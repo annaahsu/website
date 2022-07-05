@@ -72,6 +72,12 @@ const permalink = '/';
         }
       }
 
+      @media (prefers-reduced-motion: reduce) {
+        .wrap, .home-wrap, .home {
+          animation: none;
+        }
+      }
+
       @keyframes whee {
         0% {
           transform: rotate(0deg);
