@@ -1,0 +1,61 @@
+---
+---
+
+<h1>
+    <span>A</span>
+    <span>N</span>
+    <span>N</span>
+    <span>A</span>
+    <span>H</span>
+    <span>S</span>
+    <span>U</span>
+</h1>
+
+<style lang="scss">
+    $t: 1s;
+    $d: 0.08em;
+    $n: 3;
+    $e: cubic-bezier(0.86, 0, 0.07, 1);
+    h1 {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        margin: 0;
+    }
+    @keyframes ani {
+        0% {
+            transform: translate3d(0, 0, 0);
+            text-shadow: 0em 0em 0 var(--light);
+            color: var(--dark);
+        }
+        30% {
+            transform: translate3d(0, 0, 0);
+            text-shadow: 0em 0em 0 var(--light);
+            color: var(--dark);
+        }
+        70% {
+            transform: translate3d($d, -$d, 0);
+            text-shadow: -$d $d var(--light);
+            color: var(--dark);
+        }
+        100% {
+            transform: translate3d($d, -$d, 0);
+            text-shadow: -$d $d var(--light);
+            color: var(--dark);
+        }
+    }
+    span {
+        position: relative;
+        display: inline-block;
+        margin-right: -8px;
+        animation: ani $t infinite alternate $e;
+        @for $i from 1 through $n {
+            &:nth-last-child(#{$i}n) {
+                animation-delay: calc(-1 * $t * $i/$n/2);
+            }
+        }
+    }
+</style>

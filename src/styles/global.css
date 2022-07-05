@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  --user-font-scale: 1rem - 16px;
+  font-size: clamp(
+    0.875rem,
+    0.4626rem + 1.0309vw + var(--user-font-scale),
+    1.125rem
+  );
+
+  --white: #fdfaf9;
+  --pale: #f9ecea;
+  --light: #e7b7ad;
+  --med: #733302;
+  --black: #090403;
+
+  --cutout: 0px 8px 32px rgba(9, 4, 3, 0.25);
+  --cut: inset 0px 8px 32px rgba(9, 4, 3, 0.25);
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.5;
+
+  background: var(--pale);
+  color: var(--black);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-bottom: 16px;
+}
+
+::-moz-selection {
+  background: var(--light);
+  color: var(--dark);
+}
+::selection {
+  background: var(--light);
+  color: var(--dark);
+}
+
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--pale);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--med);
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--med) var(--pale);
+}

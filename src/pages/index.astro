@@ -1,0 +1,148 @@
+---
+import PageLayout from '../layouts/page.astro';
+
+import AnnaHsu from '../components/annahsu.astro';
+import ButtonLink from '../components/buttonlink.astro';
+import ButtonBar from '../components/buttonbar.astro';
+import Head from '../components/head.astro';
+import Socials from '../components/socials.astro';
+
+const title = 'Home';
+const description = "I\'m Anna Hsu (she/her), a Taiwanese-American gal studying Computer Engineering and Computer Science at the University of Southern California.";
+const permalink = '/';
+---
+
+<PageLayout>
+
+  <head>
+
+    <Head {title} {description} {permalink} />
+    <style lang="scss">
+      body {
+        height: 100%;
+      }
+
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        max-width: 900px;
+      }
+
+      .wrap {
+        position: relative;
+        z-index: 10;
+        animation: whee 1s forwards;
+      }
+
+      .rectangle-wrap {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+
+      .rectangle {
+        background: var(--light);
+        box-shadow: var(--cut);
+        width: 100%;
+        height: 100%;
+        z-index: 50;
+      }
+
+      .home-wrap {
+        z-index: 100;
+        display: flex;
+        animation: card 1s ease 1s forwards;
+      }
+
+      .home {
+        display: flex;
+        flex-direction: column;
+        padding: 128px;
+        gap: 16px;
+        background: var(--pale);
+        animation: cuts 0.5s ease 0.5s;
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+
+      @keyframes whee {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(6deg);
+        }
+      }
+
+      @keyframes card {
+        0% {
+          box-shadow: var(--cutout);
+        }
+
+        100% {
+          transform: rotate(-12deg);
+          box-shadow: var(--cutout);
+        }
+      }
+
+      @keyframes cuts {
+        0% {
+          border: none;
+        }
+
+        20% {
+          border-top: 1px solid var(--light);
+        }
+
+        40% {
+          border-right: 1px solid var(--light);
+        }
+
+        60% {
+          border-bottom: 1px solid var(--light);
+        }
+
+        80% {
+          border-left: 1px solid var(--light);
+        }
+
+        100% {
+          border: 1px solid var(--light);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <div class="wrap">
+        <div class="rectangle-wrap">
+          <div class="rectangle" />
+        </div>
+        <div class="home-wrap">
+          <div class="home">
+            <AnnaHsu />
+            <p>I'm Anna Hsu (she/her), a Taiwanese-American gal studying Computer Engineering and Computer Science at
+              the University of Southern California. I'm a journalist and engineer interested in how the world works so
+              I
+              can make it better. Welcome, and I hope you enjoy your stay!</p>
+            <ButtonBar>
+              <ButtonLink href="/about">About</ButtonLink>
+              <ButtonLink href="/blog">Blog</ButtonLink>
+              <ButtonLink href="/portfolio">Portfolio</ButtonLink>
+            </ButtonBar>
+            <Socials />
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</PageLayout>
