@@ -4,7 +4,7 @@
 }
 
 :root {
-  font-family: "Inter", sans-serif;
+  font-family: "Readex Pro", sans-serif;
   font-size: 1rem;
   --user-font-scale: 1rem - 16px;
   font-size: clamp(
@@ -21,6 +21,8 @@
 
   --cutout: 0px 8px 32px rgba(9, 4, 3, 0.25);
   --cut: inset 0px 8px 32px rgba(9, 4, 3, 0.25);
+
+  --carddrop: 0px 4px 8px rgba(9, 4, 3, 0.25);
 }
 
 html {
@@ -35,13 +37,20 @@ body {
   flex-direction: column;
   align-items: center;
   line-height: 1.5;
+  margin: 0 32px;
 
   background: var(--pale);
   color: var(--black);
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
   margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+p {
+  margin-bottom: 16px;
+  line-height: 1.5;
 }
 
 ::-moz-selection {

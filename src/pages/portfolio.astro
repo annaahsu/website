@@ -1,0 +1,47 @@
+---
+import PageLayout from '@layouts/page.astro';
+
+import Container from '@components/container.astro';
+import Head from '@components/head.astro';
+import Navbar from '@components/navbar.astro';
+import PortfolioCard from '@components/portfoliocard.astro';
+
+import portfolio from '@data/portfolio.json';
+
+const title = "Portfolio";
+const description = "I\'m Anna Hsu (she/her), a Taiwanese-American gal studying Computer Engineering and Computer Science at the University of Southern California.";
+const permalink = "/portfolio";
+---
+
+<PageLayout>
+
+  <head>
+
+    <Head {title} {description} {permalink} />
+    <script src="https://unpkg.com/colcade@0/colcade.js"></script>
+
+    <style lang="scss">
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+        gap: 24px;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <Container>
+      <Navbar />
+      <div>
+        <h1>Oh, All the Things I've Done</h1>
+        <p></p>
+        <div class="grid">
+          {portfolio.map(({ title, date, description, url, tags }) => (
+          <PortfolioCard title={title} date={date} description={description} url={url} tags={tags} />
+          ))}
+        </div>
+      </div>
+    </Container>
+  </body>
+</PageLayout>

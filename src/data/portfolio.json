@@ -1,0 +1,100 @@
+[
+  {
+    "title": "Perfect Pitch: Using the Fast Fourier Transform (FFT) To Create Musical Arrangements",
+    "date": "2022-05-12",
+    "description": "How might amateur musicians identify pitches to create pop arrangements? Through an understanding of some cool math, we can create an implementation simulated in MATLAB.",
+    "url": "https://youtu.be/ZDDlGLF751o",
+    "tags": ["tech", "research"]
+  },
+  {
+    "title": "Anna Hsu | Music",
+    "date": "2022-03-20",
+    "description": "My music website, built with Astro!",
+    "url": "https://music.annahsu.dev",
+    "tags": ["web-dev"]
+  },
+  {
+    "title": "Bridging the Gap: A Short Story",
+    "date": "2021-05-14",
+    "description": "Despite controversy surrounding LGBTQ+ rights' place in Mandopop, Jolin Tsai's calculated risk pays off.",
+    "url": "https://drive.google.com/file/d/1n1uJZQoWufduPtKyWa4Hhjc_2r2JvOhf/view?usp=sharing",
+    "tags": ["research"]
+  },
+  {
+    "title": "picoMini by redpwn - advanced-potion-making (forensics)",
+    "date": "2021-05-11",
+    "description": "Writeup for advanced-potion-making (forensics).",
+    "url": "https://activities.tjhsst.edu/csc/writeups/picomini-redpwn-apm",
+    "tags": ["cybersecurity"]
+  },
+  {
+    "title": "picoMini by redpwn - login (web)",
+    "date": "2021-05-11",
+    "description": "Writeup for login (web).",
+    "url": "https://activities.tjhsst.edu/csc/writeups/picomini-redpwn-login",
+    "tags": ["cybersecurity"]
+  },
+  {
+    "title": "TJ Latin",
+    "date": "2021-04-02",
+    "description": "TJ Latin's website for 2020-2021! Static website with blogging by Jekyll.",
+    "url": "https://activities.tjhsst.edu/latin/",
+    "tags": ["web-dev"]
+  },
+  {
+    "title": "Cyber-paving the way to success",
+    "date": "2021-03-29",
+    "description": "They sat poised in front of their screens as seconds ticked down before the competition began.",
+    "url": "https://www.tjtoday.org/32106/features/cyber-paving-the-way-to-success/",
+    "tags": ["journalism", "cybersecurity"]
+  },
+  {
+    "title": "SGA hosts speed meet and greet",
+    "date": "2021-03-15",
+    "description": "As the pandemic caused students to participate in virtual learning, many have organized creative ways to meet new people, and SGA is no exception.",
+    "url": "https://www.tjtoday.org/31898/news/sga-hosts-speed-meet-and-greet/",
+    "tags": ["journalism"]
+  },
+  {
+    "title": "Jefferson softball holds interest meeting",
+    "date": "2021-03-15",
+    "description": "Jefferson's softball team held an interest meeting on Friday, Mar. 12 during B block to discuss the upcoming spring season.",
+    "url": "https://www.tjtoday.org/31886/sports/jefferson-softball-holds-interest-meeting/",
+    "tags": ["journalism"]
+  },
+  {
+    "title": "\"To All The Boys: Always and Forever (2021)\": Did it live up to my nonexistent standards?",
+    "date": "2021-02-15",
+    "description": "Although it didn't aggressively slam into the mud, it wasn't what it could've been.",
+    "url": "https://www.tjtoday.org/31343/entertainment/to-all-the-boys-always-and-forever-2021-did-it-live-up-to-my-nonexistent-standards/",
+    "tags": ["journalism"]
+  },
+  {
+    "title": "Phishing scams target Jefferson students",
+    "date": "2021-01-16",
+    "description": "In the last week, Jefferson students have reported being sent suspicious Facebook links that look like YouTube thumbnails, with the text-only message \"Sankapp: Is it you in the video?\"",
+    "url": "https://www.tjtoday.org/30610/showcase/phishing-scams-target-jefferson-students/",
+    "tags": ["journalism", "cybersecurity"]
+  },
+  {
+    "title": "What's your Spotify Wrapped?",
+    "date": "2020-12-29",
+    "description": "Spotify releases statistics on listeners' music preferences to mostly positive reactions from Jefferson students.",
+    "url": "https://www.tjtoday.org/30450/entertainment/whats-your-spotify-wrapped/",
+    "tags": ["journalism"]
+  },
+  {
+    "title": "Hispanic culture club hosts guest speakers",
+    "date": "2020-12-07",
+    "description": "As college application season began its final month for seniors, Hispanic Culture Club hosted guest speakers Katrina Colucci-Chang and Adrian Davila during B block on Dec. 2 to speak about the college experience as people of Hispanic heritage.",
+    "url": "https://www.tjtoday.org/30185/news/hispanic-culture-club-hosts-guest-speakers/",
+    "tags": ["journalism"]
+  },
+  {
+    "title": "Discord creates peace of mind",
+    "date": "2020-11-23",
+    "description": "Jefferson organizations gravitate to Discord as a new way to uphold traditions.",
+    "url": "https://www.tjtoday.org/29983/features/discord-creates-peace-of-mind/",
+    "tags": ["journalism", "tech"]
+  }
+]
