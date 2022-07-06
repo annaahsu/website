@@ -1,0 +1,32 @@
+---
+import PageLayout from '@layouts/page.astro';
+
+import ButtonLink from '@components/buttonlink.astro';
+import Container from '@components/container.astro';
+import Head from '@components/head.astro';
+import Navbar from '@components/navbar.astro';
+
+const title = "404";
+const description = "I\'m Anna Hsu (she/her), a Taiwanese-American gal studying Computer Engineering and Computer Science at the University of Southern California.";
+const permalink = "/404";
+---
+
+<PageLayout>
+
+  <head>
+
+    <Head {title} {description} {permalink} />
+  </head>
+
+  <body>
+    <Container>
+
+      <Navbar />
+      <h1>404</h1>
+      <p><strong>Page not found :(</strong></p>
+      <p>It's okay, since you can try again! If you'd rather not, though, you can go see some <a
+          href="https://www.google.com/search?q=cat+photos">cat photos</a> to make your day better!</p>
+      <ButtonLink href="/">Return home</ButtonLink>
+    </Container>
+  </body>
+</PageLayout>
