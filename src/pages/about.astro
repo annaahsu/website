@@ -1,0 +1,113 @@
+---
+import { Image } from '@astrojs/image/components';
+import headshot from '@assets/headshot.png';
+import PageLayout from '@layouts/page.astro';
+
+import ButtonBar from '@components/buttonbar.astro';
+import ButtonLink from '@components/buttonlink.astro';
+import Container from '@components/container.astro';
+import Head from '@components/head.astro';
+import Navbar from '@components/navbar.astro';
+import Socials from '@components/socials.astro';
+
+const title = "About";
+const description = "I\'m Anna Hsu (she/her), a Taiwanese-American gal studying Computer Engineering and Computer Science at the University of Southern California.";
+const permalink = "/about";
+---
+
+<PageLayout>
+
+  <head>
+
+    <Head {title} {description} {permalink} />
+
+    <style>
+      .tangent {
+        display: flex;
+        gap: 64px;
+      }
+
+      .sidebar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+      }
+
+      .wrap {
+        position: relative;
+        z-index: 10;
+      }
+
+      .rectangle-wrap {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+
+      .rectangle {
+        background: var(--light);
+        box-shadow: var(--cutout);
+        width: 100%;
+        height: 100%;
+        z-index: 50;
+        transform: rotate(6deg);
+      }
+
+      .headshot {
+        z-index: 100;
+        max-width: 300px;
+        max-height: 300px;
+        box-shadow: var(--cutout);
+      }
+
+      .bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <Container>
+
+      <Navbar />
+      <h1>Whomst?</h1>
+      <div class="tangent">
+        <div class="sidebar">
+          <div class="wrap">
+            <div class="rectangle-wrap">
+              <div class="rectangle" />
+            </div>
+            <div class="headshot">
+              <Image src={headshot} width={300} height={300} alt="Anna Hsu headshot" />
+            </div>
+          </div>
+          <div class="bar">
+            <ButtonBar>
+              <ButtonLink href="https://drive.google.com/file/d/1-u65vavZs8-652Kn0QEI2bQWGqRhpJew/view?usp=sharing">
+                Resume</ButtonLink>
+              <ButtonLink href="https://drive.google.com/file/d/10_ho2LngZB7iuxkERGgJ1l3kF9orc3sH/view?usp=sharing">
+                Headshot</ButtonLink>
+            </ButtonBar>
+            <Socials />
+          </div>
+        </div>
+        <div>
+          <p>Hallo! My name is Anna (she/her) and I'm a Taiwanese-American gal studying Computer Engineering and
+            Computer Science at the University of Southern California. I'm originally from Northern Virginia and I
+            graduated from Thomas Jefferson High School for Science and Technology. That's where I discovered my love
+            for creating innovative products and writing stories. Nowadays, I work on leveraging both my tech and
+            writing backgrounds. I'm passionate about designing impactful products for everyone and sharing stories that
+            go untold.</p>
+          <p>In my (rare) spare time, you can find me eating Taiwanese food, listening to Mandopop, or rooting for the
+            Washington Nationals. Feel free to reach out!</p>
+        </div>
+      </div>
+    </Container>
+  </body>
+</PageLayout>

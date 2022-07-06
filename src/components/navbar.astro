@@ -1,0 +1,141 @@
+---
+import AnnaHsu from "@components/annahsu.astro";
+
+import { Icon } from 'astro-icon';
+
+const page = new URL(Astro.request.url).pathname;
+
+const navLinks = [
+  {
+    name: 'About',
+    link: '/about',
+  },
+  {
+    name: 'Blog',
+    link: '/blog',
+  },
+  {
+    name: 'Portfolio',
+    link: '/portfolio',
+  },
+]
+---
+
+<nav>
+  <div class="nav-mobile">
+    <div class="logo">
+      <a href="/">
+        <AnnaHsu />
+      </a>
+    </div>
+    <span class="navbar-toggle" id="js-navbar-toggle">
+      <Icon size={36} name="ion:reorder-three" />
+    </span>
+  </div>
+  <div class="navlinks" id="js-menu">
+    {navLinks.map(({ name, link }) => (
+    <a class={link === page ? 'active link' : 'link'} href={link}>{name}</a>
+    ))}
+  </div>
+</nav>
+
+<style lang="scss">
+  nav {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 0;
+  }
+
+  .logo>a {
+    color: inherit;
+  }
+
+  .nav-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navlinks {
+    display: none;
+  }
+
+  .navbar-toggle:hover {
+    cursor: pointer;
+  }
+
+  @media (min-width: 800px) {
+    nav {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 32px;
+    }
+
+    .link {
+      &::after {
+        background: var(--light);
+        content: "";
+        width: 0;
+        position: absolute;
+        top: 24px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        opacity: 0;
+        transition: 0.2s;
+      }
+
+      &:hover::after {
+          opacity: 1;
+          width: 100%;
+      }
+    }
+
+    .active::after {
+        opacity: 1;
+        width: 100%;
+    }
+
+    .navbar-toggle {
+      display: none;
+    }
+  }
+
+  .on {
+    border-bottom: 2px solid var(--med);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  [astro-icon] {
+    color: var(--med);
+  }
+
+  a {
+    display: inline-block;
+    position: relative;
+    transition: 0.2s;
+    color: var(--med);
+    text-decoration: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    a {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  let navlinks = document.getElementById("js-menu");
+  let navBarToggle = document.getElementById("js-navbar-toggle");
+  navBarToggle.addEventListener("click", () => {
+    navlinks.classList.toggle("on");
+  });
+</script>
