@@ -95,11 +95,6 @@ hr {
   border-top: 1px solid var(--light);
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 figcaption {
   font-style: oblique;
 }
@@ -109,6 +104,10 @@ figcaption {
   flex-direction: column;
   align-items: center;
   gap: 4px;
+  img {
+    max-width: 100%;
+    height: auto;
+}
 }
 
 ::-moz-selection {
