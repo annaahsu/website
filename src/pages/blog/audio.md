@@ -1,9 +1,12 @@
 ---
+title: 'To Teensy or Not to Teensy: That Is the Question'
+publishDate: 2021-05-17
+name: Anna Hsu
+description: Final paper for Audio Electronics.
+alt: flow chart using Audio System Design Tool
 setup: |
   import Layout from '@layouts/blogpost.astro'
   import { Image } from '@astrojs/image/components'
-  import BlogImage from '@components/blogimage.astro'
-
   import adc from '@assets/blog/audio/adc.png'
   import adcdac from '@assets/blog/audio/adcdac.png'
   import asdt from '@assets/blog/audio/asdt.png'
@@ -15,11 +18,6 @@ setup: |
   import side from '@assets/blog/audio/side.jpg'
   import slant from '@assets/blog/audio/slant.jpg'
   import top from '@assets/blog/audio/top.jpg'
-title: 'To Teensy or Not to Teensy: That Is the Question'
-publishDate: 2021-05-17
-name: Anna Hsu
-description: Final paper for Audio Electronics.
-alt: flow chart using Audio System Design Tool
 ---
 
 For my fourth semester Audio Electronics class, we were tasked with building a sampler and sequencer using the [Teensy 4.1](https://www.pjrc.com/store/teensy41.html) and [Audio Shield](https://www.pjrc.com/store/teensy3_audio.html).
