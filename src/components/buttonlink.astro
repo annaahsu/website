@@ -1,6 +1,6 @@
 ---
 export interface Props {
-	href: string;
+  href: string;
 }
 const { href } = Astro.props;
 ---
@@ -20,5 +20,22 @@ const { href } = Astro.props;
       inset 0px -4px 16px rgba(249, 236, 234, 0.5),
       inset -4px 0px 16px rgba(115, 48, 34, 0.5);
     border-radius: 8px;
+    transition: none;
+  }
+
+  a:hover {
+    box-shadow: inset 8px 0px 16px rgba(253, 250, 249, 0.5),
+      inset 0px -8px 16px rgba(249, 236, 234, 0.5),
+      inset -8px 0px 16px rgba(115, 48, 34, 0.5);
+    transition: 0.5s;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    a:hover {
+      box-shadow: inset 4px 0px 16px rgba(253, 250, 249, 0.5),
+        inset 0px -4px 16px rgba(249, 236, 234, 0.5),
+        inset -4px 0px 16px rgba(115, 48, 34, 0.5);
+      transition: none;
+    }
   }
 </style>

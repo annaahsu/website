@@ -34,7 +34,7 @@ const navLinks = [
   </div>
   <div class="navlinks" id="js-menu">
     {navLinks.map(({ name, link }) => (
-    <a class={link === page ? 'active link' : 'link'} href={link}>{name}</a>
+    <a class={page.includes(link) ? 'active link' : 'link'} href={link}>{name}</a>
     ))}
   </div>
 </nav>
@@ -44,6 +44,8 @@ const navLinks = [
     display: flex;
     flex-direction: column;
     padding: 32px 0;
+    max-width: 900px;
+    width: 100%;
   }
 
   .logo>a {
@@ -123,6 +125,12 @@ const navLinks = [
     transition: 0.2s;
     color: var(--med);
     text-decoration: none;
+    box-shadow: none;
+    padding: 0px;
+    font-weight: inherit;
+  }
+  a:hover {
+    background: none;
   }
 
   @media (prefers-reduced-motion: reduce) {

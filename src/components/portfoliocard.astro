@@ -12,14 +12,12 @@ export interface Props {
 }
 const { title, date, description, url, tags } = Astro.props;
 
-
-let newDate = new Date(date);
-
+const newDate = new Date(date);
 const options = { year: 'numeric', month: 'long', day: 'numeric' };
 const formatDate = newDate.toLocaleDateString('en-US', options)
 ---
 
-<div>
+<article class="card">
   <a class="cardlink" href={url} target="_blank">
     <div class="content">
       <div class="header">
@@ -35,20 +33,29 @@ const formatDate = newDate.toLocaleDateString('en-US', options)
       </ButtonBar>
     </div>
   </a>
-</div>
+</article>
 
 <style lang="scss">
   [astro-icon] {
     color: var(--med);
   }
 
-  .card {
-    height: 100%;
+  .card:hover {
+    transform: scale(1.01);
+    transition: 0.5s;
   }
 
   .cardlink {
     color: inherit;
     text-decoration: none;
+    box-shadow: none;
+    padding: 0px;
+    transition: none;
+    font-weight: inherit;
+  }
+
+  .cardlink:hover {
+    background: none;
   }
 
   .content {
