@@ -1,0 +1,38 @@
+---
+import PageLayout from '@layouts/page.astro';
+
+import Container from '@components/container.astro';
+import Head from '@components/head.astro';
+import Navbar from '@components/navbar.astro'
+
+const { content } = Astro.props;
+const { title, description, publishDate, permalink } = content;
+
+const newDate = new Date(publishDate);
+const options = { year: 'numeric', month: 'long', day: 'numeric' };
+const formatDate = newDate.toLocaleDateString('en-US', options)
+---
+
+<PageLayout>
+
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-lucario.css" />
+
+    <Head {title} {description} {permalink} />
+
+    <style lang="scss">
+      .date {
+        font-style: oblique;
+      }
+    </style>
+  </head>
+
+  <body>
+    <Navbar />
+    <Container>
+      <h1>{title}</h1>
+      <span class="date">{formatDate}</span>
+      <slot />
+    </Container>
+  </body>
+</PageLayout>
