@@ -1,6 +1,7 @@
 ---
 import PageLayout from '@layouts/page.astro';
 
+import ButtonBar from '@components/buttonbar.astro';
 import ButtonLink from '@components/buttonlink.astro';
 import Container from '@components/container.astro';
 import Head from '@components/head.astro';
@@ -19,14 +20,16 @@ const permalink = "/404";
   </head>
 
   <body>
+    <Navbar />
     <Container>
 
-      <Navbar />
       <h1>404</h1>
       <p><strong>Page not found :(</strong></p>
       <p>It's okay, since you can try again! If you'd rather not, though, you can go see some <a
           href="https://www.google.com/search?q=cat+photos">cat photos</a> to make your day better :D</p>
-      <ButtonLink href="/">Return home</ButtonLink>
+      <ButtonBar>
+        <ButtonLink href="/">Return home</ButtonLink>
+      </ButtonBar>
     </Container>
   </body>
 </PageLayout>

@@ -1,6 +1,8 @@
 ---
 import PageLayout from '@layouts/page.astro';
 
+import ButtonBar from '@components/buttonbar.astro';
+import ButtonLink from '@components/buttonlink.astro';
 import Container from '@components/container.astro';
 import Head from '@components/head.astro';
 import Navbar from '@components/navbar.astro';
@@ -31,16 +33,16 @@ const permalink = "/portfolio";
   </head>
 
   <body>
+    <Navbar />
     <Container>
-      <Navbar />
-      <div>
-        <h1>Oh, All the Things I've Done</h1>
-        <p></p>
-        <div class="grid">
-          {portfolio.map(({ title, date, description, url, tags }) => (
-          <PortfolioCard title={title} date={date} description={description} url={url} tags={tags} />
-          ))}
-        </div>
+      <h1>Oh, All the Things I've Done</h1>
+      <ButtonBar>
+        <ButtonLink href="#">naslfkjasdlk</ButtonLink>
+      </ButtonBar>
+      <div class="grid">
+        {portfolio.map(({ title, date, description, url, tags }) => (
+        <PortfolioCard title={title} date={date} description={description} url={url} tags={tags} />
+        ))}
       </div>
     </Container>
   </body>
