@@ -22,8 +22,13 @@ const permalink = "/about";
     <Head {title} {description} {permalink} />
 
     <style lang="scss">
+      .content {
+        flex: 999 1 300px;
+      }
+
       .tangent {
         display: flex;
+        flex-wrap: wrap;
         gap: 64px;
       }
 
@@ -32,6 +37,7 @@ const permalink = "/about";
         flex-direction: column;
         align-items: center;
         gap: 32px;
+        flex: 1 1 0;
       }
 
       .wrap {
@@ -112,7 +118,7 @@ const permalink = "/about";
             <Socials />
           </div>
         </div>
-        <div>
+        <div class="content">
           <p>Hallo! My name is Anna (she/her) and I'm a Taiwanese-American gal studying Computer Engineering and
             Computer Science at the University of Southern California. I'm originally from Northern Virginia and I
             graduated from Thomas Jefferson High School for Science and Technology. That's where I discovered my love
