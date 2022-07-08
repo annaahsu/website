@@ -1,7 +1,6 @@
 ---
 import ButtonBar from '@components/buttonbar.astro';
 import ButtonTag from '@components/buttontag.astro';
-import { Icon } from 'astro-icon';
 
 export interface Props {
   title: string;
@@ -26,7 +25,6 @@ const formatDate = newDate.toLocaleDateString('en-US', options)
       </div>
       <p>{description}</p>
       <ButtonBar>
-        <Icon size={40} name="ion:pricetag" />
         {tags.map((tag) => (
         <ButtonTag>{tag}</ButtonTag>
         ))}
@@ -36,9 +34,6 @@ const formatDate = newDate.toLocaleDateString('en-US', options)
 </article>
 
 <style lang="scss">
-  [astro-icon] {
-    color: var(--med);
-  }
 
   .card:hover {
     transform: scale(1.01);
@@ -63,7 +58,6 @@ const formatDate = newDate.toLocaleDateString('en-US', options)
     flex-direction: column;
     gap: 16px;
     padding: 24px;
-    max-width: 438px;
     background-color: var(--white);
     box-shadow: var(--carddrop);
   }
