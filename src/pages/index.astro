@@ -19,61 +19,74 @@ const permalink = '/';
     <Head {title} {description} {permalink} />
     <style lang="scss">
       body {
-        height: 100%;
-      }
-
-      main {
-        display: flex;
         justify-content: center;
-        align-items: center;
-        height: 100%;
-
-        max-width: 900px;
-      }
-
-      .wrap {
-        position: relative;
-        z-index: 10;
-        animation: whee 1s forwards;
-      }
-
-      .rectangle-wrap {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-      }
-
-      .rectangle {
-        background: var(--light);
-        box-shadow: var(--cut);
-        width: 100%;
-        height: 100%;
-        z-index: 50;
-      }
-
-      .home-wrap {
-        z-index: 100;
-        display: flex;
-        animation: card 1s ease 1s forwards;
       }
 
       .home {
         display: flex;
         flex-direction: column;
-        padding: 128px;
         gap: 16px;
         background: var(--pale);
-        animation: cuts 0.5s ease 0.5s;
 
         p {
           margin-bottom: 0;
         }
       }
 
+      @media (min-width: 850px) {
+        main {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          max-width: 900px;
+        }
+
+        .wrap {
+          position: relative;
+          z-index: 10;
+          animation: whee 1s forwards;
+        }
+
+        .rectangle-wrap {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+        }
+
+        .rectangle {
+          background: var(--light);
+          box-shadow: var(--cut);
+          width: 100%;
+          height: 100%;
+          z-index: 50;
+        }
+
+        .home {
+          padding: 128px;
+          animation: cuts 0.5s ease 0.5s;
+        }
+
+        .home-wrap {
+          z-index: 100;
+          display: flex;
+          animation: card 1s ease 1s forwards;
+        }
+      }
+
+      @media (max-width: 850px) {
+        .rectangle-wrap {
+          display: none;
+        }
+      }
+
       @media (prefers-reduced-motion: reduce) {
-        .wrap, .home-wrap, .home {
+
+        .wrap,
+        .home-wrap,
+        .home {
           animation: none;
         }
       }
