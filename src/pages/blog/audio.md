@@ -3,7 +3,7 @@ title: 'To Teensy or Not to Teensy: That Is the Question'
 publishDate: 2021-05-17
 name: Anna Hsu
 description: Final paper for Audio Electronics.
-alt: flow chart using Audio System Design Tool
+permalink: /blog/audio
 setup: |
   import Layout from '@layouts/blogpost.astro'
   import { Image } from '@astrojs/image/components'
