@@ -7,6 +7,7 @@ permalink: /blog/audio
 setup: |
   import Layout from '@layouts/blogpost.astro'
   import { Image } from '@astrojs/image/components'
+  import BlogImage from '@components/blogimage.astro'
   import adc from '@assets/blog/audio/adc.png'
   import adcdac from '@assets/blog/audio/adcdac.png'
   import asdt from '@assets/blog/audio/asdt.png'
@@ -48,10 +49,7 @@ This project involves both a hardware and a software component. Due to the natur
 
 After receiving the Teensy 4.1 and Audio Shield, we had to solder female pin headers so we could attach the two pieces, which weren’t originally designed to be used together. Otherwise, the Teensy was physically ready to go! The biggest hassle involving Teensy setup is the code behind it to link pieces together.
 
-<div class="blogimage">
-  <Image src={asdt} alt="flow chart using Audio System Design Tool" />
-  <figcaption>flow chart using Audio System Design Tool</figcaption>
-</div>
+<BlogImage src={asdt} alt="flow chart using Audio System Design Tool" />
 
 Using the [Audio System Design Tool](https://www.pjrc.com/teensy/gui/index.html), we’re able to design the connections between our circuit, and on export, we’re able to get setup code generated for us, shown below.
 
@@ -111,10 +109,7 @@ With software, there were two things that needed to be accomplished: the former 
 
 Directory List: note that I am (update: as of June 2022, I am no longer) a Windows user (for the GUIs) but I also use Ubuntu 20.04 on Windows Subsystem for Linux (for the terminal). Since I’m using Arduino on Windows, most of my stuff is going to be on the Windows end, but if it involves the terminal, it’ll probably be in Linux. Thankfully I don’t think I use the terminal a whole lot in this project!
 
-<div class="blogimage">
-  <Image src={directory} alt="view of my directory" />
-  <figcaption>view of my directory</figcaption>
-</div>
+<BlogImage src={directory} alt="view of my directory" />
 
 For the code to run the audio file, it had to be in binary form, so using the [wav2sketch executable file](https://github.com/UECIDE/Teensy3/blob/master/cores/teensy3/files/libraries/Audio/examples/SamplePlayer/wav2sketch/wav2sketch.exe), I converted 6 short 2 second WAV files, named Slip1.wav, Slip2.wav, Slip3.wav, etc., into C++ in the wav2sketch folder by clicking on the executable file. The program’s a bit janky, since it converted files in some cases but not in others. Sometimes I had to remove Slip1.wav and the associated C++ files to get it to convert the others!
 
@@ -124,24 +119,15 @@ Teensy itself is not a serial device — it uses [HID](https://www.pjrc.com/teen
 
 Tools Menu on my Arduino IDE with Board setup below.
 
-<div class="blogimage">
-  <Image src={port} alt="tools menu" />
-  <figcaption>tools menu</figcaption>
-</div>
+<BlogImage src={port} alt="tools menu" />
 
 After compiling, the Arduino IDE tells us that it was successful. If it wasn’t, it would display an error message at the bottom saying where things went wrong.
 
-<div class="blogimage">
-  <Image src={ide} alt="IDE display" />
-  <figcaption>IDE display</figcaption>
-</div>
+<BlogImage src={ide} alt="IDE display" />
 
 We would then be redirected to the Teensy Loader application, which indicated that we should press the button on the Teensy located between the continuously flashing LED and SD card slot.
 
-<div class="blogimage">
-  <Image src={loader} alt="Teensy Loader" />
-  <figcaption>Teensy Loader</figcaption>
-</div>
+<BlogImage src={loader} alt="Teensy Loader" />
 
 After pressing the button, Windows would make the USB sound. According to Make Tech Easier, [this can be a sign that there's a problem](https://www.maketecheasier.com/stop-random-usb-connect-noises-windows/#:~:text=Sometimes%20random%20USB%20noises%20could,what%20device%20you%20plug%20in.). Quite frankly, there was. No matter what I did, the Teensy would not enter the HalfKay Bootloader Mode for me to upload and run my code. Even after extensive troubleshooting, it’s not clear why. After uploading either of the test files `blink_fast.hex` or `blink_slow.hex`, it was unwilling to program. I tried uploading a blank sketch, and the Teensy Loader still indicated that something was taking up space.
 
@@ -151,20 +137,9 @@ With the semester soon approaching a close, we made the difficult decision to ha
 
 ## Circuit Shots
 
-<div class="blogimage">
-  <Image src={side} alt="side view of circuit" />
-  <figcaption>side view of circuit</figcaption>
-</div>
-
-<div class="blogimage">
-  <Image src={slant} alt="slant view of circuit" />
-  <figcaption>slant view of circuit</figcaption>
-</div>
-
-<div class="blogimage">
-  <Image src={top} alt="top view of circuit" />
-  <figcaption>top view of circuit</figcaption>
-</div>
+<BlogImage src={side} alt="side view of circuit" />
+<BlogImage src={slant} alt="slant view of circuit" />
+<BlogImage src={top} alt="top view of circuit" />
 
 In all seriousness, I’m thankful I wired the circuit before I started on the software development, since the discrete component part of the project was super successful. (I finished it in a single block!) If possible, in the summer, I’d like to see if the Teensy was the problem, which seems likely, and try to get it working as planned.
 
@@ -176,26 +151,17 @@ One such way of doing this is through digital signal processing (DSP). When a si
 
 However, since our input and output will be an analog signal, we have to produce a shift between analog and digital (and vice versa). The entire processes is illustrated well by the diagram below from Chapter 3 of The Scientist and Engineer's Guide to Digital Signal Processing:
 
-<div class="blogimage">
-  <Image src={dsp} alt="explanation of DSP from analog input to analog output" />
-  <figcaption>explanatin of DSP from analog input to analog output</figcaption>
-</div>
+<BlogImage src={dsp} alt="explanation of DSP from analog input to analog output" />
 
 Our input signal first has to be filtered to remove noise to produce the best results during conversion. It then undergoes conversion through an analog to digital convertor (ADC). An ADC takes the analog input and for a given time interval, approximates the value of the signal and represents it using binary, like the image below from All About Circuits.
 
-<div class="blogimage">
-  <Image src={adc} alt="conversion from analog to digital waveform" />
-  <figcaption>conversion from analog to digital waveform</figcaption>
-</div>
+<BlogImage src={adc} alt="conversion from analog to digital waveform" />
 
 The shorter the sampling interval, the smoother it looks. The more bits the output has, the greater resolution it has, which also results in a smoother curve. The number of bits corresponds to the number of states it can output to — for example, a 4-bit ADC will have 24 states. ADC looks a little bit like reverse integration, to be honest! Of course, a lot of this is rooted in math.
 
 A digital to analog convertor (DAC) basically undos what an ADC does. Analog Planet gives a great summary of both ADC and DAC.
 
-<div class="blogimage">
-  <Image src={adcdac} alt="comparison between what ADC and DAC do" />
-  <figcaption>comparison between what ADC and DAC do</figcaption>
-</div>
+<BlogImage src={adcdac} alt="comparison between what ADC and DAC do" />
 
 Audio file formats (i.e., WAV and mp3) are digital formats to the analog audio we physically hear, we rely on these technologies in order to do any sort of audio manipulation! Although ADC and DAC are not that complicated, since signals in real life are typically analog.
 

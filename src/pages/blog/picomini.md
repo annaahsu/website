@@ -7,6 +7,7 @@ permalink: /blog/picomini
 setup: |
   import Layout from '@layouts/blogpost.astro'
   import { Image } from '@astrojs/image/components'
+  import BlogImage from '@components/blogimage.astro'
   import hexedit from '@assets/blog/picomini/hexedit.png'
   import flag from '@assets/blog/picomini/flag.png'
 ---
@@ -74,10 +75,7 @@ Ah, forensics. The challenge-provided `advanced-potion-making` has no file exten
 
 If a file is corrupted, it can be fixed with a hex editor such as [HexEd.it](https://hexed.it/). For a PNG file to be valid, it requires a PNG file signature and critical chunks of data. In the hex editor, we can change the incorrect parts of the chunks.
 
-<div class="blogimage">
-  <Image src={hexedit} alt="a glimpse of the contents of the corrupted file" />
-  <figcaption>a glimpse of the contents of the corrupted file</figcaption>
-</div>
+<BlogImage src={hexedit} alt="a glimpse of the contents of the corrupted file" />
 
 After address `0x0000009E`, most of the content is repeated and not going to be critical (save the IEND), so the bulk of our work is going to be higher up.
 
@@ -93,10 +91,7 @@ However, when I see red (or really any solid color), I try using [stegsolve](htt
 
 The hardest part of CTF really is reading the flag. For some reason, I thought the `1` was an `l` at first!
 
-<div class="blogimage">
-  <Image src={flag} alt="why was this so hard to read aaaaaaaaa" />
-  <figcaption>why was this so hard to read aaaaaaaaa</figcaption>
-</div>
+<BlogImage src={flag} alt="why was this so hard to read aaaaaaaaa" />
 
 ## Flag
 

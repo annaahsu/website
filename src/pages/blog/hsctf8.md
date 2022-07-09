@@ -7,6 +7,7 @@ permalink: /blog/hsctf8
 setup: |
   import Layout from '@layouts/blogpost.astro'
   import { Image } from '@astrojs/image/components'
+  import BlogImage from '@components/blogimage.astro'
   import pallets from '@assets/blog/hsctf8/pallets.png'
   import glass from '@assets/blog/hsctf8/glass.png'
   import spectrogramsetup from '@assets/blog/hsctf8/spectrogram-setup.png'
@@ -49,10 +50,7 @@ Flipping through the various options using the JAR file is pretty fun, and I not
 
 Based on the flag, I'm pretty sure this was not the intended solution, but hey, if it works, it works.
 
-<div class="blogimage">
-  <Image src={pallets} alt="Red plane 0 served my purpose!" />
-  <figcaption>Red plane 0 served my purpose!</figcaption>
-</div>
+<BlogImage src={pallets} alt="Red plane 0 served my purpose!" />
 
 ## Flag
 
@@ -74,10 +72,7 @@ I'm sure some of my teammates are delighted with my use of stegsolve once more.
 
 You can get the flag in a variety of flavors &mdash; from `Colour Inversion (Xor)` to `Full green`, there's one for everybody!
 
-<div class="blogimage">
-  <Image src={glass} alt="Colour Inversion (Xor) was pretty clean" />
-  <figcaption>Colour Inversion (Xor) was pretty clean</figcaption>
-</div>
+<BlogImage src={glass} alt="Colour Inversion (Xor) was pretty clean" />
 
 ## Flag
 
@@ -99,17 +94,11 @@ Typically, [Audacity](https://www.audacityteam.org/) is a good choice for dealin
 
 Instead of viewing it as a waveform (default in Sonic Visualiser; amplitude change over time), I opened a spectrogram pane (Pane > Add Spectrogram; frequency change over time), since the challenge title indicates that frequency is pretty important here. It's important to modify the appearance of the spectogram for higher contrast so if there are abnormalities they can be quickly recognized. Below was my setup for the spectrogram. You can play around with the values!
 
-<div class="blogimage">
-  <Image src={spectrogramsetup} alt="spectrogram setup" />
-  <figcaption>spectrogram setup</figcaption>
-</div>
+<BlogImage src={spectrogramsetup} alt="spectrogram setup" />
 
 This resulted in a pretty clear spectrogram. Of course, a clear spectrogram is only helpful if you know what you're looking for.
 
-<div class="blogimage">
-  <Image src={spectrogram} alt="spectrogram" />
-  <figcaption>spectrogram</figcaption>
-</div>
+<BlogImage src={spectrogram} alt="spectrogram" />
 
 A lot of writeups I saw on the internet use spectrograms to find hidden pictures within audio files, but it's pretty clear that's not what we had. However, we do see stripes of two different colors: blue and green/black. During my earlier explorations, some of the different spectrogram values yielded visuals that looked like square waves. What do square waves mean? Binary!!
 

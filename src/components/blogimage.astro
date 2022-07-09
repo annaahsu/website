@@ -1,0 +1,29 @@
+---
+import { Image } from '@astrojs/image/components';
+
+export interface Props {
+  src: any;
+  alt: string;
+}
+
+const { src, alt } = Astro.props;
+---
+
+<div class="blogimage">
+  <Image src={src} alt={alt} />
+  <figcaption>{alt}</figcaption>
+</div>
+
+<style lang="scss">
+  .blogimage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+</style>

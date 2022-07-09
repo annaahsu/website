@@ -99,17 +99,6 @@ figcaption {
   font-style: oblique;
 }
 
-.blogimage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  img {
-    max-width: 100%;
-    height: auto;
-}
-}
-
 ::-moz-selection {
   background: var(--light);
   color: var(--dark);
