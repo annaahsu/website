@@ -76,8 +76,20 @@ a:visited {
   text-decoration: none;
 }
 
-code {
+blockquote {
+  background-color: var(--white);
+  color: var(--med);
   padding: 16px;
+  border-left: 4px solid var(--med);
+  p {
+    margin: 0;
+  }
+}
+
+code {
+  padding: 2px 8px;
+  background: var(--white);
+  border-radius: 4px;
 }
 
 pre.astro-code > code {
