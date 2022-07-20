@@ -38,7 +38,9 @@ const formatDate = newDate.toLocaleDateString('en-US', options);
         <h1>{title}</h1>
         <span class="date">{formatDate}</span>
       </header>
-      <slot />
+      <div>
+        <slot />
+      </div>
     </Container>
   </body>
 </PageLayout>
