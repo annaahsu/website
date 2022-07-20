@@ -54,7 +54,6 @@ const permalink = "/about";
 
       .rectangle {
         background: var(--light);
-        box-shadow: var(--cutout);
         width: 100%;
         height: 100%;
         z-index: 50;
@@ -65,7 +64,7 @@ const permalink = "/about";
         z-index: 100;
         max-width: 300px;
         max-height: 300px;
-        box-shadow: var(--cutout);
+        animation: photo 1s ease forwards;
       }
 
       .bar {
@@ -78,16 +77,26 @@ const permalink = "/about";
       @media (prefers-reduced-motion: reduce) {
         .rectangle {
           animation: none;
+          transform: rotate(6deg);
+          box-shadow: var(--cutout);
+        }
+      }
+
+      @keyframes photo {
+        100% {
+          box-shadow: var(--cutout);
         }
       }
 
       @keyframes whee {
         0% {
+          opacity: 0%;
           transform: rotate(0deg);
         }
 
         100% {
           transform: rotate(6deg);
+          box-shadow: var(--cutout);
         }
       }
     </style>
