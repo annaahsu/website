@@ -1,0 +1,28 @@
+---
+title: "Food Diary: Penn Quarter"
+publishDate: 2022-07-20
+description: I may be an almost-native of Northern Virginia, but I have gone to DC few enough times to count on my fingers! My best friend and I took a fun trip to the National Mall and found ourselves in Penn Quarter for lunch.
+permalink: /blog/food-diary-penn-quarter
+setup: |
+  import Layout from '@layouts/blogpost.astro'
+  import { Image } from '@astrojs/image/components'
+  import BlogImage from '@components/blogimage.astro'
+  import sandwich from '@assets/blog/food-diary/penn-quarter/sandwich.png'
+  import brisket from '@assets/blog/food-diary/penn-quarter/brisket.png'
+---
+
+I may be an almost-native of Northern Virginia, but I have gone to DC few enough times to count on my fingers! My best friend and I took a fun trip to the National Mall and found ourselves in Penn Quarter for lunch. After we scanned through Google Maps, [Teaism](https://teaism.com) seemed like a well-located and quaint restaurant close by the National Gallery of Art, where we had been wandering.
+
+Teaism can be found in three locations in DC: Dupont Circle further north, Penn Quarter south of Chinatown and north of the National Mall, and Lafayette Park directly north of the White House. It features, as is indicated by its name, tea, but there are still plenty of good Asian fusion eats to be discovered there. From All-Day Breakfast to Bento Boxes, there's something to be had for everyone on the [menu](https://www.teaism.com/menu_pdf/PQmenu%2011-9-2021.pdf)!
+
+The restaurant operates in a fashion similar to a café: you order, you get a number, and you pick up your order when your number is called. Everything else—from (free!!) iced water to utensils—is self serve, making it very convenient to quickly grab whatever you need. There are three dining options: indoor/outdoor seating, takeout, or delivery. We chose to eat indoors, which comprised of two very spacious stories of seating. Our biggest challenge was trying to carry a tray of food and a drink down the stairs, though.
+
+I got the D'Artagnan Chicken Sandwich in the panko fried variation (as opposed to grilled). Enclosed within a grilled ciabatta roll were tomatoes, lettuce, pickled cucumber, and perfectly seasoned miso mayo in addition to the flavorful chicken. The price was more than reasonable for the portion and quality I received, particularly due to its location in the midst of tourist D.C. near the Smithsonian.
+
+<BlogImage src={sandwich} alt="D'Artagnan Chicken Sandwich, panko fried; $12.50" />
+
+My friend ordered the Korean Beef Brisket Bento Box. I didn't try any of it, but he said it was very good! In the background, you can also see the classic iced bubble tea we ordered, which was only a mere $4.00. Such a price for boba is nowhere to be found these days, and it was quite good as well.
+
+<BlogImage src={brisket} alt="Korean Beef Brisket Bento Box; $15.00" />
+
+Check out Teaism next time you're in D.C., and let me know how it goes! I was a big fan, and I hope you are, too.
