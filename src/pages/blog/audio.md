@@ -1,7 +1,6 @@
 ---
 title: 'To Teensy or Not to Teensy: That Is the Question'
 publishDate: 2021-05-17
-name: Anna Hsu
 description: Final paper for Audio Electronics.
 permalink: /blog/audio
 setup: |

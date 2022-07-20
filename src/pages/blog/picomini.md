@@ -1,7 +1,6 @@
 ---
 title: Writeups for picoMini by redpwn
 publishDate: 2021-05-11
-name: Anna Hsu
 description: Writeups for login (web) and advanced-potion-making (forensics).
 permalink: /blog/picomini
 setup: |

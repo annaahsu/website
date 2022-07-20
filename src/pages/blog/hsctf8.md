@@ -1,7 +1,6 @@
 ---
 title: Writeups for HSCTF 8
 publishDate: 2021-06-20
-name: Anna Hsu
 description: Writeups for LSBlue (misc), pallets-of-gold (misc), glass-windows (misc), audio-frequency-stego (misc).
 permalink: /blog/hsctf8
 setup: |

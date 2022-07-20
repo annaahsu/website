@@ -1,7 +1,6 @@
 ---
 title: Q&A with Taiwanese writer Paris Shih
 publishDate: 2021-08-18
-name: Anna Hsu
 description: For my junior year HUM (humanities) year-long research paper, I took a deep dive into LGBTQ+ representation in Taiwanese music.
 permalink: /blog/paris-shih
 setup: |
