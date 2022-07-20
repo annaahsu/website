@@ -1,0 +1,38 @@
+---
+title: "Food Diary: Illinois"
+publishDate: 2022-06-08
+description: In early April this year, over my spring break, my dad and I embarked on a journey to check out three of my top choice colleges over four days. It was definitely a crunch, but we managed to pull it off and eat lots of good food along the way.
+permalink: /blog/food-diary-illinois
+setup: |
+  import Layout from '@layouts/blogpost.astro'
+  import { Image } from '@astrojs/image/components'
+  import BlogImage from '@components/blogimage.astro'
+  import tenq from '@assets/blog/food-diary/illinois/10q.png'
+  import oozu from '@assets/blog/food-diary/illinois/oozu.png'
+---
+
+In early April this year, over my spring break, my dad and I embarked on a journey to check out three of my top choice colleges over four days. It was definitely a crunch, but we managed to pull it off and eat lots of good food along the way. I'll be sharing two of my favorite restaurants that we encountered on our trip!
+
+# [10Q Chicken](https://www.10qchicken.com/)
+
+Located in Evanston, IL, 10Q Chicken is just right off of Northwestern University's campus. This was the first school among the three that I checked out! Overwhelmed by the unfamiliar place and Chicago wind, my dad and I opened Google Maps and picked a random place to get lunch. 10Q had good reviews and the images looked pretty good! (Bonus points for relatively simple parking—finding space in Evanston is a wild ride.) The restaurant wasn't super busy while we were there, likely since it was early during lunch hour. As we got ready to leave, though, more and more people started entering.
+
+As its name suggests, 10Q sells a lot of chicken. Whether you'd like a medium-sized chicken sandwich or a chicken bowl with rice, there are plenty of options to choose from. Everything is wrapped in cute boxes and containers so you can still eat it in your dorm room or outside in nice weather! I loved how take-out friendly it was; my dad didn't finish his fries, so I got to munch on them during the two hour car ride to Champaign-Urbana.
+
+I may be a little biased, but the Korean BBQ Chicken Bowl was phenomenal! I liked it more than the 10Q Chicken Sandwich that my dad got, although that was still pretty good. The bowl was split approximately in half; one side contained a salad with yogurt-like dressing, whereas the other half had a comfortable portion of rice topped by a plentiful serving of sweet and savory marinated chicken. Yum!
+
+<BlogImage src={tenq} alt="Korean BBQ Chicken Bowl; $8.49" />
+
+# [Oozu Ramen](https://oozuramen.com/)
+
+Prior to visiting Champaign-Urbana, [kmh](https://kmh.zone) gave me a list of recommendations, and Oozu Ramen was among the top choices on his list! As someone who was practically raised on Japanese food, I always enjoy trying out Japanese restaurants to see their similarities and differences.
+
+After a long day of walking—we hit 10 miles that day, and every subsequent day—we stopped by due to Oozu's convenient location in Campustown. Although it's not quite on the famous Green St., it's still very easy to access. It's close to Alma Mater, and not too far from the Engineering Quad. When we arrived (around 6:30 PM or so), the restaurant was almost packed. Food is a pretty integral part of the town!
+
+The broth choices were pretty standard—miso, tonkotsu, or shoyu—but they also had choices like chicken broth or vegan broth. You can add a variety of toppings, but you can also just go with the standard assortment. They also offer lots of appetizers like edamame and fried chicken, but for me, a warm bowl of ramen was sustaining enough!
+
+Usually, my dad gets tonkotsu broth whereas I get miso broth, and we get to try each other's. Our toppings were fairly similar, which was somewhat surprising, since tonkotsu broth often goes with different toppings compared to miso broth. I was a super big fan of their egg with its creamy yolk.
+
+<BlogImage src={oozu} alt="Miso Ramen; $13.50" />
+
+I hope I haven't made you *too* hungry! Feel free to check these out if you're ever in the area, and let me know your thoughts :D
