@@ -1,7 +1,7 @@
 ---
 import AnnaHsu from "@components/annahsu.astro";
 
-import { Icon } from 'astro-icon';
+import Hamburger from '@components/hamburger.astro';
 
 const page = new URL(Astro.request.url).pathname;
 
@@ -29,27 +29,33 @@ const navLinks = [
       </a>
     </div>
     <span class="navbar-toggle" id="js-navbar-toggle">
-      <Icon size={36} name="ion:reorder-three" />
+      <Hamburger />
     </span>
   </div>
   <div class="navlinks" id="js-menu">
     {navLinks.map(({ name, link }) => (
-    <a class={page.includes(link) ? 'active link' : 'link'} href={link}>{name}</a>
+    <a class={page.includes(link) ? 'active link' : 'link' } href={link}>{name}</a>
     ))}
   </div>
 </nav>
 
 <style lang="scss">
   nav {
+    position: fixed;
+    background-color: var(--pale);
+    color: inherit;
     display: flex;
     flex-direction: column;
-    padding: 32px 0;
-    max-width: 900px;
+    padding: 32px 32px;
+    max-width: 964px;
     width: 100%;
+    z-index: 999;
   }
 
-  .logo>a {
-    color: inherit;
+  .logo {
+    a {
+      color: var(--black);
+    }
   }
 
   .nav-mobile {
@@ -62,8 +68,26 @@ const navLinks = [
     display: none;
   }
 
+  .navbar-toggle {
+    display: inline-flex;
+  }
+
   .navbar-toggle:hover {
     cursor: pointer;
+  }
+
+  @media (max-width: 800px) {
+    nav {
+      gap: 32px;
+    }
+
+    .active {
+      font-weight: bold;
+    }
+
+    .link {
+      font-size: 20px;
+    }
   }
 
   @media (min-width: 800px) {
@@ -93,14 +117,14 @@ const navLinks = [
       }
 
       &:hover::after {
-          opacity: 1;
-          width: 100%;
+        opacity: 1;
+        width: 100%;
       }
     }
 
     .active::after {
-        opacity: 1;
-        width: 100%;
+      opacity: 1;
+      width: 100%;
     }
 
     .navbar-toggle {
@@ -109,10 +133,13 @@ const navLinks = [
   }
 
   .on {
-    border-bottom: 2px solid var(--med);
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 16px;
+    overflow: hidden;
+
+    min-height: 100vh;
   }
 
   [astro-icon] {
@@ -129,6 +156,7 @@ const navLinks = [
     padding: 0px;
     font-weight: inherit;
   }
+
   a:hover {
     background: none;
   }
