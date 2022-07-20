@@ -21,11 +21,15 @@ const { src, alt } = Astro.props;
     align-items: center;
     text-align: center;
     gap: 4px;
-    margin-bottom: 16px;
+    margin-bottom: var(--bottommargin);
 
     img {
       max-width: 100%;
       height: auto;
     }
+  }
+
+  figcaption {
+    font-style: oblique;
   }
 </style>

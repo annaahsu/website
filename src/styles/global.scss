@@ -23,6 +23,8 @@
   --cut: inset 0px 8px 32px rgba(55, 23, 16, 0.25);
 
   --carddrop: 0px 4px 8px rgba(55, 23, 16, 0.25);
+
+  --bottommargin: 32px;
 }
 
 html {
@@ -49,12 +51,12 @@ h3,
 h4,
 h5,
 h6 {
-  margin-bottom: 32px;
+  margin-bottom: var(--bottommargin);
   line-height: 1.3;
 }
 
 p {
-  margin-bottom: 32px;
+  margin-bottom: var(--bottommargin);
   line-height: 1.5;
 }
 
@@ -80,7 +82,7 @@ blockquote {
   background-color: var(--white);
   color: var(--med);
   padding: 16px;
-  margin-bottom: 16px;
+  margin-bottom: var(--bottommargin);
   border-left: 4px solid var(--med);
   p {
     margin: 0;
@@ -100,17 +102,14 @@ pre.astro-code > code {
 pre {
   position: relative;
   padding: 16px;
-  margin-bottom: 16px;
+  margin-bottom: var(--bottommargin);
   overflow-y: hidden;
   overflow-x: auto;
 }
 
 hr {
   border-top: 1px solid var(--light);
-}
-
-figcaption {
-  font-style: oblique;
+  margin-bottom: var(--bottommargin);
 }
 
 ::-moz-selection {
