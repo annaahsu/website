@@ -32,9 +32,9 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
       <Navbar />
     <Container>
       <h1>How To Take Over The World&trade;</h1>
-      <ButtonBar>
+      <!-- <ButtonBar>
         <ButtonLink href="#">asldkfjaslkfdjlaksjdflkas</ButtonLink>
-      </ButtonBar>
+      </ButtonBar> -->
       <div class="content">
         {allPosts.map((p) => <BlogCard post={p} />)}
       </div>
