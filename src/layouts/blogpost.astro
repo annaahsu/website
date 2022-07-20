@@ -24,14 +24,20 @@ const formatDate = newDate.toLocaleDateString('en-US', options);
       .date {
         font-style: oblique;
       }
+
+      .header {
+        margin-bottom: 32px;
+      }
     </style>
   </head>
 
   <body>
     <Navbar />
     <Container>
-      <h1>{title}</h1>
-      <span class="date">{formatDate}</span>
+      <header class="header">
+        <h1>{title}</h1>
+        <span class="date">{formatDate}</span>
+      </header>
       <slot />
     </Container>
   </body>

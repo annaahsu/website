@@ -13,7 +13,7 @@ const formatDate = newDate.toLocaleDateString('en-US', options);
 <article class="card">
   <a class="cardlink" href={post.url}>
     <div class="content">
-      <header>
+      <header class="header">
         <h1 class="title">{post.frontmatter.title}</h1>
         <span class="date">{formatDate}</span>
       </header>
@@ -52,5 +52,15 @@ const formatDate = newDate.toLocaleDateString('en-US', options);
 
   .date {
     font-style: oblique;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .title {
+    margin-bottom: 0;
   }
 </style>
