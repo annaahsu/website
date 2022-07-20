@@ -80,6 +80,7 @@ blockquote {
   background-color: var(--white);
   color: var(--med);
   padding: 16px;
+  margin-bottom: 16px;
   border-left: 4px solid var(--med);
   p {
     margin: 0;
@@ -99,6 +100,7 @@ pre.astro-code > code {
 pre {
   position: relative;
   padding: 16px;
+  margin-bottom: 16px;
   overflow-y: hidden;
   overflow-x: auto;
 }
