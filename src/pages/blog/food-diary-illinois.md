@@ -13,7 +13,7 @@ setup: |
 
 In early April this year, over my spring break, my dad and I embarked on a journey to check out three of my top choice colleges over four days. It was definitely a crunch, but we managed to pull it off and eat lots of good food along the way. I'll be sharing two of my favorite restaurants that we encountered on our trip!
 
-# [10Q Chicken](https://www.10qchicken.com/)
+## [10Q Chicken](https://www.10qchicken.com/)
 
 Located in Evanston, IL, 10Q Chicken is just right off of Northwestern University's campus. This was the first school among the three that I checked out! Overwhelmed by the unfamiliar place and Chicago wind, my dad and I opened Google Maps and picked a random place to get lunch. 10Q had good reviews and the images looked pretty good! (Bonus points for relatively simple parking—finding space in Evanston is a wild ride.) The restaurant wasn't super busy while we were there, likely since it was early during lunch hour. As we got ready to leave, though, more and more people started entering.
 
@@ -23,7 +23,7 @@ I may be a little biased, but the Korean BBQ Chicken Bowl was phenomenal! I like
 
 <BlogImage src={tenq} alt="Korean BBQ Chicken Bowl; $8.49" />
 
-# [Oozu Ramen](https://oozuramen.com/)
+## [Oozu Ramen](https://oozuramen.com/)
 
 Prior to visiting Champaign-Urbana, [kmh](https://kmh.zone) gave me a list of recommendations, and Oozu Ramen was among the top choices on his list! As someone who was practically raised on Japanese food, I always enjoy trying out Japanese restaurants to see their similarities and differences.
 

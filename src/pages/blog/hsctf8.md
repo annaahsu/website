@@ -17,31 +17,31 @@ From Jun. 14-18, I participated in HSCTF 8, my first CTF with [tjcsc](https://ct
 
 As a fair warning, my writeups tend to be more verbose so those with zero experience can understand.
 
-# LSBlue
+## LSBlue
 
-## Description
+### Description
 
 > Orca watching is an awesome pastime of mine!
 
-## Solution
+### Solution
 
 The title has "LSB" in it, so LSB steganography presumably will show up in our first forensics problem of the CTF! Thankfully, [zsteg](https://github.com/zed-0xff/zsteg) (which can detect LSB steganography in PNGs) does just the trick. Running `zsteg lsblue.png` in my terminal gives me the flag.
 
 Forensics often requires command line tools, and many people online have posted lists of helpful programs to use! [Here](https://github.com/apsdehal/awesome-ctf/blob/master/README.md) is an example of one (that includes categories beyond forensics as well).
 
-## Flag
+### Flag
 
 ```
 flag{0rc45_4r3nt_6lu3_s1lly_4895131}
 ```
 
-# pallets-of-gold
+## pallets-of-gold
 
-## Description
+### Description
 
 > It doesn't really look like gold to me...
 
-## Solution
+### Solution
 
 I didn't actually solve this until later into the CTF when there was only crypto left (ew) &mdash; one of my teammates did it when it first came out. However, I figured I might as well for fun :)) This challenge wasn't released at the start of the CTF, so I decided to skip trying `grep`, `strings`, and other basic techniques for PNGs. It also wasn't corrupted, since we were able to open it just fine via File Explorer. Stegsolve is practically my best friend for forensics, so I thought I'd take a shot at it.
 
@@ -51,19 +51,19 @@ Based on the flag, I'm pretty sure this was not the intended solution, but hey, 
 
 <BlogImage src={pallets} alt="Red plane 0 served my purpose!" />
 
-## Flag
+### Flag
 
 ```
 flag{plte_chunks_remind_me_of_gifs}
 ```
 
-# glass-windows
+## glass-windows
 
-## Description
+### Description
 
 > I found a cool glass texture.
 
-## Solutions
+### Solutions
 
 As I'm sure is already clear, the descriptions to these challenges are not particularly helpful, although the titles are useful enough. This challenge reminded me of Fish from AngstromCTF 2021, so I followed the same solution method.
 
@@ -73,19 +73,19 @@ You can get the flag in a variety of flavors &mdash; from `Colour Inversion (Xor
 
 <BlogImage src={glass} alt="Colour Inversion (Xor) was pretty clean" />
 
-## Flag
+### Flag
 
 ```
 flag{this_is_why_i_use_premultiplied_alpha}
 ```
 
-# audio-frequency-stego
+## audio-frequency-stego
 
-## Description
+### Description
 
 > What a mundane song, it's just the same note repeated over and over. But could there perhaps be two different notes?
 
-## Solution
+### Solution
 
 The title made it pretty clear that it would be audio forensics, which I've been relatively successful with during my short CTF career, so I decided to take a stab at it. Upon playback, we hear an A played for the duration of the file, although we hear static on occasion, indicating there's something hidden inside of the audio (a defining trait of audio forensics, as some might say).
 
@@ -113,7 +113,7 @@ After obtaining the binary, convert it to ASCII, which I did via an [online conv
 
 Overall, this challenge just required some experience (and a tad of guessing if you didn't have any). I'd like to thank the TJ Microelectronics Research Lab for my past exposures to audio signals letting me recognize what this challenge was looking for!
 
-## Flag
+### Flag
 
 ```
 flag{sl1gh_p1tch_ch4ng3}

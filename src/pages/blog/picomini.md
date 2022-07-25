@@ -15,15 +15,15 @@ _Originally posted on the TJCSC website [(login)](https://activities.tjhsst.edu/
 
 Redpwn decided to host picoMini by redpwn in the midst of AP and finals cram season, which was unfortunate. However, I did solve their two lowest level challenges, and their detailed step-by-step solutions are below. If you're a beginner, I hope you find this helpful!
 
-# web - login
+## web - login
 
-## Description
+### Description
 
 > My dog-sitter's brother made this website but I can't get in; can you help?
 >
 > [login.mars.picoctf.net](https://login.mars.picoctf.net)
 
-## Solution
+### Solution
 
 On first inspection, when faced with a [login screen](https://login.mars.picoctf.net), it seems like SQL injection, because isn't that what always happens with logins in CTFs? However, it's a lot simpler than that. After navigating to website source, we encounter `index.js`. Upon pretty-printing, it's just vanilla JS.
 
@@ -56,19 +56,19 @@ atob("cGljb0NURns1M3J2M3JfNTNydjNyXzUzcnYzcl81M3J2M3JfNTNydjNyfQ");
 
 If you're not convinced it's the real flag, you can decode the username (`admin`) and input both into the login form, which results in an alert announcing the flag.
 
-## Flag
+### Flag
 
 ```
 picoCTF{53rv3r_53rv3r_53rv3r_53rv3r_53rv3r}
 ```
 
-# forensics - advanced-potion-making
+## forensics - advanced-potion-making
 
-## Description
+### Description
 
 > Ron just found his own copy of advanced potion making, but its been corrupted by some kind of spell. Help him recover it!
 
-## Solution
+### Solution
 
 Ah, forensics. The challenge-provided `advanced-potion-making` has no file extension, but it's probably a good bet to say it's a corrupted PNG file. `file advanced-potion-making` returned `advanced-potion-making: data` (unlikely to work, but it's worth a shot and certainly "obligatory" for forensics challenges).
 
@@ -92,7 +92,7 @@ The hardest part of CTF really is reading the flag. For some reason, I thought t
 
 <BlogImage src={flag} alt="why was this so hard to read aaaaaaaaa" />
 
-## Flag
+### Flag
 
 ```
 picoCTF{w1z4rdry}

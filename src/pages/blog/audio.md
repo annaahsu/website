@@ -22,27 +22,27 @@ setup: |
 
 For my fourth semester Audio Electronics class, we were tasked with building a sampler and sequencer using the [Teensy 4.1](https://www.pjrc.com/store/teensy41.html) and [Audio Shield](https://www.pjrc.com/store/teensy3_audio.html).
 
-# Introduction
+## Introduction
 
 For this project, we are using the provided Teensy microcontroller and audio shield to build a sampler and sequencer, using buttons and potentiometers to control the sampling and sound effects.
 
 The hardware setup is seemingly relatively simple, as the Teensy prepackaged breakouts have been set up for quick usage, allowing us to focus our time on the more time consuming programming and understanding behind the theoretical concepts. From sound effects such as pitch shift, echo, and filtering, we will be utilizing the Teensyduino library within an Arduino IDE.
 
-# Objective
+## Objective
 
 Through this project, we’re aiming to gain a better understanding of digital signal processing (DSP) with a practical application. A very common and relatively simple use of DSP is in sound modification, which can be seen in products ranging from Auto-Tune to digital keyboards. Due to its simplicity, it’s a good first project when diving into the world of audio electronics and DSP. In this project, we will take short sound samples and apply a variety of sound effects to them, from bitcrusher to pitch shift.
 
-# Methods and Materials
+## Methods and Materials
 
 We will be using the Teensy 4.1 microprocessor and Teensy audio shield as our primary source of hardware used for processing, supplemented by a plethora of buttons and potentiometers for user input, and wires to connect parts of the circuit together. As for software, we will be using the [Teensyduino library](https://www.pjrc.com/teensy/td_download.html) accompanied by the [traditional Arduino IDE](https://www.arduino.cc/en/software). (Note that the Windows app version is not compatible with Teensyduino.) The last piece of software we needed to download was the [Teensy Loader](https://www.pjrc.com/teensy/loader.html). Pretty easy to set up overall! Of course, things will prove to move in a totally different direction once we actually try to compile and run our code.
 
-# Procedures
+## Procedures
 
-## Planning
+### Planning
 
 As people with less experience in the world of DSP, Andy and I went on the search for previous projects that were similar to our end goal. We were able to find a [project](https://www.hackster.io/H0meMadeGarbage/diy-sampler-using-teensy-audio-board-01b47b) that had developed a sampler based on an earlier Teensy version. It was well documented and clear, so we chose to follow along with their project, since it was complete with a hardware and software setup. Since we were both remaining virtual for the rest of the year, we chose to build everything independently, although we worked together to troubleshoot issues.
 
-## Hardware
+### Hardware
 
 This project involves both a hardware and a software component. Due to the nature of the virtual environment, the class as a whole opted for a less involved approach, and we selected Teensy microcontrollers to replace a section of our hardware.
 
@@ -102,7 +102,7 @@ AudioConnection          patchCord21(mixer7, 0, i2s1, 1);
 
 In terms of hardware used for product interaction, this was a super simple circuit. With 8 pushbuttons and 3 potentiometers, we were able to assemble it with the help of a [very bare schematic](https://www.hackster.io/H0meMadeGarbage/diy-sampler-using-teensy-audio-board-01b47b#toc-sampler-production-2).
 
-## Software Development
+### Software Development
 
 With software, there were two things that needed to be accomplished: the former being the setup of audio files, and the latter being the code to run the Teensy itself. However, I first set up a folder on my computer called audio, where I stored two folders: one for my actual code and audio files, and the other for audio file conversation. I’ll speak more on that later.
 
@@ -132,9 +132,9 @@ After pressing the button, Windows would make the USB sound. According to Make T
 
 With the semester soon approaching a close, we made the difficult decision to halt the project since we weren’t getting anywhere.
 
-# Results
+## Results
 
-## Circuit Shots
+### Circuit Shots
 
 <BlogImage src={side} alt="side view of circuit" />
 <BlogImage src={slant} alt="slant view of circuit" />
@@ -142,7 +142,7 @@ With the semester soon approaching a close, we made the difficult decision to ha
 
 In all seriousness, I’m thankful I wired the circuit before I started on the software development, since the discrete component part of the project was super successful. (I finished it in a single block!) If possible, in the summer, I’d like to see if the Teensy was the problem, which seems likely, and try to get it working as planned.
 
-## Analysis
+### Analysis
 
 As we know from Analog, signals are waves that can be represented by sine and cosine functions, and using different techniques, we can manipulate the signal to alter its sound quality — from cleaning up the sound to changing its timbre, we’ve got a variety of choices!
 
@@ -166,7 +166,7 @@ Audio file formats (i.e., WAV and mp3) are digital formats to the analog audio w
 
 Bringing us back to DSP, it’s critical in the handling of analog signals because it allows for faster transmission and easier storage, such as saving a recording to a computer or phone. Noise cancellation is also achieved using DSP (destructive interference to cancel out sound). A gross simplification of DSP would be taking data from a signal and performing mathematical operations on it to achieve an end goal you may have. There’s still a lot more in this field left to learn!
 
-# Conclusion and Reflections
+## Conclusion and Reflections
 
 Theoretically, if everything had worked, we should have been able to record our own audio clips to edit using the Teensy 4.1 and Audio Shield, as detailed above in the Analysis section. The lengths of the audio clips would’ve been limited by the Teensy, but the theory behind a more sophisticated sampler and sequencer would’ve been the same.
 
@@ -182,7 +182,7 @@ I’m disappointed that the Teensy didn’t work for me, since I’m really some
 
 To future Audio students: there’s a lot of stuff that’s probably confusing in Audio (so much math!! AAAAAAAAAAAAA), but it’s still lots of fun. Don’t be afraid to ask your friends for help and collaborate on your projects. Most of all, have fun!!
 
-# References
+## References
 
 You can take a look below at where I got my research, inspiration, and more! Special thanks to Kari (literally class carry! that was a terrible pun) for coming up with this project, explaining it eloquently, and helping us troubleshoot.
 
