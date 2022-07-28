@@ -30,7 +30,7 @@ The hardware setup is seemingly relatively simple, as the Teensy prepackaged bre
 
 ## Objective
 
-Through this project, we’re aiming to gain a better understanding of digital signal processing (DSP) with a practical application. A very common and relatively simple use of DSP is in sound modification, which can be seen in products ranging from Auto-Tune to digital keyboards. Due to its simplicity, it’s a good first project when diving into the world of audio electronics and DSP. In this project, we will take short sound samples and apply a variety of sound effects to them, from bitcrusher to pitch shift.
+Through this project, we're aiming to gain a better understanding of digital signal processing (DSP) with a practical application. A very common and relatively simple use of DSP is in sound modification, which can be seen in products ranging from Auto-Tune to digital keyboards. Due to its simplicity, it's a good first project when diving into the world of audio electronics and DSP. In this project, we will take short sound samples and apply a variety of sound effects to them, from bitcrusher to pitch shift.
 
 ## Methods and Materials
 
@@ -46,11 +46,11 @@ As people with less experience in the world of DSP, Andy and I went on the searc
 
 This project involves both a hardware and a software component. Due to the nature of the virtual environment, the class as a whole opted for a less involved approach, and we selected Teensy microcontrollers to replace a section of our hardware.
 
-After receiving the Teensy 4.1 and Audio Shield, we had to solder female pin headers so we could attach the two pieces, which weren’t originally designed to be used together. Otherwise, the Teensy was physically ready to go! The biggest hassle involving Teensy setup is the code behind it to link pieces together.
+After receiving the Teensy 4.1 and Audio Shield, we had to solder female pin headers so we could attach the two pieces, which weren't originally designed to be used together. Otherwise, the Teensy was physically ready to go! The biggest hassle involving Teensy setup is the code behind it to link pieces together.
 
 <BlogImage src={asdt} alt="flow chart using Audio System Design Tool" />
 
-Using the [Audio System Design Tool](https://www.pjrc.com/teensy/gui/index.html), we’re able to design the connections between our circuit, and on export, we’re able to get setup code generated for us, shown below.
+Using the [Audio System Design Tool](https://www.pjrc.com/teensy/gui/index.html), we're able to design the connections between our circuit, and on export, we're able to get setup code generated for us, shown below.
 
 ```ino
 #include <Audio.h>
@@ -104,23 +104,23 @@ In terms of hardware used for product interaction, this was a super simple circu
 
 ### Software Development
 
-With software, there were two things that needed to be accomplished: the former being the setup of audio files, and the latter being the code to run the Teensy itself. However, I first set up a folder on my computer called audio, where I stored two folders: one for my actual code and audio files, and the other for audio file conversation. I’ll speak more on that later.
+With software, there were two things that needed to be accomplished: the former being the setup of audio files, and the latter being the code to run the Teensy itself. However, I first set up a folder on my computer called audio, where I stored two folders: one for my actual code and audio files, and the other for audio file conversation. I'll speak more on that later.
 
-Directory List: note that I am (update: as of June 2022, I am no longer) a Windows user (for the GUIs) but I also use Ubuntu 20.04 on Windows Subsystem for Linux (for the terminal). Since I’m using Arduino on Windows, most of my stuff is going to be on the Windows end, but if it involves the terminal, it’ll probably be in Linux. Thankfully I don’t think I use the terminal a whole lot in this project!
+Directory List: note that I am (update: as of June 2022, I am no longer) a Windows user (for the GUIs) but I also use Ubuntu 20.04 on Windows Subsystem for Linux (for the terminal). Since I'm using Arduino on Windows, most of my stuff is going to be on the Windows end, but if it involves the terminal, it'll probably be in Linux. Thankfully I don't think I use the terminal a whole lot in this project!
 
 <BlogImage src={directory} alt="view of my directory" />
 
-For the code to run the audio file, it had to be in binary form, so using the [wav2sketch executable file](https://github.com/UECIDE/Teensy3/blob/master/cores/teensy3/files/libraries/Audio/examples/SamplePlayer/wav2sketch/wav2sketch.exe), I converted 6 short 2 second WAV files, named Slip1.wav, Slip2.wav, Slip3.wav, etc., into C++ in the wav2sketch folder by clicking on the executable file. The program’s a bit janky, since it converted files in some cases but not in others. Sometimes I had to remove Slip1.wav and the associated C++ files to get it to convert the others!
+For the code to run the audio file, it had to be in binary form, so using the [wav2sketch executable file](https://github.com/UECIDE/Teensy3/blob/master/cores/teensy3/files/libraries/Audio/examples/SamplePlayer/wav2sketch/wav2sketch.exe), I converted 6 short 2 second WAV files, named Slip1.wav, Slip2.wav, Slip3.wav, etc., into C++ in the wav2sketch folder by clicking on the executable file. The program's a bit janky, since it converted files in some cases but not in others. Sometimes I had to remove Slip1.wav and the associated C++ files to get it to convert the others!
 
 As it turns out, the project we were following shared their [code](https://www.hackster.io/H0meMadeGarbage/diy-sampler-using-teensy-audio-board-01b47b#toc-arduino-program-4), too! (Yay, open source!) After moving the C++ versions of the WAV files into the folder with my main Teensy code in `main.ino`, everything compiled, and after exporting, in `main` there is a `main.ino.TEENSY41.hex` file. Unfortunately, this is where my success ended and things started getting dicey.
 
-Teensy itself is not a serial device — it uses [HID](https://www.pjrc.com/teensy/troubleshoot.html). It has to be programmed once using the preloaded Blink program in order for it to show up in the port section of board setup. For most people, their port is COM3 or COM4, but for mine, it had a really janky name. Google said it was fine, but I’m not really sure if it actually is.
+Teensy itself is not a serial device — it uses [HID](https://www.pjrc.com/teensy/troubleshoot.html). It has to be programmed once using the preloaded Blink program in order for it to show up in the port section of board setup. For most people, their port is COM3 or COM4, but for mine, it had a really janky name. Google said it was fine, but I'm not really sure if it actually is.
 
 Tools Menu on my Arduino IDE with Board setup below.
 
 <BlogImage src={port} alt="tools menu" />
 
-After compiling, the Arduino IDE tells us that it was successful. If it wasn’t, it would display an error message at the bottom saying where things went wrong.
+After compiling, the Arduino IDE tells us that it was successful. If it wasn't, it would display an error message at the bottom saying where things went wrong.
 
 <BlogImage src={ide} alt="IDE display" />
 
@@ -128,9 +128,9 @@ We would then be redirected to the Teensy Loader application, which indicated th
 
 <BlogImage src={loader} alt="Teensy Loader" />
 
-After pressing the button, Windows would make the USB sound. According to Make Tech Easier, [this can be a sign that there's a problem](https://www.maketecheasier.com/stop-random-usb-connect-noises-windows/#:~:text=Sometimes%20random%20USB%20noises%20could,what%20device%20you%20plug%20in.). Quite frankly, there was. No matter what I did, the Teensy would not enter the HalfKay Bootloader Mode for me to upload and run my code. Even after extensive troubleshooting, it’s not clear why. After uploading either of the test files `blink_fast.hex` or `blink_slow.hex`, it was unwilling to program. I tried uploading a blank sketch, and the Teensy Loader still indicated that something was taking up space.
+After pressing the button, Windows would make the USB sound. According to Make Tech Easier, [this can be a sign that there's a problem](https://www.maketecheasier.com/stop-random-usb-connect-noises-windows/#:~:text=Sometimes%20random%20USB%20noises%20could,what%20device%20you%20plug%20in.). Quite frankly, there was. No matter what I did, the Teensy would not enter the HalfKay Bootloader Mode for me to upload and run my code. Even after extensive troubleshooting, it's not clear why. After uploading either of the test files `blink_fast.hex` or `blink_slow.hex`, it was unwilling to program. I tried uploading a blank sketch, and the Teensy Loader still indicated that something was taking up space.
 
-With the semester soon approaching a close, we made the difficult decision to halt the project since we weren’t getting anywhere.
+With the semester soon approaching a close, we made the difficult decision to halt the project since we weren't getting anywhere.
 
 ## Results
 
@@ -140,13 +140,13 @@ With the semester soon approaching a close, we made the difficult decision to ha
 <BlogImage src={slant} alt="slant view of circuit" />
 <BlogImage src={top} alt="top view of circuit" />
 
-In all seriousness, I’m thankful I wired the circuit before I started on the software development, since the discrete component part of the project was super successful. (I finished it in a single block!) If possible, in the summer, I’d like to see if the Teensy was the problem, which seems likely, and try to get it working as planned.
+In all seriousness, I'm thankful I wired the circuit before I started on the software development, since the discrete component part of the project was super successful. (I finished it in a single block!) If possible, in the summer, I'd like to see if the Teensy was the problem, which seems likely, and try to get it working as planned.
 
 ### Analysis
 
-As we know from Analog, signals are waves that can be represented by sine and cosine functions, and using different techniques, we can manipulate the signal to alter its sound quality — from cleaning up the sound to changing its timbre, we’ve got a variety of choices!
+As we know from Analog, signals are waves that can be represented by sine and cosine functions, and using different techniques, we can manipulate the signal to alter its sound quality — from cleaning up the sound to changing its timbre, we've got a variety of choices!
 
-One such way of doing this is through digital signal processing (DSP). When a signal is digitized, it can easily be manipulated through the 0s and 1s that are representing it. Instead of using purely hardware, we’re able to more easily transfer our thoughts from our heads to actual results through code in embedded systems.
+One such way of doing this is through digital signal processing (DSP). When a signal is digitized, it can easily be manipulated through the 0s and 1s that are representing it. Instead of using purely hardware, we're able to more easily transfer our thoughts from our heads to actual results through code in embedded systems.
 
 However, since our input and output will be an analog signal, we have to produce a shift between analog and digital (and vice versa). The entire processes is illustrated well by the diagram below from Chapter 3 of The Scientist and Engineer's Guide to Digital Signal Processing:
 
@@ -167,23 +167,23 @@ A digital to analog convertor (DAC) basically undos what an ADC does. Analog Pla
 
 Audio file formats (i.e., WAV and mp3) are digital formats to the analog audio we physically hear, we rely on these technologies in order to do any sort of audio manipulation! Although ADC and DAC are not that complicated, since signals in real life are typically analog.
 
-Bringing us back to DSP, it’s critical in the handling of analog signals because it allows for faster transmission and easier storage, such as saving a recording to a computer or phone. Noise cancellation is also achieved using DSP (destructive interference to cancel out sound). A gross simplification of DSP would be taking data from a signal and performing mathematical operations on it to achieve an end goal you may have. There’s still a lot more in this field left to learn!
+Bringing us back to DSP, it's critical in the handling of analog signals because it allows for faster transmission and easier storage, such as saving a recording to a computer or phone. Noise cancellation is also achieved using DSP (destructive interference to cancel out sound). A gross simplification of DSP would be taking data from a signal and performing mathematical operations on it to achieve an end goal you may have. There's still a lot more in this field left to learn!
 
 ## Conclusion and Reflections
 
-Theoretically, if everything had worked, we should have been able to record our own audio clips to edit using the Teensy 4.1 and Audio Shield, as detailed above in the Analysis section. The lengths of the audio clips would’ve been limited by the Teensy, but the theory behind a more sophisticated sampler and sequencer would’ve been the same.
+Theoretically, if everything had worked, we should have been able to record our own audio clips to edit using the Teensy 4.1 and Audio Shield, as detailed above in the Analysis section. The lengths of the audio clips would've been limited by the Teensy, but the theory behind a more sophisticated sampler and sequencer would've been the same.
 
-In the future, we could continue building on using discrete components (a much more daunting and time consuming task than it may seem) so we can control some aspects of the circuit, such as the input and processing quality. Of course, we’re always constrained by time, money, and other resources.
+In the future, we could continue building on using discrete components (a much more daunting and time consuming task than it may seem) so we can control some aspects of the circuit, such as the input and processing quality. Of course, we're always constrained by time, money, and other resources.
 
-Research is a vital skill to have, because it helps you learn things and build from them, as well as letting you find and utilize the best resources at your disposal. It doesn’t have to be academic research — for example, you could be researching which domain name is best for a project you have in mind! Although the Audio project was likely still quite different from senior research, we still had to find information to build our projects off of. It’s certainly good practice for next year!
+Research is a vital skill to have, because it helps you learn things and build from them, as well as letting you find and utilize the best resources at your disposal. It doesn't have to be academic research — for example, you could be researching which domain name is best for a project you have in mind! Although the Audio project was likely still quite different from senior research, we still had to find information to build our projects off of. It's certainly good practice for next year!
 
-If there’s any skill I learned through this project, it’s been how to troubleshoot quickly. Since we were met with so many problems throughout the project, it was critical that we resolve as many of them as soon as possible. In fact, we were able to resolve the first issues we encountered (i.e., duplicate libraries, non compiling code, etc.). Sadly, we were still heavily constrained by time, so we weren’t able to fix the Teensy. Of course, I also learned a lot of technical stuff like how DSP works, but I think that was my biggest takeaway.
+If there's any skill I learned through this project, it's been how to troubleshoot quickly. Since we were met with so many problems throughout the project, it was critical that we resolve as many of them as soon as possible. In fact, we were able to resolve the first issues we encountered (i.e., duplicate libraries, non compiling code, etc.). Sadly, we were still heavily constrained by time, so we weren't able to fix the Teensy. Of course, I also learned a lot of technical stuff like how DSP works, but I think that was my biggest takeaway.
 
-Overall, I really enjoyed putting the circuit together. I know that it’s not a super complicated circuit — it’s literally just wires, pushbuttons, and potentiometers, but I really missed the feeling of touching discrete components. This is the part of electronics that makes me like it just as much, if not more, than CS. Every time I think that electronics isn’t for me, as soon as I build something again, the spark comes back.
+Overall, I really enjoyed putting the circuit together. I know that it's not a super complicated circuit — it's literally just wires, pushbuttons, and potentiometers, but I really missed the feeling of touching discrete components. This is the part of electronics that makes me like it just as much, if not more, than CS. Every time I think that electronics isn't for me, as soon as I build something again, the spark comes back.
 
-I’m disappointed that the Teensy didn’t work for me, since I’m really someone that is highly motivated by tangible final products. It’s much more difficult to try to experiment with different functions through imagination and theory rather than physically altering code and hearing the effects. I guess there’s not a whole lot that I could’ve done otherwise, but I would’ve liked a better understanding of the theory going in before starting the project. Since 4th Quarter goes by so fast, it’s hard to catch up on the theory since you just don’t have enough time.
+I'm disappointed that the Teensy didn't work for me, since I'm really someone that is highly motivated by tangible final products. It's much more difficult to try to experiment with different functions through imagination and theory rather than physically altering code and hearing the effects. I guess there's not a whole lot that I could've done otherwise, but I would've liked a better understanding of the theory going in before starting the project. Since 4th Quarter goes by so fast, it's hard to catch up on the theory since you just don't have enough time.
 
-To future Audio students: there’s a lot of stuff that’s probably confusing in Audio (so much math!! AAAAAAAAAAAAA), but it’s still lots of fun. Don’t be afraid to ask your friends for help and collaborate on your projects. Most of all, have fun!!
+To future Audio students: there's a lot of stuff that's probably confusing in Audio (so much math!! AAAAAAAAAAAAA), but it's still lots of fun. Don't be afraid to ask your friends for help and collaborate on your projects. Most of all, have fun!!
 
 ## References
 
