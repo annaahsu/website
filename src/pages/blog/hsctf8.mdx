@@ -49,7 +49,7 @@ Flipping through the various options using the JAR file is pretty fun, and I not
 
 Based on the flag, I'm pretty sure this was not the intended solution, but hey, if it works, it works.
 
-<BlogImage src={pallets} alt="Red plane 0 served my purpose!" />
+<BlogImage src={pallets} alt="Red plane 0 served my purpose!" client:visible />
 
 ### Flag
 
@@ -71,7 +71,7 @@ I'm sure some of my teammates are delighted with my use of stegsolve once more.
 
 You can get the flag in a variety of flavors &mdash; from `Colour Inversion (Xor)` to `Full green`, there's one for everybody!
 
-<BlogImage src={glass} alt="Colour Inversion (Xor) was pretty clean" />
+<BlogImage src={glass} alt="Colour Inversion (Xor) was pretty clean" client:visible />
 
 ### Flag
 
@@ -93,11 +93,11 @@ Typically, [Audacity](https://www.audacityteam.org/) is a good choice for dealin
 
 Instead of viewing it as a waveform (default in Sonic Visualiser; amplitude change over time), I opened a spectrogram pane (Pane > Add Spectrogram; frequency change over time), since the challenge title indicates that frequency is pretty important here. It's important to modify the appearance of the spectogram for higher contrast so if there are abnormalities they can be quickly recognized. Below was my setup for the spectrogram. You can play around with the values!
 
-<BlogImage src={spectrogramsetup} alt="spectrogram setup" />
+<BlogImage src={spectrogramsetup} alt="spectrogram setup" client:visible />
 
 This resulted in a pretty clear spectrogram. Of course, a clear spectrogram is only helpful if you know what you're looking for.
 
-<BlogImage src={spectrogram} alt="spectrogram" />
+<BlogImage src={spectrogram} alt="spectrogram" client:visible />
 
 A lot of writeups I saw on the internet use spectrograms to find hidden pictures within audio files, but it's pretty clear that's not what we had. However, we do see stripes of two different colors: blue and green/black. During my earlier explorations, some of the different spectrogram values yielded visuals that looked like square waves. What do square waves mean? Binary!!
 

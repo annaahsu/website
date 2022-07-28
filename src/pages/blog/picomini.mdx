@@ -78,6 +78,7 @@ If a file is corrupted, it can be fixed with a hex editor such as [HexEd.it](htt
 <BlogImage
   src={hexedit}
   alt="a glimpse of the contents of the corrupted file"
+  client:visible
 />
 
 After address `0x0000009E`, most of the content is repeated and not going to be critical (save the IEND), so the bulk of our work is going to be higher up.
@@ -94,7 +95,7 @@ However, when I see red (or really any solid color), I try using [stegsolve](htt
 
 The hardest part of CTF really is reading the flag. For some reason, I thought the `1` was an `l` at first!
 
-<BlogImage src={flag} alt="why was this so hard to read aaaaaaaaa" />
+<BlogImage src={flag} alt="why was this so hard to read aaaaaaaaa" client:visible />
 
 ### Flag
 
