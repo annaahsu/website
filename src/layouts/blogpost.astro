@@ -5,8 +5,7 @@ import Container from '@components/container.astro';
 import Head from '@components/head.astro';
 import Navbar from '@components/navbar.astro'
 
-const { content } = Astro.props;
-const { title, description, publishDate, permalink } = content;
+const { title, description, publishDate, permalink } = Astro.props;
 
 const newDate = new Date(publishDate);
 const options = { year: 'numeric', month: 'long', day: 'numeric' };
@@ -16,7 +15,7 @@ const formatDate = newDate.toLocaleDateString('en-US', options);
 <PageLayout>
 
   <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-lucario.css" />
+    <link rel="stylesheet" href="/prism-laserwave.css" />
 
     <Head {title} {description} {permalink} />
 
