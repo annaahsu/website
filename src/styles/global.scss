@@ -95,16 +95,8 @@ code {
   border-radius: 4px;
 }
 
-pre.astro-code > code {
+pre > code {
   all: unset;
-}
-
-pre {
-  position: relative;
-  padding: 16px;
-  margin-bottom: var(--bottommargin);
-  overflow-y: hidden;
-  overflow-x: auto;
 }
 
 hr {
