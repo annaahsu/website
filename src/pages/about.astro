@@ -1,5 +1,5 @@
 ---
-import { Image } from '@astrojs/image/components';
+import { Picture } from '@astrojs/image/components';
 import headshot from '@assets/headshot.png';
 import PageLayout from '@layouts/page.astro';
 
@@ -113,7 +113,7 @@ const permalink = "/about";
               <div class="rectangle" />
             </div>
             <div class="headshot">
-              <Image src={headshot} width={300} alt="Anna Hsu headshot" />
+              <Picture src={headshot} widths={[300]} sizes="(max-width: 900px) 300px" alt="Anna Hsu headshot" />
             </div>
           </div>
           <div class="bar">
