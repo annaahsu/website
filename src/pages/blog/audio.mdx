@@ -1,25 +1,25 @@
 ---
-title: 'To Teensy or Not to Teensy: That Is the Question'
+title: "To Teensy or Not to Teensy: That Is the Question"
 publishDate: 2021-05-17
 description: Final paper for Audio Electronics.
 permalink: /blog/audio
-setup: |
-  import Layout from '@layouts/blogpost.astro'
-  import { Image } from '@astrojs/image/components'
-  import BlogImage from '@components/blogimage.astro'
-  import adc from '@assets/blog/audio/adc.png'
-  import adcdac from '@assets/blog/audio/adcdac.png'
-  import asdt from '@assets/blog/audio/asdt.png'
-  import directory from '@assets/blog/audio/directory.png'
-  import dsp from '@assets/blog/audio/dsp.png'
-  import ide from '@assets/blog/audio/ide.png'
-  import loader from '@assets/blog/audio/loader.png'
-  import port from '@assets/blog/audio/port.png'
-  import side from '@assets/blog/audio/side.jpg'
-  import slant from '@assets/blog/audio/slant.jpg'
-  import top from '@assets/blog/audio/top.jpg'
 ---
 
+import Layout from "@layouts/blogpost.astro";
+import BlogImage from "@components/blogimage.astro";
+import adc from "@assets/blog/audio/adc.png";
+import adcdac from "@assets/blog/audio/adcdac.png";
+import asdt from "@assets/blog/audio/asdt.png";
+import directory from "@assets/blog/audio/directory.png";
+import dsp from "@assets/blog/audio/dsp.png";
+import ide from "@assets/blog/audio/ide.png";
+import loader from "@assets/blog/audio/loader.png";
+import port from "@assets/blog/audio/port.png";
+import side from "@assets/blog/audio/side.jpg";
+import slant from "@assets/blog/audio/slant.jpg";
+import top from "@assets/blog/audio/top.jpg";
+
+<Layout { ...frontmatter }>
 For my fourth semester Audio Electronics class, we were tasked with building a sampler and sequencer using the [Teensy 4.1](https://www.pjrc.com/store/teensy41.html) and [Audio Shield](https://www.pjrc.com/store/teensy3_audio.html).
 
 ## Introduction
@@ -52,7 +52,7 @@ After receiving the Teensy 4.1 and Audio Shield, we had to solder female pin hea
 
 Using the [Audio System Design Tool](https://www.pjrc.com/teensy/gui/index.html), we’re able to design the connections between our circuit, and on export, we’re able to get setup code generated for us, shown below.
 
-```c
+```ino
 #include <Audio.h>
 #include <Wire.h>
 #include <SPI.h>
@@ -150,7 +150,10 @@ One such way of doing this is through digital signal processing (DSP). When a si
 
 However, since our input and output will be an analog signal, we have to produce a shift between analog and digital (and vice versa). The entire processes is illustrated well by the diagram below from Chapter 3 of The Scientist and Engineer's Guide to Digital Signal Processing:
 
-<BlogImage src={dsp} alt="explanation of DSP from analog input to analog output" />
+<BlogImage
+  src={dsp}
+  alt="explanation of DSP from analog input to analog output"
+/>
 
 Our input signal first has to be filtered to remove noise to produce the best results during conversion. It then undergoes conversion through an analog to digital convertor (ADC). An ADC takes the analog input and for a given time interval, approximates the value of the signal and represents it using binary, like the image below from All About Circuits.
 
@@ -191,3 +194,5 @@ You can take a look below at where I got my research, inspiration, and more! Spe
 - [Volume 4, Chapter 13 of Lessons in Electric Circuits by Tony R. Kuphaldt](https://www.allaboutcircuits.com/textbook/digital/chpt-13/practical-considerations-adc-circuits/)
 - [Analog Planet's great graphic of ADCs and DACs](https://www.analogplanet.com/content/analog-digital-converter-files-identified-converters-profiled)
 - [Analog Devices' _A Beginner's Guide to Digital Signal Processing (DSP)_](https://www.analog.com/en/design-center/landing-pages/001/beginners-guide-to-dsp.html)
+
+</Layout>
