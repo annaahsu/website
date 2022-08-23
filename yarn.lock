@@ -10,10 +10,10 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@astrojs/compiler@^0.23.1":
-  version "0.23.1"
-  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-0.23.1.tgz#acfa7ca3c4e587b269b746bed0e625c9c2e558cb"
-  integrity sha512-KsoDrASGwTKZoWXbjy8SlIeoDv7y1OfBJtHVLuPuzhConA8e0SZpGzFqIuVRfG4bhisSTptZLDQZ7oxwgPv2jA==
+"@astrojs/compiler@^0.23.3":
+  version "0.23.3"
+  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-0.23.3.tgz#25af8efda9c92dbc8745341c3a2544caa4c689dc"
+  integrity sha512-eBWo0d3DoRDeg2Di1/5YJtOXh5eGFSjJMp1wVoVfoITHR4egdUGgsrDHZTzj0a25M/S9W5S6SpXCyNWcqi8jOA==
 
 "@astrojs/image@^0.3.4":
   version "0.3.4"
@@ -956,12 +956,12 @@ astro-robots-txt@^0.3.7:
     valid-filename "^4.0.0"
     zod "^3.17.9"
 
-astro@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-1.0.3.tgz#22c119fa1a36cc6999262f4f7b526b1794d98cf4"
-  integrity sha512-QaKFZIhraQaoWqg7s7wNCAuMI+r50UzmnlWhQAl7IMJ0RQ00IVwAi1sV7IMjf2h/iRT/b87xqN4aNlBDWf/qyg==
+astro@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-1.0.8.tgz#a7b449698a4df1cafb63ec40c7224fe4bfb59e04"
+  integrity sha512-cWey5M/EjdgeZCRlOAB6YP05ui3U9ZfHPdb4r5HmumOE/1w8auDqRiHPpb2RCGYD7RpxOXcJu5XfJL4V2F1UpQ==
   dependencies:
-    "@astrojs/compiler" "^0.23.1"
+    "@astrojs/compiler" "^0.23.3"
     "@astrojs/language-server" "^0.20.0"
     "@astrojs/markdown-remark" "^1.0.0"
     "@astrojs/telemetry" "^1.0.0"
@@ -1013,7 +1013,7 @@ astro@^1.0.3:
     tsconfig-resolver "^3.0.1"
     unist-util-visit "^4.1.0"
     vfile "^5.3.2"
-    vite "3.0.5"
+    vite "3.0.9"
     yargs-parser "^21.0.1"
     zod "^3.17.3"
 
@@ -3916,6 +3916,13 @@ reusify@^1.0.4:
   resolved "https://registry.yarnpkg.com/reusify/-/reusify-1.0.4.tgz#90da382b1e126efc02146e90845a88db12925d76"
   integrity sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==
 
+"rollup@>=2.75.6 <2.77.0 || ~2.77.0":
+  version "2.77.3"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.77.3.tgz#8f00418d3a2740036e15deb653bed1a90ee0cc12"
+  integrity sha512-/qxNTG7FbmefJWoeeYJFbHehJ2HNWnjkAFRKzWN/45eNBBF/r8lo992CwcJXEzyVxs5FmfId+vTSTQDb+bxA+g==
+  optionalDependencies:
+    fsevents "~2.3.2"
+
 rollup@^2.75.6:
   version "2.75.7"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.75.7.tgz#221ff11887ae271e37dcc649ba32ce1590aaa0b9"
@@ -4540,15 +4547,15 @@ vfile@^5.0.0, vfile@^5.3.2:
     unist-util-stringify-position "^3.0.0"
     vfile-message "^3.0.0"
 
-vite@3.0.5:
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-3.0.5.tgz#56b8d52e00bbbd5f21d02f0868dc613b3246ecc6"
-  integrity sha512-bRvrt9Tw8EGW4jj64aYFTnVg134E8hgDxyl/eEHnxiGqYk7/pTPss6CWlurqPOUzqvEoZkZ58Ws+Iu8MB87iMA==
+vite@3.0.9:
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-3.0.9.tgz#45fac22c2a5290a970f23d66c1aef56a04be8a30"
+  integrity sha512-waYABTM+G6DBTCpYAxvevpG50UOlZuynR0ckTK5PawNVt7ebX6X7wNXHaGIO6wYYFXSM7/WcuFuO2QzhBB6aMw==
   dependencies:
     esbuild "^0.14.47"
     postcss "^8.4.16"
     resolve "^1.22.1"
-    rollup "^2.75.6"
+    rollup ">=2.75.6 <2.77.0 || ~2.77.0"
   optionalDependencies:
     fsevents "~2.3.2"
 

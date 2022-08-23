@@ -6,10 +6,9 @@ permalink: /blog/picomini
 ---
 
 import Layout from "@layouts/blogpost.astro";
-import BlogImage from '@components/blogimage.astro'
-import hexedit from '@assets/blog/picomini/hexedit.png'
-import flag from '@assets/blog/picomini/flag.png'
-
+import BlogImage from "@components/blogimage.astro";
+import hexedit from "@assets/blog/picomini/hexedit.png";
+import flag from "@assets/blog/picomini/flag.png";
 
 <Layout { ...frontmatter }>
 _Originally posted on the TJCSC website [(login)](https://activities.tjhsst.edu/csc/writeups/picomini-redpwn-login) and [(advanced-potion-making)](https://activities.tjhsst.edu/csc/writeups/picomini-redpwn-apm)._
@@ -78,7 +77,6 @@ If a file is corrupted, it can be fixed with a hex editor such as [HexEd.it](htt
 <BlogImage
   src={hexedit}
   alt="a glimpse of the contents of the corrupted file"
-  client:visible
 />
 
 After address `0x0000009E`, most of the content is repeated and not going to be critical (save the IEND), so the bulk of our work is going to be higher up.
@@ -95,7 +93,7 @@ However, when I see red (or really any solid color), I try using [stegsolve](htt
 
 The hardest part of CTF really is reading the flag. For some reason, I thought the `1` was an `l` at first!
 
-<BlogImage src={flag} alt="why was this so hard to read aaaaaaaaa" client:visible />
+<BlogImage src={flag} alt="why was this so hard to read aaaaaaaaa" />
 
 ### Flag
 

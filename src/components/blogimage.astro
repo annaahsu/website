@@ -1,5 +1,5 @@
 ---
-import { Image } from '@astrojs/image/components';
+import { Image, Picture } from '@astrojs/image/components';
 
 export interface Props {
   src: any;
@@ -10,7 +10,8 @@ const { src, alt } = Astro.props;
 ---
 
 <div class="blogimage">
-  <Image src={src} alt={alt} />
+  <!-- <Image src={src} alt={alt} /> -->
+  <Picture src={src} widths={[400, 700, 900]} sizes="(max-width: 600px) 100vw, ((max-width: 900px) and (min-width: 600px)) 900px" alt={alt} />
   <figcaption>{alt}</figcaption>
 </div>
 
@@ -23,7 +24,7 @@ const { src, alt } = Astro.props;
     gap: 4px;
     margin-bottom: var(--bottommargin);
 
-    img {
+    picture, picture > img {
       max-width: 100%;
       height: auto;
     }
