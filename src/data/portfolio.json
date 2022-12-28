@@ -1,5 +1,19 @@
 [
   {
+    "title": "Morning, Trojan",
+    "date": "2022-10-31",
+    "description": "Essential headlines for USC students every weekday morning, curated and written by Tomoki Chien and copy edited by Anna Hsu.",
+    "url": "https://bit.ly/morning-trojan",
+    "tags": ["journalism"]
+  },
+  {
+    "title": "Humans and robots: Stefanos Nikolaidis fosters anthro-machine collaboration in manufacturing",
+    "date": "2022-10-04",
+    "description": "Nikolaidis received the Agilent 2022 Early Career Professor Award in July.",
+    "url": "https://dailytrojan.com/2022/10/04/humans-and-robots-stefanos-nikolaidis-fosters-anthro-machine-collaboration-in-manufacturing/",
+    "tags": ["journalism", "tech"]
+  },
+  {
     "title": "Perfect Pitch: Using the Fast Fourier Transform (FFT) To Create Musical Arrangements",
     "date": "2022-05-12",
     "description": "How might amateur musicians identify pitches to create pop arrangements? Through an understanding of some cool math, we can create an implementation simulated in MATLAB.",
@@ -49,27 +63,6 @@
     "tags": ["journalism", "cybersecurity"]
   },
   {
-    "title": "SGA hosts speed meet and greet",
-    "date": "2021-03-15",
-    "description": "As the pandemic caused students to participate in virtual learning, many have organized creative ways to meet new people, and SGA is no exception.",
-    "url": "https://www.tjtoday.org/31898/news/sga-hosts-speed-meet-and-greet/",
-    "tags": ["journalism"]
-  },
-  {
-    "title": "Jefferson softball holds interest meeting",
-    "date": "2021-03-15",
-    "description": "Jefferson's softball team held an interest meeting on Friday, Mar. 12 during B block to discuss the upcoming spring season.",
-    "url": "https://www.tjtoday.org/31886/sports/jefferson-softball-holds-interest-meeting/",
-    "tags": ["journalism"]
-  },
-  {
-    "title": "\"To All The Boys: Always and Forever (2021)\": Did it live up to my nonexistent standards?",
-    "date": "2021-02-15",
-    "description": "Although it didn't aggressively slam into the mud, it wasn't what it could've been.",
-    "url": "https://www.tjtoday.org/31343/entertainment/to-all-the-boys-always-and-forever-2021-did-it-live-up-to-my-nonexistent-standards/",
-    "tags": ["journalism"]
-  },
-  {
     "title": "Phishing scams target Jefferson students",
     "date": "2021-01-16",
     "description": "In the last week, Jefferson students have reported being sent suspicious Facebook links that look like YouTube thumbnails, with the text-only message \"Sankapp: Is it you in the video?\"",
@@ -81,13 +74,6 @@
     "date": "2020-12-29",
     "description": "Spotify releases statistics on listeners' music preferences to mostly positive reactions from Jefferson students.",
     "url": "https://www.tjtoday.org/30450/entertainment/whats-your-spotify-wrapped/",
-    "tags": ["journalism"]
-  },
-  {
-    "title": "Hispanic culture club hosts guest speakers",
-    "date": "2020-12-07",
-    "description": "As college application season began its final month for seniors, Hispanic Culture Club hosted guest speakers Katrina Colucci-Chang and Adrian Davila during B block on Dec. 2 to speak about the college experience as people of Hispanic heritage.",
-    "url": "https://www.tjtoday.org/30185/news/hispanic-culture-club-hosts-guest-speakers/",
     "tags": ["journalism"]
   },
   {
