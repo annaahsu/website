@@ -18,5 +18,7 @@ export default defineConfig({
   experimental: {
     integrations: true
   },
-  integrations: [image(), astro(), mdx(), sitemap()]
+  integrations: [image({
+    serviceEntryPoint: "@astrojs/image/sharp"
+  }), astro(), mdx(), sitemap()]
 });
