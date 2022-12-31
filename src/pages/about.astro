@@ -67,6 +67,13 @@ const permalink = "/about";
         animation: photo 1s ease forwards;
       }
 
+      @media (max-width: 374px) {
+        .headshot {
+          max-width: 200px;
+          max-height: 200px;
+        }
+      }
+
       .bar {
         display: flex;
         flex-direction: column;
@@ -113,12 +120,12 @@ const permalink = "/about";
               <div class="rectangle" />
             </div>
             <div class="headshot">
-              <Picture src={headshot} widths={[400, 800]} sizes="300px" alt="Anna Hsu headshot" />
+              <Picture src={headshot} widths={[400, 800]} sizes="(max-width: 374px) 200px, (min-width: 375px) 300px" alt="Anna Hsu headshot" />
             </div>
           </div>
           <div class="bar">
             <ButtonBar>
-              <ButtonLink href="https://drive.google.com/file/d/1-u65vavZs8-652Kn0QEI2bQWGqRhpJew/view?usp=sharing">
+              <ButtonLink href="https://drive.google.com/file/d/1BX_bHZ3Q3J8osZ8oj2nemc0Enos3d6Vj/view?usp=sharing">
                 Resume</ButtonLink>
               <ButtonLink href="https://drive.google.com/file/d/10_ho2LngZB7iuxkERGgJ1l3kF9orc3sH/view?usp=sharing">
                 Headshot</ButtonLink>
@@ -130,11 +137,17 @@ const permalink = "/about";
           <p>Hallo! My name is Anna (she/her) and I'm a Taiwanese-American gal studying Computer Engineering and
             Computer Science at the <a href="https://usc.edu">University of Southern California</a>. I'm originally from
             Northern Virginia and I graduated from <a href="https://tjhsst.fcps.edu">Thomas Jefferson High School for
-              Science and Technology</a>. That's where I discovered my love for creating innovative products and writing
-            stories. Nowadays, I work on leveraging both my tech and writing backgrounds. I'm passionate about designing
-            impactful products for everyone and sharing stories that go untold.</p>
-          <p>In my (rare) spare time, you can find me eating Taiwanese food, listening to Mandopop, or rooting for the
-            Washington Nationals. Feel free to reach out!</p>
+              Science and Technology</a>. That's where I discovered my love for designing impactful products and sharing
+            stories that go untold.</p>
+          <p>At SC, I'm part of <a href="https://hacksc.com">HackSC</a>, Southern California's flagship hackathon, where
+            I'm on the Hacker Experience team. I primarily work on bringing in amazing speakers and selecting cool prizes,
+            but I also chip in on the engineering team from time to time so we can revolutionize the hackathon experience
+            together. I also copy edit for the <a href="https://dailytrojan.com">Daily Trojan</a> and <a
+              href="https://www.uscannenbergmedia.com/"> Annenberg Media</a>, where I can fulfill my commitment to accurate,
+            high-quality journalism.</p>
+          <p>In my (rare) spare time, you can find me eating Taiwanese food, <a
+              href="https://open.spotify.com/playlist/7pqZbX1kOheeGjIY5B6i6M">listening to music</a>, or rooting for the
+            Washington Nationals. Feel free to reach out; I'd love to chat!</p>
         </div>
       </div>
     </Container>
