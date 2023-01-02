@@ -35,15 +35,17 @@ body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
   overflow-x: hidden;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   line-height: 1.5;
   margin: 0 32px;
-
   background: var(--pale);
   color: var(--black);
+
+  @media (max-width: 350px) {
+    margin: 0 16px;
+  }
 }
 
 h1,
@@ -77,6 +79,10 @@ a:hover {
 a:visited {
   color: var(--med);
   text-decoration: none;
+}
+
+ul {
+  margin-bottom: var(--bottommargin);
 }
 
 blockquote {
