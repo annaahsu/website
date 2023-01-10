@@ -14,6 +14,13 @@
     "tags": ["journalism", "tech"]
   },
   {
+    "title": "New Tab Page",
+    "date": "2022-06-15",
+    "description": "Organizational hub filled with time-dependent messages and quick links, built with Astro and HTML, CSS, and JavaScript.",
+    "url": "https://ntp.annahsu.dev",
+    "tags": ["web-dev"]
+  },
+  {
     "title": "Perfect Pitch: Using the Fast Fourier Transform (FFT) To Create Musical Arrangements",
     "date": "2022-05-12",
     "description": "How might amateur musicians identify pitches to create pop arrangements? Through an understanding of some cool math, we can create an implementation simulated in MATLAB.",
