@@ -10,7 +10,7 @@ const { src, alt } = Astro.props;
 ---
 
 <div class="blogimage">
-  <Picture src={src} widths={[400, 800, 1200]} sizes="(max-width: 300px) 280px, (max-width: 500px) 20em, (max-width: 600px) 27em, (max-width: 700px) 33em, (min-width: 700px) 40em" alt={alt} />
+  <Picture class="image" src={src} widths={[400, 800, 1200]} sizes="(max-width: 300px) 280px, (max-width: 500px) 20em, (max-width: 600px) 27em, (max-width: 700px) 33em, (min-width: 700px) 40em" alt={alt} />
   <figcaption>{alt}</figcaption>
 </div>
 
@@ -22,6 +22,10 @@ const { src, alt } = Astro.props;
     text-align: center;
     gap: 4px;
     margin-bottom: var(--bottommargin);
+  }
+
+  .image {
+    box-shadow: var(--carddrop);
   }
 
   figcaption {
