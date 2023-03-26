@@ -1,8 +1,22 @@
 [
   {
+    "title": "AthenaHacks USC Creates Community",
+    "date": "2023-02-13",
+    "description": "More than 400 students took part in USC's hackathon for marginalized gender identities, now in its seventh year.",
+    "url": "https://viterbischool.usc.edu/news/2023/03/athenahacks-usc-creates-community/",
+    "tags": ["journalism", "tech"]
+  },
+  {
+    "title": "Scott Rabenold appointed senior vice president for university advancement",
+    "date": "2022-12-14",
+    "description": "Rabenold will join USC in February 2023.",
+    "url": "https://dailytrojan.com/2022/12/14/scott-rabenold-appointed-senior-vice-president-for-university-advancement/",
+    "tags": ["journalism"]
+  },
+  {
     "title": "Morning, Trojan",
     "date": "2022-10-31",
-    "description": "Essential headlines for USC students every weekday morning, curated and written by Tomoki Chien and copy edited by Anna Hsu.",
+    "description": "Essential headlines for USC students every weekday morning, curated and written by Tomoki Chien and Claire Qiu, copy edited by Anna Hsu.",
     "url": "https://bit.ly/morning-trojan",
     "tags": ["journalism"]
   },
@@ -33,13 +47,6 @@
     "description": "My music website, built with Astro!",
     "url": "https://music.annahsu.dev",
     "tags": ["web-dev"]
-  },
-  {
-    "title": "Bridging the Gap: A Short Story",
-    "date": "2021-05-14",
-    "description": "Despite controversy surrounding LGBTQ+ rights' place in Mandopop, Jolin Tsai's calculated risk pays off.",
-    "url": "https://drive.google.com/file/d/1n1uJZQoWufduPtKyWa4Hhjc_2r2JvOhf/view?usp=sharing",
-    "tags": ["research"]
   },
   {
     "title": "picoMini by redpwn - advanced-potion-making (forensics)",
@@ -75,13 +82,6 @@
     "description": "In the last week, Jefferson students have reported being sent suspicious Facebook links that look like YouTube thumbnails, with the text-only message \"Sankapp: Is it you in the video?\"",
     "url": "https://www.tjtoday.org/30610/showcase/phishing-scams-target-jefferson-students/",
     "tags": ["journalism", "cybersecurity"]
-  },
-  {
-    "title": "What's your Spotify Wrapped?",
-    "date": "2020-12-29",
-    "description": "Spotify releases statistics on listeners' music preferences to mostly positive reactions from Jefferson students.",
-    "url": "https://www.tjtoday.org/30450/entertainment/whats-your-spotify-wrapped/",
-    "tags": ["journalism"]
   },
   {
     "title": "Discord creates peace of mind",
