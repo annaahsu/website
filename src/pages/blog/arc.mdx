@@ -1,0 +1,61 @@
+---
+title: "Arc: Worth the hype?"
+publishDate: 2023-03-27
+description: Shiny new browser on the block? Sign me up.
+permalink: /blog/arc
+---
+
+import Layout from "@layouts/blogpost.astro";
+import BlogImage from "@components/blogimage.astro";
+import dev from "@assets/blog/arc/dev.png";
+import space from "@assets/blog/arc/space.png";
+import split from "@assets/blog/arc/split.png";
+
+<Layout { ...frontmatter }>
+On my recent trip to Cornell, I was talking with the esteemed [Bryant Park](https://bryantpark.dev) and he sounded mildly disappointed that I hadn't posted anything new on my blog in a while. So sir, here is my latest train of thought. I'm writing this post on my flight back to Los Angeles at the conclusion of my spring break, except I happened to try to write the same one at the conclusion of my winter break. The draft disappeared — I would've sworn it was on some branch in my Github repository, but I guess not.
+
+So I'm currently trying the “theoretically more foolproof” method: drafting in Notion.
+
+Anyway, I've apparently been an avid [Arc](https://arc.net/) user for six months! For the uninformed, Arc is a very cool new browser created by [The Browser Company](https://thebrowser.company/), and they're trying to revolutionize the browser experience. This attempt has not been successful since … probably before I was using computers.
+
+(Definitely before. I haven't even hit a full decade of computer usage yet. To put it lightly, I was a little late to the tech party.)
+
+Arc was built to function as some kind of CS wizard's dream — and if used properly, it can be. There are truly an endless number of ways to customize the browser experience, and Arc hasn't even been around for that long. It's built on Chromium, so all of the basic functionalities are very familiar and it's not a nightmare to migrate. For devs that want to move off of Chrome, it gets you … like … halfway there, I guess?
+
+I think there are three features worth highlighting, though — life-changing browser habits that can totally convince you to migrate. Let's get to it.
+
+# Split Tabs
+
+This is an absolute lifesaver whenever I'm working with essays: a source on one side, a Google doc on another. ✨
+
+Even if you're not a student anymore, there are still plenty of ways split tabs can be useful. Ever wish you could search up places in Google Maps while you're browsing a tourism page without going back and forth between the tabs a million times? This gets the job done.
+
+The process is super seamless. You just drag one tab from the sidebar into another, wherever you want to split the tabs. You can split up to four tabs horizontally or vertically. I just wish that they would let you split both horizontally and vertically at the same time!
+
+<BlogImage src={split} alt="I am addicted to split screen, even on my 14-inch MacBook Pro" />
+
+# Dev Experience
+
+I'm convinced that The Browser Company is just filled with a lot of devs that are disgruntled with the shortfalls of current browsers, so they're implementing those features themselves.
+
+Whenever you're running something on localhost, Arc enters “Developer Mode” in that specific tab. Console, Network Panel, and Inspect Element are all within a click at the top of the browser, making it super easy to access. You can turn it off, although I'm not sure why you would.
+
+I have a feeling that more features will be added to this as time goes on…
+
+<BlogImage src={dev} alt="Dev mode looks pretty fresh, doesn't it? All the buttons are so accessible!" />
+
+# Spaces
+
+Out of sight, out of mind, right? This is definitely true for me.
+
+In Arc, you can split all of your different browser modes into spaces that make it act like a totally different browser. I distinguish certain things that take up a lot of tabs — school, internship search, HackSC, etc. This makes it so that I'm not just in a different headspace, but I'm physically in a different tab space. It's a bit different from profiles, which is another feature Arc offers (just like Chrome profiles), in that you're still logged into the same accounts and everything.
+
+You can use spaces as an alternative to profiles, but that's probably not the recommended use case from the builders of Arc. (I do it anyway, though.)
+
+<BlogImage src={space} alt="You can't see the boatload of work I must complete in my USC space..." />
+
+---
+I've really liked using Arc so far (if you couldn't tell already), so I hope you will, too! There are definitely a lot more features to Arc than the ones I hit upon here — easels are one that I know a lot of people around me really like. I just haven't spent that much time actually using them, so I don't feel qualified to share. There are also a million super helpful keyboard shortcuts that make the workflow so much faster. Certainly very vim-esque of them, so I guess it could be a bit of an acquired taste.
+
+Overall, I'd totally recommend giving Arc at least a try! There's not really any harm to giving something like this a whirl, and maybe you'll be so convinced you want it to be your default browser. Let me know if you'd like a gift link to try out Arc or if you have any thoughts about it you'd like to share!
+</Layout>
