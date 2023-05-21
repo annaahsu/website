@@ -1,10 +1,24 @@
 [
   {
+    "title": "Candid",
+    "date": "2023-05-20",
+    "description": "Photo gallery of candid moments, built with Gatsby.",
+    "url": "https://candid.annahsu.dev",
+    "tags": ["web-dev"]
+  },
+  {
     "title": "Two USC Computer Science Juniors Awarded Goldwater Scholarships",
     "date": "2023-04-28",
     "description": "Juniors Jordan Cahoon and Allen Chang were recognized for their research in, and beyond, computer science.",
     "url": "https://viterbischool.usc.edu/news/2023/04/two-usc-computer-science-juniors-awarded-goldwater-scholarships/",
     "tags": ["journalism", "tech"]
+  },
+  {
+    "title": "TARA.ai",
+    "date": "2023-04-23",
+    "description": "An AI-powered teaching assistant that revolutionizes virtual classrooms, helping you learn anywhere, anytime.",
+    "url": "https://devpost.com/software/tara-ai",
+    "tags": ["web-dev"]
   },
   {
     "title": "AthenaHacks USC Creates Community",
