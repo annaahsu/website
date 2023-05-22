@@ -103,6 +103,11 @@ code {
   padding: 2px 8px;
   background: var(--white);
   border-radius: 4px;
+  box-shadow: var(--buttondrop);
+}
+
+pre {
+  box-shadow: var(--photodrop);
 }
 
 pre > code {
