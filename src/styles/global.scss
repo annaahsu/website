@@ -19,10 +19,11 @@
   --med: #733302;
   --black: #371710;
 
-  --cutout: 0px 8px 32px rgba(55, 23, 16, 0.25);
-  --cut: inset 0px 8px 32px rgba(55, 23, 16, 0.25);
+  --cutout: 0px 0px 32px rgba(55, 23, 16, 0.25);
+  --cut: inset 0px 0px 32px rgba(55, 23, 16, 0.25);
 
-  --carddrop: 0px 4px 8px rgba(55, 23, 16, 0.25);
+  --carddrop: 0px 0px 8px rgba(55, 23, 16, 0.25);
+  --photodrop: 0px 0px 16px rgba(55, 23, 16, 0.25);
 
   --bottommargin: 32px;
 }
