@@ -12,7 +12,7 @@ const title = frontmatter.title;
 const description = frontmatter.description;
 const options = { year: 'numeric', month: 'long', day: 'numeric' };
 const formatDate = frontmatter.publishDate.toLocaleDateString('en-US', options);
-const permalink = `blog/${frontmatter.permalink}`;
+const permalink = `/blog/${frontmatter.permalink}`;
 ---
 
 <PageLayout>
