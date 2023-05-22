@@ -10,7 +10,7 @@
   font-size: clamp(
     0.875rem,
     0.4626rem + 1.0309vw + var(--user-font-scale),
-    1.125rem
+    1rem
   );
 
   --white: #fdfaf9;
@@ -24,6 +24,8 @@
 
   --carddrop: 0px 0px 8px rgba(55, 23, 16, 0.25);
   --photodrop: 0px 0px 16px rgba(55, 23, 16, 0.25);
+  --svgdrop: 0px 0px 2px rgba(55, 23, 16, 0.25);
+  --buttondrop: 0px 0px 2px rgba(55, 23, 16, 0.25);
 
   --bottommargin: 32px;
 }
@@ -110,6 +112,10 @@ pre > code {
 hr {
   border: 1px solid var(--light);
   margin-bottom: var(--bottommargin);
+}
+
+svg {
+  filter: drop-shadow(var(--svgdrop));
 }
 
 ::-moz-selection {

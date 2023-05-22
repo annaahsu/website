@@ -3,7 +3,9 @@ import PageLayout from '@layouts/page.astro';
 
 import Container from '@components/container.astro';
 import Head from '@components/head.astro';
-import Navbar from '@components/navbar.astro'
+import Navbar from '@components/navbar.astro';
+import ButtonBar from '@components/buttonbar.astro';
+import ButtonLink from '@components/buttonlink.astro';
 
 // const { title, description, publishDate, permalink } = Astro.props;
 const { frontmatter } = Astro.props;
@@ -43,6 +45,9 @@ const permalink = `/blog/${frontmatter.permalink}`;
       <div>
         <slot />
       </div>
+      <ButtonBar>
+        <ButtonLink href="/blog">Back</ButtonLink>
+      </ButtonBar>
     </Container>
   </body>
 </PageLayout>
