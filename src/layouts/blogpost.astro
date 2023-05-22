@@ -5,11 +5,14 @@ import Container from '@components/container.astro';
 import Head from '@components/head.astro';
 import Navbar from '@components/navbar.astro'
 
-const { title, description, publishDate, permalink } = Astro.props;
+// const { title, description, publishDate, permalink } = Astro.props;
+const { frontmatter } = Astro.props;
 
-const newDate = new Date(publishDate);
+const title = frontmatter.title;
+const description = frontmatter.description;
 const options = { year: 'numeric', month: 'long', day: 'numeric' };
-const formatDate = newDate.toLocaleDateString('en-US', options);
+const formatDate = frontmatter.publishDate.toLocaleDateString('en-US', options);
+const permalink = `blog/${frontmatter.permalink}`;
 ---
 
 <PageLayout>

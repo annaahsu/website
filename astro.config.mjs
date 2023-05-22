@@ -15,9 +15,6 @@ export default defineConfig({
   markdown: {
     syntaxHighlight: "prism"
   },
-  experimental: {
-    integrations: true
-  },
   integrations: [image({
     serviceEntryPoint: "@astrojs/image/sharp"
   }), astro(), mdx(), sitemap()]

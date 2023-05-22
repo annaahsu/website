@@ -5,19 +5,25 @@ export interface Props {
 
 const { post } = Astro.props;
 
-const newDate = new Date(post.frontmatter.publishDate);
+// const newDate = new Date(post.frontmatter.publishDate);
+// const options = { year: 'numeric', month: 'long', day: 'numeric' };
+// const formatDate = newDate.toLocaleDateString('en-US', options);
+
+const title = post.data.title;
+const description = post.data.description;
 const options = { year: 'numeric', month: 'long', day: 'numeric' };
-const formatDate = newDate.toLocaleDateString('en-US', options);
+const formatDate = post.data.publishDate.toLocaleDateString('en-US', options);
+const permalink = `blog/${post.slug}`;
 ---
 
 <article class="card">
-  <a class="cardlink" href={post.url}>
+  <a class="cardlink" href={permalink}>
     <div class="content">
       <header class="header">
-        <h1 class="title">{post.frontmatter.title}</h1>
+        <h1 class="title">{title}</h1>
         <span class="date">{formatDate}</span>
       </header>
-      <p>{post.frontmatter.description}</p>
+      <p>{description}</p>
     </div>
   </a>
 </article>

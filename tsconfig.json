@@ -9,6 +9,8 @@
     "resolveJsonModule": true,
     // Enable stricter transpilation for better output.
     "isolatedModules": true,
+    "strictNullChecks": true,
+    "allowJs": true,
     // Add type definitions for our Vite runtime.
     "types": ["vite/client", "@astrojs/image/clinet"],
     "baseUrl": ".",
