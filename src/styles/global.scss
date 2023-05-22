@@ -27,7 +27,7 @@
   --svgdrop: 0px 0px 2px rgba(55, 23, 16, 0.25);
   --buttondrop: 0px 0px 2px rgba(55, 23, 16, 0.25);
 
-  --bottommargin: 32px;
+  --bottommargin: 2rem;
 }
 
 html {
@@ -91,9 +91,10 @@ ul {
 blockquote {
   background-color: var(--white);
   color: var(--med);
-  padding: 16px;
+  padding: 1rem;
   margin-bottom: var(--bottommargin);
   border-left: 4px solid var(--med);
+  box-shadow: var(--photodrop);
   p {
     margin: 0;
   }
