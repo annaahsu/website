@@ -1,24 +1,23 @@
 ---
-import { Image, Picture } from '@astrojs/image/components';
-import headshot from '@assets/headshot.png';
-import PageLayout from '@layouts/page.astro';
+import { Picture } from "@astrojs/image/components";
+import headshot from "@assets/headshot.png";
+import PageLayout from "@layouts/page.astro";
 
-import ButtonBar from '@components/buttonbar.astro';
-import ButtonLink from '@components/buttonlink.astro';
-import Container from '@components/container.astro';
-import Head from '@components/head.astro';
-import Navbar from '@components/navbar.astro';
-import Socials from '@components/socials.astro';
+import ButtonBar from "@components/buttonbar.astro";
+import ButtonLink from "@components/buttonlink.astro";
+import Container from "@components/container.astro";
+import Head from "@components/head.astro";
+import Navbar from "@components/navbar.astro";
+import Socials from "@components/socials.astro";
 
 const title = "About";
-const description = "I\'m Anna Hsu (she/her), a Taiwanese American gal studying Computer Engineering and Computer Science at the University of Southern California.";
+const description =
+  "I'm Anna Hsu (she/her), a Taiwanese American gal studying Computer Engineering and Computer Science at the University of Southern California.";
 const permalink = "/about";
 ---
 
 <PageLayout>
-
   <head>
-
     <Head {title} {description} {permalink} />
     <style lang="scss">
       .content {
@@ -117,39 +116,68 @@ const permalink = "/about";
         <div class="sidebar">
           <div class="wrap">
             <div class="rectangle-wrap">
-              <div class="rectangle" />
+              <div class="rectangle"></div>
             </div>
             <div class="headshot">
-              <Picture src={headshot} widths={[400, 800]} sizes="(max-width: 374px) 200px, (min-width: 375px) 300px" alt="Anna Hsu headshot" />
+              <Picture
+                src={headshot}
+                widths={[400, 800]}
+                sizes="(max-width: 374px) 200px, (min-width: 375px) 300px"
+                alt="Anna Hsu headshot"
+              />
             </div>
           </div>
           <div class="bar">
             <ButtonBar>
               <ButtonLink href="https://l.annahsu.dev/resume-d">
-                Resume</ButtonLink>
+                Resume
+              </ButtonLink>
               <ButtonLink href="https://l.annahsu.dev/headshot">
-                Headshot</ButtonLink>
+                Headshot
+              </ButtonLink>
             </ButtonBar>
             <Socials />
           </div>
         </div>
         <div class="content">
-          <p>Hallo! My name is Anna (she/her) and I'm a Taiwanese American gal studying Computer Engineering and
-            Computer Science at the <a href="https://usc.edu">University of Southern California</a>. I'm originally from
-            Northern Virginia and I graduated from <a href="https://tjhsst.fcps.edu">Thomas Jefferson High School for Science
-              and Technology</a>. That's where I discovered my love for filling niches at the intersections of different
-            fields. In other words, I build, I design, and I write.</p>
-          <p>By leveraging my technical background and my love of writing, I cover noteworthy innovations and events for the
-            <a href="https://cs.usc.edu/news/">USC Thomas Lord Department of Computer Science</a>. I also previously led the
-            Copy Desk at <a href="https://www.uscannenbergmedia.com/">Annenberg Media</a>, where I helped fulfill my goal to
-            producing accurate, high-quality journalism.</p>
-          <p>I'm on the Hacker Experience and Marketing teams for <a href="https://hacksc.com">HackSC</a>, Southern
-            California's flagship hackathon. I recruit amazing speakers and plan exciting events, but I also occasionally
-            contribute on the Engineering team to our mission of <a href="https://github.com/HackSC/hibiscus">revolutionizing
-              the hackathon experience</a> together.</p>
-          <p>In my (rare) spare time, you can find me eating Taiwanese food, <a
-              href="https://open.spotify.com/playlist/7pqZbX1kOheeGjIY5B6i6M">listening to music</a>, or rooting for the
-            Washington Nationals. Feel free to reach out; I'd love to chat!</p>
+          <p>
+            Hallo! My name is Anna (she/her) and I'm a Taiwanese American gal
+            studying Computer Engineering and Computer Science at the <a
+              href="https://usc.edu">University of Southern California</a
+            >. I'm originally from Northern Virginia and I graduated from <a
+              href="https://tjhsst.fcps.edu"
+              >Thomas Jefferson High School for Science and Technology</a
+            >. That's where I discovered my love for filling niches at the
+            intersections of different fields. In other words, I build, I
+            design, and I write.
+          </p>
+          <p>
+            By leveraging my technical background and my love of writing, I
+            cover noteworthy innovations and events for the
+            <a href="https://cs.usc.edu/news/"
+              >USC Thomas Lord Department of Computer Science</a
+            >. I also previously led the Copy Desk at <a
+              href="https://www.uscannenbergmedia.com/">Annenberg Media</a
+            >, where I helped fulfill my goal to producing accurate,
+            high-quality journalism.
+          </p>
+          <p>
+            I'm on the Hacker Experience and Marketing teams for <a
+              href="https://hacksc.com">HackSC</a
+            >, Southern California's flagship hackathon. I recruit amazing
+            speakers and plan exciting events, but I also occasionally
+            contribute on the Engineering team to our mission of <a
+              href="https://github.com/HackSC/hibiscus"
+              >revolutionizing the hackathon experience</a
+            > together.
+          </p>
+          <p>
+            In my (rare) spare time, you can find me eating Taiwanese food, <a
+              href="https://open.spotify.com/playlist/7pqZbX1kOheeGjIY5B6i6M"
+              >listening to music</a
+            >, or rooting for the Washington Nationals. Feel free to reach out;
+            I'd love to chat!
+          </p>
         </div>
       </div>
     </Container>

@@ -1,24 +1,23 @@
 ---
-import PageLayout from '@layouts/page.astro';
+import PageLayout from "@layouts/page.astro";
 
-import Container from '@components/container.astro';
-import Head from '@components/head.astro';
-import Navbar from '@components/navbar.astro';
-import ButtonBar from '@components/buttonbar.astro';
-import ButtonLink from '@components/buttonlink.astro';
+import Container from "@components/container.astro";
+import Head from "@components/head.astro";
+import Navbar from "@components/navbar.astro";
+import ButtonBar from "@components/buttonbar.astro";
+import ButtonLink from "@components/buttonlink.astro";
 
 // const { title, description, publishDate, permalink } = Astro.props;
 const { frontmatter } = Astro.props;
 
 const title = frontmatter.title;
 const description = frontmatter.description;
-const options = { year: 'numeric', month: 'long', day: 'numeric' };
-const formatDate = frontmatter.publishDate.toLocaleDateString('en-US', options);
+const options = { year: "numeric", month: "long", day: "numeric" };
+const formatDate = frontmatter.publishDate.toLocaleDateString("en-US", options);
 const permalink = `/blog/${frontmatter.permalink}`;
 ---
 
 <PageLayout>
-
   <head>
     <link rel="stylesheet" href="/prism-laserwave.css" />
 

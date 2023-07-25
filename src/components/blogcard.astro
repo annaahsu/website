@@ -7,8 +7,8 @@ const { post } = Astro.props;
 
 const title = post.data.title;
 const description = post.data.description;
-const options = { year: 'numeric', month: 'long', day: 'numeric' };
-const formatDate = post.data.publishDate.toLocaleDateString('en-US', options);
+const options = { year: "numeric", month: "long", day: "numeric" };
+const formatDate = post.data.publishDate.toLocaleDateString("en-US", options);
 const permalink = `/blog/${post.slug}`;
 ---
 

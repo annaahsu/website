@@ -1,6 +1,6 @@
 ---
-import ButtonBar from '@components/buttonbar.astro';
-import ButtonTag from '@components/buttontag.astro';
+import ButtonBar from "@components/buttonbar.astro";
+import ButtonTag from "@components/buttontag.astro";
 
 export interface Props {
   title: string;
@@ -12,12 +12,11 @@ export interface Props {
 const { title, date, description, url, tags } = Astro.props;
 
 const newDate = new Date(`${date}T00:00:00`);
-const options = { year: 'numeric', month: 'long', day: 'numeric' };
-const formatDate = newDate.toLocaleDateString('en-US', options);
+const options = { year: "numeric", month: "long", day: "numeric" };
+const formatDate = newDate.toLocaleDateString("en-US", options);
 ---
 
 <!-- when I have a masonry solution (or when grid masonry comes out!) remember to clean up the content class flex -->
-
 <article class="card">
   <a class="cardlink" href={url} target="_blank">
     <div class="content">
@@ -29,9 +28,7 @@ const formatDate = newDate.toLocaleDateString('en-US', options);
         <p>{description}</p>
       </div>
       <ButtonBar>
-        {tags.map((tag) => (
-        <ButtonTag>{tag}</ButtonTag>
-        ))}
+        {tags.map((tag) => <ButtonTag>{tag}</ButtonTag>)}
       </ButtonBar>
     </div>
   </a>

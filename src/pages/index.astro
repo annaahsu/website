@@ -1,21 +1,20 @@
 ---
-import PageLayout from '@layouts/page.astro';
+import PageLayout from "@layouts/page.astro";
 
-import AnnaHsu from '@components/annahsu.astro';
-import ButtonLink from '@components/buttonlink.astro';
-import ButtonBar from '@components/buttonbar.astro';
-import Head from '@components/head.astro';
-import Socials from '@components/socials.astro';
+import AnnaHsu from "@components/annahsu.astro";
+import ButtonLink from "@components/buttonlink.astro";
+import ButtonBar from "@components/buttonbar.astro";
+import Head from "@components/head.astro";
+import Socials from "@components/socials.astro";
 
-const title = 'Home';
-const description = "I\'m Anna Hsu (she/her), a Taiwanese American gal studying Computer Engineering and Computer Science at the University of Southern California.";
-const permalink = '/';
+const title = "Home";
+const description =
+  "I'm Anna Hsu (she/her), a Taiwanese American gal studying Computer Engineering and Computer Science at the University of Southern California.";
+const permalink = "/";
 ---
 
 <PageLayout>
-
   <head>
-
     <Head {title} {description} {permalink} />
     <style lang="scss">
       body {
@@ -83,7 +82,6 @@ const permalink = '/';
       }
 
       @media (prefers-reduced-motion: reduce) {
-
         .wrap,
         .home-wrap,
         .home {
@@ -140,14 +138,19 @@ const permalink = '/';
     <main>
       <div class="wrap">
         <div class="rectangle-wrap">
-          <div class="rectangle" />
+          <div class="rectangle"></div>
         </div>
         <div class="home-wrap">
           <div class="home">
             <AnnaHsu />
-            <p>I'm Anna Hsu (she/her), a Taiwanese American gal studying Computer Engineering and Computer Science at
-              the <a href="https://usc.edu">University of Southern California</a>. I'm a journalist, designer, and engineer
-              interested in how the world works so I can make it better. Welcome, and I hope you enjoy your stay!</p>
+            <p>
+              I'm Anna Hsu (she/her), a Taiwanese American gal studying Computer
+              Engineering and Computer Science at the <a href="https://usc.edu"
+                >University of Southern California</a
+              >. I'm a journalist, designer, and engineer interested in how the
+              world works so I can make it better. Welcome, and I hope you enjoy
+              your stay!
+            </p>
             <ButtonBar>
               <ButtonLink href="/about">About</ButtonLink>
               <ButtonLink href="/blog">Blog</ButtonLink>

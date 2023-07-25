@@ -1,22 +1,21 @@
 ---
-import PageLayout from '@layouts/page.astro';
+import PageLayout from "@layouts/page.astro";
 
-import Container from '@components/container.astro';
-import Head from '@components/head.astro';
-import Navbar from '@components/navbar.astro';
-import PortfolioCard from '@components/portfoliocard.astro';
+import Container from "@components/container.astro";
+import Head from "@components/head.astro";
+import Navbar from "@components/navbar.astro";
+import PortfolioCard from "@components/portfoliocard.astro";
 
-import portfolio from '@data/portfolio.json';
+import portfolio from "@data/portfolio.json";
 
 const title = "Portfolio";
-const description = "I\'m Anna Hsu (she/her), a Taiwanese American gal studying Computer Engineering and Computer Science at the University of Southern California.";
+const description =
+  "I'm Anna Hsu (she/her), a Taiwanese American gal studying Computer Engineering and Computer Science at the University of Southern California.";
 const permalink = "/portfolio";
 ---
 
 <PageLayout>
-
   <head>
-
     <Head {title} {description} {permalink} />
 
     <style lang="scss">
@@ -26,7 +25,6 @@ const permalink = "/portfolio";
         gap: 24px;
       }
     </style>
-
   </head>
 
   <body>
@@ -34,9 +32,17 @@ const permalink = "/portfolio";
     <Container>
       <h1>Oh, All the Things I've Done</h1>
       <div class="grid">
-        {portfolio.map(({ title, date, description, url, tags }) => (
-        <PortfolioCard title={title} date={date} description={description} url={url} tags={tags} />
-        ))}
+        {
+          portfolio.map(({ title, date, description, url, tags }) => (
+            <PortfolioCard
+              title={title}
+              date={date}
+              description={description}
+              url={url}
+              tags={tags}
+            />
+          ))
+        }
       </div>
     </Container>
   </body>

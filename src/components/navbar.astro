@@ -1,24 +1,24 @@
 ---
 import AnnaHsu from "@components/annahsu.astro";
 
-import Hamburger from '@components/hamburger.astro';
+import Hamburger from "@components/hamburger.astro";
 
 const page = new URL(Astro.request.url).pathname;
 
 const navLinks = [
   {
-    name: 'About',
-    link: '/about',
+    name: "About",
+    link: "/about",
   },
   {
-    name: 'Blog',
-    link: '/blog',
+    name: "Blog",
+    link: "/blog",
   },
   {
-    name: 'Portfolio',
-    link: '/portfolio',
+    name: "Portfolio",
+    link: "/portfolio",
   },
-]
+];
 ---
 
 <nav>
@@ -33,9 +33,13 @@ const navLinks = [
     </span>
   </div>
   <div class="navlinks" id="js-menu">
-    {navLinks.map(({ name, link }) => (
-    <a class={page.includes(link) ? 'active link' : 'link' } href={link}>{name}</a>
-    ))}
+    {
+      navLinks.map(({ name, link }) => (
+        <a class={page.includes(link) ? "active link" : "link"} href={link}>
+          {name}
+        </a>
+      ))
+    }
   </div>
 </nav>
 

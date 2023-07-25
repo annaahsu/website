@@ -1,10 +1,14 @@
 ---
 export interface Props {
-	title: string;
-	description: string;
-	permalink: string;
+  title: string;
+  description: string;
+  permalink: string;
 }
-let { title, description = "I\'m Anna Hsu (she/her), a Taiwanese American gal studying Computer Engineering and Computer Science at the University of Southern California.", permalink } = Astro.props;
+let {
+  title,
+  description = "I'm Anna Hsu (she/her), a Taiwanese American gal studying Computer Engineering and Computer Science at the University of Southern California.",
+  permalink,
+} = Astro.props;
 title = `Anna Hsu | ${title}`;
 permalink = `https://annahsu.dev${permalink}`;
 
@@ -15,15 +19,15 @@ const meta = "/assets/meta.png";
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width" />
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e7b7ad">
-<link rel="shortcut icon" href="/favicon.ico">
-<meta name="msapplication-TileColor" content="#f9ecea">
-<meta name="msapplication-config" content="/browserconfig.xml">
-<meta name="theme-color" content="#f9ecea">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e7b7ad" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<meta name="msapplication-TileColor" content="#f9ecea" />
+<meta name="msapplication-config" content="/browserconfig.xml" />
+<meta name="theme-color" content="#f9ecea" />
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
@@ -45,8 +49,15 @@ const meta = "/assets/meta.png";
 <meta property="twitter:image" content={meta} />
 
 <!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;700&display=swap" as="style">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;700&display=swap">
+<link
+  rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;700&display=swap"
+  as="style"
+/>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;700&display=swap"
+/>

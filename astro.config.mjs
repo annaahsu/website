@@ -9,13 +9,18 @@ export default defineConfig({
   site: "https://annahsu.dev",
   vite: {
     ssr: {
-      external: ["svgo"]
-    }
+      external: ["svgo"],
+    },
   },
   markdown: {
-    syntaxHighlight: "prism"
+    syntaxHighlight: "prism",
   },
-  integrations: [image({
-    serviceEntryPoint: "@astrojs/image/sharp"
-  }), astro(), mdx(), sitemap()]
+  integrations: [
+    image({
+      serviceEntryPoint: "@astrojs/image/sharp",
+    }),
+    astro(),
+    mdx(),
+    sitemap(),
+  ],
 });
