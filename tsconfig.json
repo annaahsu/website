@@ -12,7 +12,7 @@
     "strictNullChecks": true,
     "allowJs": true,
     // Add type definitions for our Vite runtime.
-    "types": ["vite/client", "@astrojs/image/clinet"],
+    "types": ["vite/client", "@astrojs/image/client"],
     "baseUrl": ".",
     "paths": {
       "@assets/*": ["src/assets/*"],
