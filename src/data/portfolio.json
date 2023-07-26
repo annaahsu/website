@@ -1,5 +1,12 @@
 [
   {
+    "title": "USC Computer Science Students Awarded NSF Graduate Research Fellowships",
+    "date": "2023-07-06",
+    "description": "Emily Nguyen and James Flemings were recognized for their contributions to deep generative models focusing on wildfire prevention and privacy in machine learning.",
+    "url": "https://viterbischool.usc.edu/news/2023/07/usc-computer-science-students-awarded-nsf-graduate-research-fellowships/",
+    "tags": ["journalism", "tech"]
+  },
+  {
     "title": "Candid",
     "date": "2023-05-20",
     "description": "Photo gallery of candid moments, built with Gatsby.",
