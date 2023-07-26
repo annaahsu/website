@@ -1,13 +1,11 @@
 ---
-import PageLayout from "@layouts/page.astro";
-
+import ButtonBar from "@components/buttonbar.astro";
+import ButtonLink from "@components/buttonlink.astro";
 import Container from "@components/container.astro";
 import Head from "@components/head.astro";
 import Navbar from "@components/navbar.astro";
-import ButtonBar from "@components/buttonbar.astro";
-import ButtonLink from "@components/buttonlink.astro";
+import PageLayout from "@layouts/page.astro";
 
-// const { title, description, publishDate, permalink } = Astro.props;
 const { frontmatter } = Astro.props;
 
 const title = frontmatter.title;
