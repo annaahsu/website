@@ -23,4 +23,5 @@ export default defineConfig({
     mdx(),
     sitemap(),
   ],
+  scopedStyleStrategy: "class",
 });
