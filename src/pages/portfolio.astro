@@ -7,16 +7,11 @@ import Navbar from "@components/navbar.astro";
 import PortfolioCard from "@components/portfoliocard.astro";
 
 import portfolio from "@data/portfolio.json";
-
-const title = "Portfolio";
-const description =
-  "I'm Anna Hsu (she/her), a Taiwanese American gal studying Computer Engineering and Computer Science at the University of Southern California.";
-const permalink = "/portfolio";
 ---
 
 <PageLayout>
   <head>
-    <Head {title} {description} {permalink} />
+    <Head title="Portfolio" permalink="/portfolio" />
 
     <style lang="scss">
       .grid {
@@ -34,13 +29,7 @@ const permalink = "/portfolio";
       <div class="grid">
         {
           portfolio.map(({ title, date, description, url, tags }) => (
-            <PortfolioCard
-              title={title}
-              date={date}
-              description={description}
-              url={url}
-              tags={tags}
-            />
+            <PortfolioCard {title} {date} {description} {url} {tags} />
           ))
         }
       </div>

@@ -6,16 +6,11 @@ import ButtonLink from "@components/buttonlink.astro";
 import ButtonBar from "@components/buttonbar.astro";
 import Head from "@components/head.astro";
 import Socials from "@components/socials.astro";
-
-const title = "Home";
-const description =
-  "I'm Anna Hsu (she/her), a Taiwanese American gal studying Computer Engineering and Computer Science at the University of Southern California.";
-const permalink = "/";
 ---
 
 <PageLayout>
   <head>
-    <Head {title} {description} {permalink} />
+    <Head title="Home" permalink="/" />
     <style lang="scss">
       body {
         justify-content: center;

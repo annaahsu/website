@@ -1,24 +1,18 @@
 ---
 import { Picture } from "@astrojs/image/components";
-import headshot from "@assets/headshot.png";
 import PageLayout from "@layouts/page.astro";
-
 import ButtonBar from "@components/buttonbar.astro";
 import ButtonLink from "@components/buttonlink.astro";
 import Container from "@components/container.astro";
 import Head from "@components/head.astro";
 import Navbar from "@components/navbar.astro";
 import Socials from "@components/socials.astro";
-
-const title = "About";
-const description =
-  "I'm Anna Hsu (she/her), a Taiwanese American gal studying Computer Engineering and Computer Science at the University of Southern California.";
-const permalink = "/about";
+import headshot from "@assets/headshot.png";
 ---
 
 <PageLayout>
   <head>
-    <Head {title} {description} {permalink} />
+    <Head title="About" permalink="/about" />
     <style lang="scss">
       .content {
         flex: 999 1 300px;
@@ -153,7 +147,7 @@ const permalink = "/about";
           </p>
           <p>
             By leveraging my technical background and my love of writing, I
-            cover noteworthy innovations and events for the
+            cover noteworthy innovations, accomplishments, and events for the
             <a href="https://cs.usc.edu/news/"
               >USC Thomas Lord Department of Computer Science</a
             >. I also previously led the Copy Desk at <a
