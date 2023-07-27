@@ -11,6 +11,7 @@
     "isolatedModules": true,
     "strictNullChecks": true,
     "allowJs": true,
+    "allowSyntheticDefaultImports": true,
     // Add type definitions for our Vite runtime.
     "types": ["vite/client", "@astrojs/image/client"],
     "baseUrl": ".",
