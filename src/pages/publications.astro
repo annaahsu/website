@@ -1,0 +1,39 @@
+---
+import PageLayout from "@layouts/page.astro";
+
+import Container from "@components/container.astro";
+import Head from "@components/head.astro";
+import Navbar from "@components/navbar.astro";
+
+import data from "@data/publications.json";
+---
+
+<PageLayout>
+  <head>
+    <Head title="Publications" permalink="/publications" />
+  </head>
+
+  <body>
+    <Navbar />
+    <Container>
+      <h1>Thoughts, Words, and the Media</h1>
+      <div>
+        {
+          data.map(({ title, date, description, url }) => {
+            const newDate = new Date(date).toLocaleDateString("en-US", {
+              month: "long",
+              day: "numeric",
+              year: "numeric",
+            });
+            return (
+              <p>
+                <a href={url}>{`${title} (${newDate}).`}</a>
+                {description}
+              </p>
+            );
+          })
+        }
+      </div>
+    </Container>
+  </body>
+</PageLayout>
