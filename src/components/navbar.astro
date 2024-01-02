@@ -4,24 +4,7 @@ import Hamburger from "@components/hamburger.astro";
 
 const page = new URL(Astro.request.url).pathname;
 
-const navLinks = [
-  {
-    name: "About",
-    link: "/about",
-  },
-  {
-    name: "Blog",
-    link: "/blog",
-  },
-  {
-    name: "Portfolio",
-    link: "/portfolio",
-  },
-  {
-    name: "Publications",
-    link: "/publications",
-  },
-];
+import navLinks from "@data/nav.json";
 ---
 
 <nav>

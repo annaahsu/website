@@ -6,6 +6,8 @@ import ButtonLink from "@components/buttonlink.astro";
 import ButtonBar from "@components/buttonbar.astro";
 import Head from "@components/head.astro";
 import Socials from "@components/socials.astro";
+
+import navLinks from "@data/nav.json";
 ---
 
 <PageLayout>
@@ -147,9 +149,11 @@ import Socials from "@components/socials.astro";
               your stay!
             </p>
             <ButtonBar>
-              <ButtonLink href="/about">About</ButtonLink>
-              <ButtonLink href="/blog">Blog</ButtonLink>
-              <ButtonLink href="/portfolio">Portfolio</ButtonLink>
+              {
+                navLinks.map(({ name, link }) => (
+                  <ButtonLink href={link}>{name}</ButtonLink>
+                ))
+              }
             </ButtonBar>
             <Socials />
           </div>
