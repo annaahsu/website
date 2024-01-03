@@ -1,28 +1,28 @@
 ---
 import ButtonBar from "@components/buttonbar.astro";
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 ---
 
 <ButtonBar>
   <a class="icon" href="mailto:hello@annahsu.dev">
-    <Icon size={40} name="ion:mail" alt="email" />
+    <Icon size={40} name="ion:mail" />
   </a>
   <a class="icon" href="https://linkedin.com/in/annaahsu">
-    <Icon size={40} name="ion:logo-linkedin" alt="LinkedIn" />
+    <Icon size={40} name="ion:logo-linkedin" />
   </a>
   <a class="icon" href="https://twitter.com/annaahsu">
-    <Icon size={40} name="ion:logo-twitter" alt="Twitter" />
+    <Icon size={40} name="ion:logo-twitter" />
   </a>
   <a class="icon" href="https://github.com/annaahsu">
-    <Icon size={40} name="ion:logo-github" alt="Github" />
+    <Icon size={40} name="ion:logo-github" />
   </a>
   <a class="icon" href="https://anna.show/yt">
-    <Icon size={40} name="ion:logo-youtube" alt="YouTube" />
+    <Icon size={40} name="ion:logo-youtube" />
   </a>
 </ButtonBar>
 
 <style lang="scss">
-  [astro-icon] {
+  [data-icon] {
     color: var(--med);
   }
 
