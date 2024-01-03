@@ -1,5 +1,5 @@
 ---
-import { Picture } from "@astrojs/image/components";
+import { Picture } from "astro:assets";
 import PageLayout from "@layouts/page.astro";
 import ButtonBar from "@components/buttonbar.astro";
 import ButtonLink from "@components/buttonlink.astro";
@@ -13,93 +13,6 @@ import headshot from "@assets/headshot.jpg";
 <PageLayout>
   <head>
     <Head title="About" permalink="/about" />
-    <style lang="scss">
-      .content {
-        flex: 999 1 300px;
-      }
-
-      .tangent {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 64px;
-      }
-
-      .sidebar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
-        flex: 1 1 0;
-      }
-
-      .wrap {
-        position: relative;
-        z-index: 10;
-      }
-
-      .rectangle-wrap {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-      }
-
-      .rectangle {
-        background: var(--light);
-        width: 100%;
-        height: 100%;
-        z-index: 50;
-        animation: whee 1s ease forwards;
-      }
-
-      .headshot {
-        z-index: 100;
-        max-width: 300px;
-        max-height: 300px;
-        animation: photo 1s ease forwards;
-      }
-
-      @media (max-width: 374px) {
-        .headshot {
-          max-width: 200px;
-          max-height: 200px;
-        }
-      }
-
-      .bar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        .rectangle {
-          animation: none;
-          transform: rotate(6deg);
-          box-shadow: var(--cutout);
-        }
-      }
-
-      @keyframes photo {
-        100% {
-          box-shadow: var(--cutout);
-        }
-      }
-
-      @keyframes whee {
-        0% {
-          opacity: 0%;
-          transform: rotate(0deg);
-        }
-
-        100% {
-          transform: rotate(6deg);
-          box-shadow: var(--cutout);
-        }
-      }
-    </style>
   </head>
 
   <body>
@@ -113,12 +26,7 @@ import headshot from "@assets/headshot.jpg";
               <div class="rectangle"></div>
             </div>
             <div class="headshot">
-              <Picture
-                src={headshot}
-                widths={[400, 800]}
-                sizes="(max-width: 374px) 200px, (min-width: 375px) 300px"
-                alt="Anna Hsu headshot"
-              />
+              <Picture src={headshot} width="300" alt="Anna Hsu headshot" />
             </div>
           </div>
           <div class="bar">
@@ -185,3 +93,96 @@ import headshot from "@assets/headshot.jpg";
     </Container>
   </body>
 </PageLayout>
+
+ <style lang="scss">
+  .content {
+    flex: 999 1 300px;
+  }
+
+  .tangent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 64px;
+  }
+
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    flex: 1 1 0;
+  }
+
+  .wrap {
+    position: relative;
+    z-index: 10;
+  }
+
+  .rectangle-wrap {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .rectangle {
+    background: var(--light);
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    animation: whee 1s ease forwards;
+  }
+
+  .headshot {
+    z-index: 100;
+    max-width: 300px;
+    max-height: 300px;
+    animation: photo 1s ease forwards;
+  }
+
+  @media (max-width: 374px) {
+    .headshot {
+      max-width: 200px;
+      max-height: 200px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rectangle {
+      animation: none;
+      transform: rotate(6deg);
+      box-shadow: var(--cutout);
+    }
+  }
+
+  @keyframes photo {
+    100% {
+      box-shadow: var(--cutout);
+    }
+  }
+
+  @keyframes whee {
+    0% {
+      opacity: 0%;
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(6deg);
+      box-shadow: var(--cutout);
+    }
+  }
+</style>

@@ -1,5 +1,6 @@
 ---
-import { Picture } from "@astrojs/image/components";
+// import { Picture } from "@astrojs/image/components";
+import { Picture } from 'astro:assets';
 
 export interface Props {
   src: any;
@@ -10,13 +11,7 @@ const { src, alt } = Astro.props;
 ---
 
 <div class="blogimage">
-  <Picture
-    class="image"
-    src={src}
-    widths={[400, 800, 1200]}
-    sizes="(max-width: 300px) 280px, (max-width: 500px) 20em, (max-width: 600px) 27em, (max-width: 700px) 33em, (min-width: 700px) 40em"
-    alt={alt}
-  />
+  <Picture src={src} width="640" alt={alt} class="image" />
   <figcaption>{alt}</figcaption>
 </div>
 
@@ -31,7 +26,29 @@ const { src, alt } = Astro.props;
   }
 
   .image {
-    box-shadow: var(--photodrop);
+    max-width: 100%;
+    height: auto;
+
+    // (max-width: 300px) 280px, (max-width: 500px) 20em, (max-width: 600px) 27em, (max-width: 700px) 33em, (min-width: 700px) 40em
+    @media (max-width: 300px) {
+      width: 280px;
+    }
+
+    @media (max-width: 500px) {
+      width: 20em;
+    }
+
+    @media (max-width: 600px) {
+      width: 27em;
+    }
+
+    @media (max-width: 700px) {
+      width: 33em;
+    }
+
+    @media (min-width: 700px) {
+      width: 40em;
+    }
   }
 
   figcaption {
