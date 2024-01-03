@@ -1,34 +1,37 @@
 ---
 import { getCollection } from "astro:content";
 import PageLayout from "@layouts/page.astro";
-
 import BlogCard from "@components/blogcard.astro";
 import ButtonBar from "@components/buttonbar.astro";
-import ButtonLink from "@components/buttonlink.astro";
+import ButtonFilter from "@components/buttonfilter.astro";
 import Container from "@components/container.astro";
 import Head from "@components/head.astro";
 import Navbar from "@components/navbar.astro";
 
-const title = "Blog";
-const description =
-  "I'm Anna Hsu (she/her), a Taiwanese American gal studying Computer Engineering and Computer Science at the University of Southern California.";
-const permalink = "/blog";
-
 let allPosts = await getCollection("blog");
+const categories: string[] = [];
 allPosts = allPosts.sort(
   (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
 );
+allPosts.forEach((p) => {
+  p.data.tags.forEach((t) => {
+    if (!categories.includes(t)) {
+      categories.push(t);
+    }
+  });
+});
 ---
 
 <PageLayout>
   <head>
-    <Head {title} {description} {permalink} />
-
+    <Head title="Blog" permalink="/blog" />
     <style lang="scss">
-      .content {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
+      .filtered {
+        display: none;
+      }
+
+      .selected {
+        display: block;
       }
     </style>
   </head>
@@ -37,12 +40,71 @@ allPosts = allPosts.sort(
     <Navbar />
     <Container>
       <h1>How To Take Over The World&trade;</h1>
-      <!-- <ButtonBar>
-        <ButtonLink href="#">asldkfjaslkfdjlaksjdflkas</ButtonLink>
-      </ButtonBar> -->
       <div class="content">
-        {allPosts.map((p) => <BlogCard post={p} />)}
+        <ButtonBar>
+          {categories.map((c) => <ButtonFilter id={c} tag={c} />)}
+        </ButtonBar>
+        {
+          allPosts.map((p) => {
+            return (
+              <div class={`blog-card ${p.data.tags.join(" ")}`}>
+                <BlogCard post={p} />
+              </div>
+            );
+          })
+        }
       </div>
     </Container>
   </body>
 </PageLayout>
+
+<style lang="scss">
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .none {
+    display: none;
+  }
+</style>
+
+<script>
+  const click = [];
+  const buttons = document.querySelectorAll("button");
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const id = button.id;
+      if (!click.find((c) => c === id)) {
+        click.push(id);
+      } else {
+        click.splice(click.indexOf(id), 1);
+      }
+      button.classList.toggle("clicked");
+      update();
+    });
+  });
+
+  const update = () => {
+    const cards = Array.from(document.getElementsByClassName("blog-card"));
+    if (click.length > 0) {
+      cards.forEach((card) => {
+        card.classList.add("filtered");
+        card.classList.remove("selected");
+        const classes = Array.from(card.classList);
+        click.forEach((clickedClass) => {
+          if (classes.find((cardClass) => cardClass === clickedClass)) {
+            card.classList.remove("filtered");
+            card.classList.add("selected");
+          }
+        });
+      });
+    } else {
+      cards.forEach((card) => {
+        card.classList.remove("filtered");
+        card.classList.remove("selected");
+      });
+    }
+  };
+</script>

@@ -1,0 +1,70 @@
+---
+export interface Props {
+  tag: string;
+  id: string;
+}
+
+const { tag, id } = Astro.props;
+---
+
+<button {id}>
+  {tag}
+</button>
+
+<style lang="scss">
+  button {
+    padding: 8px 12px;
+    text-decoration: none;
+    color: var(--med);
+    font-weight: bold;
+    font-size: inherit;
+    font-family: inherit;
+    background: var(--light);
+    box-shadow: inset 4px 0px 16px rgba(253, 250, 249, 0.5),
+      inset 0px -4px 16px rgba(249, 236, 234, 0.5),
+      inset -4px 0px 16px rgba(115, 48, 34, 0.5), var(--buttondrop);
+    border-radius: 8px;
+    transition: none;
+    outline: none;
+    border: none;
+  }
+
+  button:hover {
+    box-shadow: inset 8px 0px 16px rgba(253, 250, 249, 0.5),
+      inset 0px -8px 16px rgba(249, 236, 234, 0.5),
+      inset -8px 0px 16px rgba(115, 48, 34, 0.5);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  button:active {
+    box-shadow: inset 24px 0px 16px rgba(253, 250, 249, 0.5),
+      inset 0px -24px 16px rgba(249, 236, 234, 0.5),
+      inset -24px 0px 16px rgba(115, 48, 34, 0.5);
+    trnsition: 0.5s;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    button:hover {
+      box-shadow: inset 4px 0px 16px rgba(253, 250, 249, 0.5),
+        inset 0px -4px 16px rgba(249, 236, 234, 0.5),
+        inset -4px 0px 16px rgba(115, 48, 34, 0.5);
+      transition: none;
+      cursor: pointer;
+    }
+  }
+
+  .clicked {
+    background: var(--med);
+    color: var(--light);
+    box-shadow: inset -4px 0px 16px rgba(115, 48, 34, 0.5),
+      inset 0px -4px 16px rgba(249, 236, 234, 0.5),
+      inset 4px 0px 16px rgba(253, 250, 249, 0.5), var(--buttondrop);
+  }
+
+  .clicked:hover {
+    box-shadow: inset 4px 0px 8px rgba(253, 250, 249, 0.5),
+      inset 0px -4px 8px rgba(249, 236, 234, 0.5),
+      inset -4px 0px 8px rgba(115, 48, 34, 0.5);
+  }
+</style>
