@@ -13,7 +13,7 @@
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     // Add type definitions for our Vite runtime.
-    "types": ["vite/client", "@astrojs/image/client"],
+    "types": ["vite/client", "astro/client"],
     "baseUrl": ".",
     "paths": {
       "@assets/*": ["src/assets/*"],

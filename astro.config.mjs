@@ -1,8 +1,8 @@
 import { defineConfig } from "astro/config";
-import image from "@astrojs/image";
 import astro from "astro-robots-txt";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
+import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,13 +15,16 @@ export default defineConfig({
   markdown: {
     syntaxHighlight: "prism",
   },
+  image: {
+    service: {
+      entrypoint: 'astro/assets/services/noop'
+    }
+  },
   integrations: [
-    image({
-      serviceEntryPoint: "@astrojs/image/sharp",
-    }),
     astro(),
     mdx(),
     sitemap(),
+    icon(),
   ],
   scopedStyleStrategy: "class",
 });
