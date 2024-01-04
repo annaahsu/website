@@ -20,16 +20,6 @@ const permalink = `/blog/${frontmatter.permalink}`;
     <link rel="stylesheet" href="/prism-laserwave.css" />
 
     <Head {title} {description} {permalink} />
-
-    <style lang="scss">
-      .date {
-        font-style: oblique;
-      }
-
-      .header {
-        margin-bottom: 32px;
-      }
-    </style>
   </head>
 
   <body>
@@ -48,3 +38,13 @@ const permalink = `/blog/${frontmatter.permalink}`;
     </Container>
   </body>
 </PageLayout>
+
+<style lang="scss">
+  .date {
+    font-style: oblique;
+  }
+
+  .header {
+    margin-bottom: var(--bottommargin);
+  }
+</style>
