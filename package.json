@@ -18,6 +18,7 @@
     "sass": "^1.69.7"
   },
   "dependencies": {
+    "@fontsource/readex-pro": "^5.0.8",
     "@iconify-json/ion": "^1.1.15",
     "astro-icon": "^1.0.2",
     "preact": "^10.19.3",
