@@ -13,122 +13,6 @@ import navLinks from "@data/nav.json";
 <PageLayout>
   <head>
     <Head title="Home" permalink="/" />
-    <style lang="scss">
-      body {
-        justify-content: center;
-      }
-
-      .home {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        background: var(--pale);
-
-        p {
-          margin-bottom: 0;
-        }
-      }
-
-      @media (min-width: 850px) {
-        main {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          max-width: 900px;
-        }
-
-        .wrap {
-          position: relative;
-          z-index: 10;
-          animation: whee 1s forwards;
-        }
-
-        .rectangle-wrap {
-          position: absolute;
-          top: 0;
-          width: 100%;
-          height: 100%;
-          z-index: -1;
-        }
-
-        .rectangle {
-          background: var(--light);
-          box-shadow: var(--cut);
-          width: 100%;
-          height: 100%;
-          z-index: 50;
-        }
-
-        .home {
-          padding: 128px;
-          animation: cuts 0.5s ease 0.5s;
-        }
-
-        .home-wrap {
-          z-index: 100;
-          display: flex;
-          animation: card 1s ease 1s forwards;
-        }
-      }
-
-      @media (max-width: 850px) {
-        .rectangle-wrap {
-          display: none;
-        }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        .wrap,
-        .home-wrap,
-        .home {
-          animation: none;
-        }
-      }
-
-      @keyframes whee {
-        0% {
-          transform: rotate(0deg);
-        }
-
-        100% {
-          transform: rotate(6deg);
-        }
-      }
-
-      @keyframes card {
-        100% {
-          transform: rotate(-12deg);
-          box-shadow: var(--cutout);
-        }
-      }
-
-      @keyframes cuts {
-        0% {
-          border: none;
-        }
-
-        20% {
-          border-top: 1px solid var(--light);
-        }
-
-        40% {
-          border-right: 1px solid var(--light);
-        }
-
-        60% {
-          border-bottom: 1px solid var(--light);
-        }
-
-        80% {
-          border-left: 1px solid var(--light);
-        }
-
-        100% {
-          border: 1px solid var(--light);
-        }
-      }
-    </style>
   </head>
 
   <body>
@@ -162,3 +46,120 @@ import navLinks from "@data/nav.json";
     </main>
   </body>
 </PageLayout>
+
+<style lang="scss">
+  body {
+    justify-content: center;
+  }
+
+  .home {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: var(--pale);
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 850px) {
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      max-width: 900px;
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 10;
+      animation: whee 1s forwards;
+    }
+
+    .rectangle-wrap {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .rectangle {
+      background: var(--light);
+      box-shadow: var(--cut);
+      width: 100%;
+      height: 100%;
+      z-index: 50;
+    }
+
+    .home {
+      padding: 128px;
+      animation: cuts 0.5s ease 0.5s;
+    }
+
+    .home-wrap {
+      z-index: 100;
+      display: flex;
+      animation: card 1s ease 1s forwards;
+    }
+  }
+
+  @media (max-width: 850px) {
+    .rectangle-wrap {
+      display: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .wrap,
+    .home-wrap,
+    .home {
+      animation: none;
+    }
+  }
+
+  @keyframes whee {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(6deg);
+    }
+  }
+
+  @keyframes card {
+    100% {
+      transform: rotate(-12deg);
+      box-shadow: var(--cutout);
+    }
+  }
+
+  @keyframes cuts {
+    0% {
+      border: none;
+    }
+
+    20% {
+      border-top: 1px solid var(--light);
+    }
+
+    40% {
+      border-right: 1px solid var(--light);
+    }
+
+    60% {
+      border-bottom: 1px solid var(--light);
+    }
+
+    80% {
+      border-left: 1px solid var(--light);
+    }
+
+    100% {
+      border: 1px solid var(--light);
+    }
+  }
+</style>
