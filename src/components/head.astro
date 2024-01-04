@@ -1,9 +1,12 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
+
 export interface Props {
   title: string;
   description?: string;
   permalink: string;
 }
+
 let {
   title,
   description = "I'm Anna Hsu (she/her), a Taiwanese American gal studying Computer Engineering and Computer Science at the University of Southern California.",
@@ -61,3 +64,5 @@ const meta = "/assets/meta.png";
   rel="stylesheet"
   href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;700&display=swap"
 />
+
+<ViewTransitions />
