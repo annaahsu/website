@@ -17,14 +17,9 @@ export default defineConfig({
   },
   image: {
     service: {
-      entrypoint: 'astro/assets/services/noop'
-    }
+      entrypoint: "astro/assets/services/noop",
+    },
   },
-  integrations: [
-    astro(),
-    mdx(),
-    sitemap(),
-    icon(),
-  ],
+  integrations: [astro(), mdx(), sitemap(), icon()],
   scopedStyleStrategy: "class",
 });
