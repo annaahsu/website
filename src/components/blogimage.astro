@@ -10,18 +10,9 @@ const { src, alt } = Astro.props;
 ---
 
 <div class="blogimage">
-  <!-- <Picture
-    class="image"
-    src={src}
-    formats={['avif', 'webp']}
-    widths={[400, 800, 1200]}
-    sizes="(max-width: 300px) 280px, (max-width: 500px) 20em, (max-width: 600px) 27em, (max-width: 700px) 33em, (min-width: 700px) 40em"
-    alt={alt}
-  /> -->
   <Picture
     class="image"
     src={src}
-    formats={["avif", "webp"]}
     widths={[400, 800]}
     sizes="(max-width: 300px) 280px, (max-width: 500px) 20em, (max-width: 600px) 27em, (max-width: 700px) 33em, (min-width: 700px) 40em"
     alt={alt}
