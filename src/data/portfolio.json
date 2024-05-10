@@ -1,5 +1,26 @@
 [
   {
+    "title": "Changing Course: Natalie Fung",
+    "date": "2023-07-06",
+    "description": "From PR to data science, Natalie Fung, a graduating master's student, on becoming a “double Trojan” after a life-altering accident.",
+    "url": "https://viterbischool.usc.edu/news/2024/05/changing-course-natalie-fung/",
+    "tags": ["journalism", "tech"]
+  },
+  {
+    "title": "Ph.D. Student Named Apple Scholar for Human-Centered LLM Research",
+    "date": "2024-04-23",
+    "description": "\"ChatGPT, do you know who I am?\" Computer science doctoral student Brihi Joshi studies the symbiotic relationship between humans and large language models.",
+    "url": "https://viterbischool.usc.edu/news/2024/04/phd-student-named-apple-scholar-for-human-centered-llm-research/",
+    "tags": ["journalism", "tech"]
+  },
+  {
+    "title": "CANVAS",
+    "date": "2023-12-01",
+    "description": "A collaborative, concurrent drawing tool, powered by Next.js and WebSockets and designed in Figma.",
+    "url": "https://canvas.annahsu.dev",
+    "tags": ["web-dev"]
+  },
+  {
     "title": "USC Computer Science Students Awarded NSF Graduate Research Fellowships",
     "date": "2023-07-06",
     "description": "Emily Nguyen and James Flemings were recognized for their contributions to deep generative models focusing on wildfire prevention and privacy in machine learning.",
@@ -35,17 +56,10 @@
     "tags": ["journalism", "tech"]
   },
   {
-    "title": "Scott Rabenold appointed senior vice president for university advancement",
-    "date": "2022-12-14",
-    "description": "Rabenold will join USC in February 2023.",
-    "url": "https://dailytrojan.com/2022/12/14/scott-rabenold-appointed-senior-vice-president-for-university-advancement/",
-    "tags": ["journalism"]
-  },
-  {
-    "title": "Morning, Trojan",
+    "title": "College Brief",
     "date": "2022-10-31",
-    "description": "Essential headlines for USC students every weekday morning, curated and written by Tomoki Chien and Claire Qiu, copy edited by Anna Hsu.",
-    "url": "https://bit.ly/morning-trojan",
+    "description": "Essential headlines for USC students every weekday morning.",
+    "url": "https://collegebrief.org",
     "tags": ["journalism"]
   },
   {
@@ -75,20 +89,6 @@
     "description": "My music website, built with Astro!",
     "url": "https://music.annahsu.dev",
     "tags": ["web-dev"]
-  },
-  {
-    "title": "picoMini by redpwn - advanced-potion-making (forensics)",
-    "date": "2021-05-11",
-    "description": "Writeup for advanced-potion-making (forensics).",
-    "url": "https://activities.tjhsst.edu/csc/writeups/picomini-redpwn-apm",
-    "tags": ["cybersecurity"]
-  },
-  {
-    "title": "picoMini by redpwn - login (web)",
-    "date": "2021-05-11",
-    "description": "Writeup for login (web).",
-    "url": "https://activities.tjhsst.edu/csc/writeups/picomini-redpwn-login",
-    "tags": ["cybersecurity"]
   },
   {
     "title": "TJ Latin",

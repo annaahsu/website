@@ -15,11 +15,6 @@ export default defineConfig({
   markdown: {
     syntaxHighlight: "prism",
   },
-  image: {
-    service: {
-      entrypoint: "astro/assets/services/noop",
-    },
-  },
   integrations: [astro(), mdx(), sitemap(), icon()],
   scopedStyleStrategy: "class",
 });

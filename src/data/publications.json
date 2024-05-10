@@ -1,5 +1,19 @@
 [
   {
+    "title": "Changing Course: Natalie Fung",
+    "date": "2023-07-06",
+    "description": "From PR to data science, Natalie Fung, a graduating master's student, on becoming a “double Trojan” after a life-altering accident.",
+    "url": "https://viterbischool.usc.edu/news/2024/05/changing-course-natalie-fung/",
+    "tags": ["journalism", "tech"]
+  },
+  {
+    "title": "Ph.D. Student Named Apple Scholar for Human-Centered LLM Research",
+    "date": "2024-04-23",
+    "description": "\"ChatGPT, do you know who I am?\" Computer science doctoral student Brihi Joshi studies the symbiotic relationship between humans and large language models.",
+    "url": "https://viterbischool.usc.edu/news/2024/04/phd-student-named-apple-scholar-for-human-centered-llm-research/",
+    "tags": ["journalism", "tech"]
+  },
+  {
     "title": "USC at the Conference on Neural Information Processing Systems (NeurIPS)",
     "date": "2023-12-12",
     "description": "USC researchers will highlight 28 papers at the Conference on Neural Information Processing Systems (NeurIPS).",

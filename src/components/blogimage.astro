@@ -10,11 +10,19 @@ const { src, alt } = Astro.props;
 ---
 
 <div class="blogimage">
-  <Picture
+  <!-- <Picture
     class="image"
     src={src}
     formats={['avif', 'webp']}
     widths={[400, 800, 1200]}
+    sizes="(max-width: 300px) 280px, (max-width: 500px) 20em, (max-width: 600px) 27em, (max-width: 700px) 33em, (min-width: 700px) 40em"
+    alt={alt}
+  /> -->
+  <Picture
+    class="image"
+    src={src}
+    formats={["avif", "webp"]}
+    widths={[400, 800]}
     sizes="(max-width: 300px) 280px, (max-width: 500px) 20em, (max-width: 600px) 27em, (max-width: 700px) 33em, (min-width: 700px) 40em"
     alt={alt}
   />
@@ -32,29 +40,9 @@ const { src, alt } = Astro.props;
   }
 
   .image {
-    max-width: 100%;
+    box-shadow: var(--photodrop);
+    width: 100%;
     height: auto;
-
-    // (max-width: 300px) 280px, (max-width: 500px) 20em, (max-width: 600px) 27em, (max-width: 700px) 33em, (min-width: 700px) 40em
-    @media (max-width: 300px) {
-      width: 280px;
-    }
-
-    @media (max-width: 500px) {
-      width: 20em;
-    }
-
-    @media (max-width: 600px) {
-      width: 27em;
-    }
-
-    @media (max-width: 700px) {
-      width: 33em;
-    }
-
-    @media (min-width: 700px) {
-      width: 40em;
-    }
   }
 
   figcaption {

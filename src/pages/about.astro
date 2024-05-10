@@ -1,5 +1,5 @@
 ---
-import { Picture } from "astro:assets";
+import { Image } from "astro:assets";
 import PageLayout from "@layouts/page.astro";
 import ButtonBar from "@components/buttonbar.astro";
 import ButtonLink from "@components/buttonlink.astro";
@@ -26,7 +26,7 @@ import headshot from "@assets/headshot.jpg";
               <div class="rectangle"></div>
             </div>
             <div class="headshot">
-              <Picture src={headshot} width="300" alt="Anna Hsu headshot" />
+              <Image src={headshot} width="800" alt="Anna Hsu headshot" />
             </div>
           </div>
           <div class="bar">
@@ -48,9 +48,9 @@ import headshot from "@assets/headshot.jpg";
               href="https://tjhsst.fcps.edu"
               >Thomas Jefferson High School for Science and Technology</a
             >. That's where I discovered my love for filling niches at the
-            intersections of different fields. I'm broadly interested in
-            designing and writing code to build impactful products, AI ethics
-            and policy, and expanding tech journalism to a broader audience.
+            intersections of CS/engineering, design, journalism, and beyond. I'm
+            broadly interested in writing impactful code, exploring AI
+            ethics/policy, and making tech journalism more accessible.
           </p>
           <p>
             At USC, I'm a <a href="https://viterbivoices.usc.edu"
@@ -68,7 +68,16 @@ import headshot from "@assets/headshot.jpg";
           </p>
           <p>
             By leveraging my technical background and my love of writing, I
-            cover noteworthy innovations, accomplishments, and events for the
+            cover noteworthy <a
+              href="https://viterbischool.usc.edu/news/2023/02/robot-tutors-read-childrens-emotions-as-they-learn/"
+              >innovations</a
+            >, <a
+              href="https://viterbischool.usc.edu/news/2024/05/changing-course-natalie-fung/"
+              >accomplishments</a
+            >, and <a
+              href="https://viterbischool.usc.edu/news/2023/03/athenahacks-usc-creates-community/"
+              >events</a
+            > for the
             <a href="https://cs.usc.edu/news/"
               >USC Thomas Lord Department of Computer Science</a
             >. I also lead copy editing efforts at <a
@@ -81,7 +90,10 @@ import headshot from "@assets/headshot.jpg";
           </p>
 
           <p>
-            In my (rare) spare time, you can find me eating Taiwanese food, <a
+            In my (rare) spare time, you can find me <a
+              href="https://www.yelp.com/user_details?userid=dCvHUJufGBePFPpCAh5uFw"
+              >writing about good food</a
+            >, <a
               href="https://open.spotify.com/playlist/7pqZbX1kOheeGjIY5B6i6M"
               >listening to music</a
             >, and <a href="https://www.strava.com/athletes/89593849"
@@ -94,7 +106,7 @@ import headshot from "@assets/headshot.jpg";
   </body>
 </PageLayout>
 
- <style lang="scss">
+<style lang="scss">
   .content {
     flex: 999 1 300px;
   }
@@ -139,17 +151,22 @@ import headshot from "@assets/headshot.jpg";
     max-width: 300px;
     max-height: 300px;
     animation: photo 1s ease forwards;
+
+    img {
+      max-width: 300px;
+      height: auto;
+    }
   }
 
   @media (max-width: 374px) {
     .headshot {
       max-width: 200px;
       max-height: 200px;
-    }
 
-    img {
-      width: 100%;
-      height: auto;
+      img {
+        max-width: 200px;
+        height: auto;
+      }
     }
   }
 
