@@ -7,7 +7,7 @@ const page = new URL(Astro.request.url).pathname;
 import navLinks from "@data/nav.json";
 ---
 
-<nav>
+<nav transition:persist>
   <div class="nav-mobile">
     <div class="logo">
       <a href="/">
@@ -167,7 +167,9 @@ import navLinks from "@data/nav.json";
 <script>
   let navlinks = document.getElementById("js-menu");
   let navBarToggle = document.getElementById("js-navbar-toggle");
-  navBarToggle.addEventListener("click", () => {
-    navlinks.classList.toggle("on");
+  navBarToggle?.addEventListener("click", () => {
+    navlinks?.classList.toggle("on");
   });
+
+  document.addEventListener("astro:after-swap", () => navlinks?.classList.toggle("on"));
 </script>

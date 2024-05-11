@@ -1,4 +1,5 @@
 ---
+
 ---
 
 <svg
@@ -7,8 +8,7 @@
   viewBox="0 0 36 36"
   height="36"
   width="36"
-  onclick=""
->
+  onclick="">
   <g class="top-bars" stroke-width="4">
     <path class="bar bar1" d="M 6,8 H 30"></path>
     <path class="bar bar2" d="M 6,17 H 30"></path>
@@ -54,7 +54,11 @@
 
 <script>
   let hamburger = document.getElementById("x");
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
+  hamburger?.addEventListener("click", () => {
+    hamburger?.classList.toggle("active");
   });
+
+  document.addEventListener("astro:after-swap", () =>
+    hamburger?.classList.toggle("active")
+  );
 </script>
