@@ -31,7 +31,7 @@ if (!images[post.data.cover]) {
 
 <a class="cardlink" href={permalink}>
   <article class="card">
-    <img class="image" src={post.data.cover} alt="cover" />
+    <Image class="image" src={images[post.data.cover]()} alt="cover" width="400" />
     <div class="content">
       <header class="header">
         <h2 class="title">{title}</h2>
