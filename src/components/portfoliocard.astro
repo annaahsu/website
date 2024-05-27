@@ -3,33 +3,70 @@ import ButtonBar from "@components/buttonbar.astro";
 import ButtonTag from "@components/buttontag.astro";
 
 export interface Props {
+  image: boolean;
+  body: boolean;
   title: string;
   date: string;
   description: string;
   url: string;
+  imageUrl: string;
   tags: string[];
 }
-const { title, date, description, url, tags } = Astro.props;
+const { image, body, title, date, description, url, imageUrl, tags } =
+  Astro.props;
 
 const newDate = new Date(`${date}T00:00:00`);
 const options = { year: "numeric", month: "long", day: "numeric" };
 const formatDate = newDate.toLocaleDateString("en-US", options);
+
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/portfolio/*.{jpeg,jpg,png,gif}"
+);
+if (imageUrl != "" && !images[imageUrl])
+  throw new Error(
+    `"${imageUrl}" does not exist in glob: "src/assets/portfolio/*.{jpeg,jpg,png,gif}"`
+  );
 ---
 
-<!-- when I have a masonry solution (or when grid masonry comes out!) remember to clean up the content class flex -->
 <article class="card">
   <a class="cardlink" href={url} target="_blank">
     <div class="content">
-      <div class="text">
-        <div class="header">
-          <h2 class="title">{title}</h2>
-          <span class="date">{formatDate}</span>
-        </div>
-        <p>{description}</p>
-      </div>
-      <ButtonBar>
-        {tags.map((tag) => <ButtonTag>{tag}</ButtonTag>)}
-      </ButtonBar>
+      {
+        body ? (
+          <div class="card-content">
+            <div class="text">
+              {image && (
+                <Image
+                  class="img-content"
+                  src={images[imageUrl]()}
+                  width="600"
+                  alt={description}
+                />
+              )}
+              <div class="header">
+                <h2 class="title">{title}</h2>
+                <span class="date">{formatDate}</span>
+              </div>
+              <p>{description}</p>
+            </div>
+            <ButtonBar>
+              {tags.map((tag) => (
+                <ButtonTag>{tag}</ButtonTag>
+              ))}
+            </ButtonBar>
+          </div>
+        ) : (
+          <Image
+            class="img-content"
+            src={images[imageUrl]()}
+            width="800"
+            alt={description}
+          />
+        )
+      }
     </div>
   </a>
 </article>
@@ -64,13 +101,23 @@ const formatDate = newDate.toLocaleDateString("en-US", options);
   }
 
   .content {
+    box-shadow: var(--carddrop);
+    margin-bottom: 24px;
+    break-inside: avoid;
+  }
+
+  .img-content {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .card-content {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     padding: 24px;
     background-color: var(--white);
-    box-shadow: var(--carddrop);
-    height: 100%;
   }
 
   .date {

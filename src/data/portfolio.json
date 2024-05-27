@@ -1,121 +1,202 @@
 [
   {
+    "image": true,
+    "body": true,
     "title": "Changing Course: Natalie Fung",
     "date": "2024-05-08",
     "description": "From PR to data science, Natalie Fung, a graduating master's student, on becoming a “double Trojan” after a life-altering accident.",
     "url": "https://viterbischool.usc.edu/news/2024/05/changing-course-natalie-fung/",
+    "imageUrl": "/src/assets/portfolio/natalie-fung.jpg",
     "tags": ["journalism", "tech"]
   },
   {
+    "image": true,
+    "body": false,
+    "title": "Federated Learning for Video Caching Networks",
+    "date": "2024-04-25",
+    "description": "Jonathan Ong's poster for Center for Undergraduate Research in Viterbi Engineering (CURVE) Fellowship Symposium, designed by Anna Hsu.",
+    "url": "/src/assets/portfolio/jonathan-poster.png",
+    "imageUrl": "/src/assets/portfolio/jonathan-poster.png",
+    "tags": ["design"]
+  },
+  {
+    "image": true,
+    "body": true,
     "title": "Ph.D. Student Named Apple Scholar for Human-Centered LLM Research",
     "date": "2024-04-23",
     "description": "\"ChatGPT, do you know who I am?\" Computer science doctoral student Brihi Joshi studies the symbiotic relationship between humans and large language models.",
     "url": "https://viterbischool.usc.edu/news/2024/04/phd-student-named-apple-scholar-for-human-centered-llm-research/",
+    "imageUrl": "/src/assets/portfolio/brihi-joshi.jpg",
     "tags": ["journalism", "tech"]
   },
   {
+    "image": true,
+    "body": false,
+    "title": "No shoes",
+    "date": "2023-12-04",
+    "description": "Sign requesting for shoes to be taken off, written in C++ and designed by Anna Hsu.",
+    "url": "/src/assets/portfolio/noshoes.png",
+    "imageUrl": "/src/assets/portfolio/noshoes.png",
+    "tags": ["design"]
+  },
+  {
+    "image": false,
+    "body": true,
     "title": "CANVAS",
     "date": "2023-12-01",
     "description": "A collaborative, concurrent drawing tool, powered by Next.js and WebSockets and designed in Figma.",
     "url": "https://canvas.annahsu.dev",
+    "imageUrl": "",
     "tags": ["web-dev"]
   },
   {
+    "image": true,
+    "body": false,
+    "title": "American football playing time & CTE",
+    "date": "2023-10-31",
+    "description": "Infographic on common statistics regarding American football playing time and CTE (chronic traumatic encephalopathy), designed by Anna Hsu.",
+    "url": "/src/assets/portfolio/cte.png",
+    "imageUrl": "/src/assets/portfolio/cte.png",
+    "tags": ["design"]
+  },
+  {
+    "image": true,
+    "body": true,
     "title": "USC Computer Science Students Awarded NSF Graduate Research Fellowships",
     "date": "2023-07-06",
     "description": "Emily Nguyen and James Flemings were recognized for their contributions to deep generative models focusing on wildfire prevention and privacy in machine learning.",
     "url": "https://viterbischool.usc.edu/news/2023/07/usc-computer-science-students-awarded-nsf-graduate-research-fellowships/",
+    "imageUrl": "/src/assets/portfolio/nsf.jpg",
     "tags": ["journalism", "tech"]
   },
   {
+    "image": false,
+    "body": true,
     "title": "Candid",
     "date": "2023-05-20",
     "description": "Photo gallery of candid moments, built with Gatsby.",
     "url": "https://candid.annahsu.dev",
+    "imageUrl": "",
     "tags": ["web-dev"]
   },
   {
+    "image": true,
+    "body": true,
     "title": "Two USC Computer Science Juniors Awarded Goldwater Scholarships",
     "date": "2023-04-28",
     "description": "Juniors Jordan Cahoon and Allen Chang were recognized for their research in, and beyond, computer science.",
     "url": "https://viterbischool.usc.edu/news/2023/04/two-usc-computer-science-juniors-awarded-goldwater-scholarships/",
+    "imageUrl": "/src/assets/portfolio/goldwater.jpg",
     "tags": ["journalism", "tech"]
   },
   {
+    "image": true,
+    "body": true,
     "title": "TARA.ai",
     "date": "2023-04-23",
     "description": "An AI-powered teaching assistant that revolutionizes virtual classrooms, helping you learn anywhere, anytime.",
     "url": "https://devpost.com/software/tara-ai",
+    "imageUrl": "/src/assets/portfolio/tara.png",
     "tags": ["web-dev"]
   },
   {
+    "image": true,
+    "body": true,
     "title": "AthenaHacks USC Creates Community",
     "date": "2023-02-13",
     "description": "More than 400 students took part in USC's hackathon for marginalized gender identities, now in its seventh year.",
     "url": "https://viterbischool.usc.edu/news/2023/03/athenahacks-usc-creates-community/",
+    "imageUrl": "/src/assets/portfolio/athena.png",
     "tags": ["journalism", "tech"]
   },
   {
+    "image": true,
+    "body": false,
+    "title": "Sentiment Analysis of Tweets Via Transfer Learning on BERT",
+    "date": "2022-11-30",
+    "description": "Nathaniel Johnson's poster for ShowCAIS at CAIS++.",
+    "url": "/src/assets/portfolio/nathan-poster.png",
+    "imageUrl": "/src/assets/portfolio/nathan-poster.png",
+    "tags": ["design"]
+  },
+  {
+    "image": false,
+    "body": true,
     "title": "College Brief",
     "date": "2022-10-31",
-    "description": "Essential headlines for USC students every weekday morning.",
+    "description": "Essential headlines for USC, Cal Poly SLO, and UC Berkeley students every weekday morning.",
     "url": "https://collegebrief.org",
+    "imageUrl": "",
     "tags": ["journalism"]
   },
   {
+    "image": true,
+    "body": true,
     "title": "Humans and robots: Stefanos Nikolaidis fosters anthro-machine collaboration in manufacturing",
     "date": "2022-10-04",
     "description": "Nikolaidis received the Agilent 2022 Early Career Professor Award in July.",
     "url": "https://dailytrojan.com/2022/10/04/humans-and-robots-stefanos-nikolaidis-fosters-anthro-machine-collaboration-in-manufacturing/",
+    "imageUrl": "/src/assets/portfolio/stefanos-nikolaidis.png",
     "tags": ["journalism", "tech"]
   },
   {
+    "image": true,
+    "body": true,
     "title": "New Tab Page",
     "date": "2022-06-15",
     "description": "Organizational hub filled with time-dependent messages and quick links, built with Astro and HTML, CSS, and JavaScript.",
     "url": "https://ntp.annahsu.dev",
+    "imageUrl": "/src/assets/portfolio/ntp.png",
     "tags": ["web-dev"]
   },
   {
+    "image": true,
+    "body": true,
     "title": "Perfect Pitch: Using the Fast Fourier Transform (FFT) To Create Musical Arrangements",
     "date": "2022-05-12",
     "description": "How might amateur musicians identify pitches to create pop arrangements? Through an understanding of some cool math, we can create an implementation simulated in MATLAB.",
     "url": "https://youtu.be/ZDDlGLF751o",
+    "imageUrl": "/src/assets/portfolio/poster.png",
     "tags": ["tech", "research"]
   },
   {
-    "title": "Anna Hsu | Music",
-    "date": "2022-03-20",
-    "description": "My music website, built with Astro!",
-    "url": "https://music.annahsu.dev",
-    "tags": ["web-dev"]
-  },
-  {
+    "image": false,
+    "body": true,
     "title": "TJ Latin",
     "date": "2021-04-02",
     "description": "TJ Latin's website for 2020-2021! Static website with blogging by Jekyll.",
     "url": "https://activities.tjhsst.edu/latin/",
+    "imageUrl": "",
     "tags": ["web-dev"]
   },
   {
+    "image": false,
+    "body": true,
     "title": "Cyber-paving the way to success",
     "date": "2021-03-29",
     "description": "Jefferson students placed third at CyberPatriot Nationals after three years of hard work and dedication.",
     "url": "https://www.tjtoday.org/32106/features/cyber-paving-the-way-to-success/",
+    "imageUrl": "",
     "tags": ["journalism", "cybersecurity"]
   },
   {
+    "image": false,
+    "body": true,
     "title": "Phishing scams target Jefferson students",
     "date": "2021-01-16",
     "description": "In the last week, Jefferson students have reported being sent suspicious Facebook links that look like YouTube thumbnails, with the text-only message \"Sankapp: Is it you in the video?\"",
     "url": "https://www.tjtoday.org/30610/showcase/phishing-scams-target-jefferson-students/",
+    "imageUrl": "",
     "tags": ["journalism", "cybersecurity"]
   },
   {
+    "image": false,
+    "body": true,
     "title": "Discord creates peace of mind",
     "date": "2020-11-23",
     "description": "Jefferson organizations gravitate to Discord as a new way to uphold traditions.",
     "url": "https://www.tjtoday.org/29983/features/discord-creates-peace-of-mind/",
+    "imageUrl": "",
     "tags": ["journalism", "tech"]
   }
 ]

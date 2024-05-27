@@ -20,8 +20,8 @@ import portfolio from "@data/portfolio.json";
       <h1>Oh, all the things I've done</h1>
       <div class="grid">
         {
-          portfolio.map(({ title, date, description, url, tags }) => (
-            <PortfolioCard {title} {date} {description} {url} {tags} />
+          portfolio.map(({ image, body, title, date, description, url, imageUrl, tags }) => (
+            <PortfolioCard {image} {body} {title} {date} {description} {url} {imageUrl} {tags} />
           ))
         }
       </div>
@@ -31,8 +31,8 @@ import portfolio from "@data/portfolio.json";
 
 <style lang="scss">
   .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
-    gap: 24px;
+    -webkit-columns: 20em;
+    -moz-columns: 20em;
+    columns: 20em;
   }
 </style>
