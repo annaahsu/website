@@ -10,10 +10,28 @@ const description = post.data.description;
 const options = { year: "numeric", month: "long", day: "numeric" };
 const formatDate = post.data.publishDate.toLocaleDateString("en-US", options);
 const permalink = `/blog/${post.slug}`;
+
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+let images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/blog/*/*.{jpeg,jpg,png,gif}"
+);
+if (!images[post.data.cover]) {
+  images = import.meta.glob<{ default: ImageMetadata }>(
+    "/src/assets/blog/*/*/*.{jpeg,jpg,png,gif}"
+  );
+  if (!images[post.data.cover]) {
+    throw new Error(
+      `"${post.data.cover}" does not exist in glob: "src/assets/blog/*/*.{jpeg,jpg,png,gif}" or "src/assets/blog/*/*/*.{jpeg,jpg,png,gif}"`
+    );
+  }
+}
 ---
 
-<article class="card">
-  <a class="cardlink" href={permalink}>
+<a class="cardlink" href={permalink}>
+  <article class="card">
+    <img class="image" src={post.data.cover} alt="cover" />
     <div class="content">
       <header class="header">
         <h2 class="title">{title}</h2>
@@ -21,10 +39,19 @@ const permalink = `/blog/${post.slug}`;
       </header>
       <p>{description}</p>
     </div>
-  </a>
-</article>
+  </article>
+</a>
 
 <style lang="scss">
+  .card {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 24px;
+    padding: 24px;
+    background-color: var(--white);
+    box-shadow: var(--carddrop);
+  }
+
   .card:hover {
     transform: scale(1.01);
     transition: 0.3s;
@@ -35,6 +62,17 @@ const permalink = `/blog/${post.slug}`;
     transition: 0.3s;
   }
 
+  .image {
+    object-fit: cover;
+    width: 250px;
+    height: auto;
+    flex: 1 1 0;
+
+    @media (max-width: 500px) {
+      width: 100%;
+    }
+  }
+
   .cardlink {
     color: inherit;
     text-decoration: none;
@@ -42,6 +80,7 @@ const permalink = `/blog/${post.slug}`;
     padding: 0;
     transition: none;
     font-weight: inherit;
+    flex-grow: 1;
   }
 
   .cardlink:hover {
@@ -57,9 +96,7 @@ const permalink = `/blog/${post.slug}`;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 24px;
-    background-color: var(--white);
-    box-shadow: var(--carddrop);
+    flex: 999 1 200px;
 
     p {
       margin-bottom: 1rem;

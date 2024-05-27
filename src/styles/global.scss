@@ -49,6 +49,8 @@ body {
   @media (max-width: 350px) {
     margin: 0 var(--smallbottommargin);
   }
+
+  cursor: url("/assets/cursor.svg"), auto;
 }
 
 h1,
