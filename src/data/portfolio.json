@@ -15,7 +15,7 @@
     "title": "Federated Learning for Video Caching Networks",
     "date": "2024-04-25",
     "description": "Jonathan Ong's poster for Center for Undergraduate Research in Viterbi Engineering (CURVE) Fellowship Symposium, designed by Anna Hsu.",
-    "url": "/src/assets/portfolio/jonathan-poster.png",
+    "url": "/assets/portfolio/jonathan-poster.png",
     "imageUrl": "/src/assets/portfolio/jonathan-poster.png",
     "tags": ["design"]
   },
@@ -35,7 +35,7 @@
     "title": "No shoes",
     "date": "2023-12-04",
     "description": "Sign requesting for shoes to be taken off, written in C++ and designed by Anna Hsu.",
-    "url": "/src/assets/portfolio/noshoes.png",
+    "url": "/assets/portfolio/noshoes.png",
     "imageUrl": "/src/assets/portfolio/noshoes.png",
     "tags": ["design"]
   },
@@ -55,7 +55,7 @@
     "title": "American football playing time & CTE",
     "date": "2023-10-31",
     "description": "Infographic on common statistics regarding American football playing time and CTE (chronic traumatic encephalopathy), designed by Anna Hsu.",
-    "url": "/src/assets/portfolio/cte.png",
+    "url": "/assets/portfolio/cte.png",
     "imageUrl": "/src/assets/portfolio/cte.png",
     "tags": ["design"]
   },
@@ -115,7 +115,7 @@
     "title": "Sentiment Analysis of Tweets Via Transfer Learning on BERT",
     "date": "2022-11-30",
     "description": "Nathaniel Johnson's poster for ShowCAIS at CAIS++.",
-    "url": "/src/assets/portfolio/nathan-poster.png",
+    "url": "/assets/portfolio/nathan-poster.png",
     "imageUrl": "/src/assets/portfolio/nathan-poster.png",
     "tags": ["design"]
   },
