@@ -2,6 +2,16 @@
   {
     "image": true,
     "body": true,
+    "title": "Massive USC security failure could wreak digital havoc",
+    "date": "2024-10-20",
+    "description": "You can fake emails from any usc.edu address. We did it to Carol Folt's.",
+    "url": "https://morningtrojan.com/p/usc-spoof-security-fail",
+    "imageUrl": "/src/assets/portfolio/spoof.png",
+    "tags": ["journalism", "tech"]
+  },
+  {
+    "image": true,
+    "body": true,
     "title": "Changing Course: Natalie Fung",
     "date": "2024-05-08",
     "description": "From PR to data science, Natalie Fung, a graduating master's student, on becoming a “double Trojan” after a life-altering accident.",
@@ -40,24 +50,24 @@
     "tags": ["design"]
   },
   {
-    "image": false,
+    "image": true,
     "body": true,
     "title": "CANVAS",
     "date": "2023-12-01",
     "description": "A collaborative, concurrent drawing tool, powered by Next.js and WebSockets and designed in Figma.",
     "url": "https://canvas.annahsu.dev",
-    "imageUrl": "",
+    "imageUrl": "/src/assets/portfolio/canvas.png",
     "tags": ["web-dev"]
   },
   {
-    "image": true,
-    "body": false,
-    "title": "American football playing time & CTE",
-    "date": "2023-10-31",
-    "description": "Infographic on common statistics regarding American football playing time and CTE (chronic traumatic encephalopathy), designed by Anna Hsu.",
-    "url": "/assets/portfolio/cte.png",
-    "imageUrl": "/src/assets/portfolio/cte.png",
-    "tags": ["design"]
+    "image": false,
+    "body": true,
+    "title": "Hibiscus, a HackSC Engineering product",
+    "date": "2023-08-31",
+    "description": "HackSC Engineering brings a new feature-loaded product with the potential to revolutionize the hackathon space once again.",
+    "url": "https://medium.com/@hacksc/hibiscus-a-hacksc-engineering-product-3899952a9d10",
+    "imageUrl": "",
+    "tags": ["journalism", "tech"]
   },
   {
     "image": true,
@@ -70,13 +80,13 @@
     "tags": ["journalism", "tech"]
   },
   {
-    "image": false,
-    "body": true,
+    "image": true,
+    "body": false,
     "title": "Candid",
     "date": "2023-05-20",
     "description": "Photo gallery of candid moments, built with Gatsby.",
     "url": "https://candid.annahsu.dev",
-    "imageUrl": "",
+    "imageUrl": "/src/assets/portfolio/candid.png",
     "tags": ["web-dev"]
   },
   {
@@ -91,7 +101,7 @@
   },
   {
     "image": true,
-    "body": true,
+    "body": false,
     "title": "TARA.ai",
     "date": "2023-04-23",
     "description": "An AI-powered teaching assistant that revolutionizes virtual classrooms, helping you learn anywhere, anytime.",
@@ -120,13 +130,13 @@
     "tags": ["design"]
   },
   {
-    "image": false,
-    "body": true,
-    "title": "College Brief",
+    "image": true,
+    "body": false,
+    "title": "Morning, Trojan",
     "date": "2022-10-31",
-    "description": "Essential headlines for USC, Cal Poly SLO, and UC Berkeley students every weekday morning.",
-    "url": "https://collegebrief.org",
-    "imageUrl": "",
+    "description": "Five USC, Los Angeles, and California stories to start your day.",
+    "url": "https://morningtrojan.com",
+    "imageUrl": "/src/assets/portfolio/mt.png",
     "tags": ["journalism"]
   },
   {
@@ -158,16 +168,6 @@
     "url": "https://youtu.be/ZDDlGLF751o",
     "imageUrl": "/src/assets/portfolio/poster.png",
     "tags": ["tech", "research"]
-  },
-  {
-    "image": false,
-    "body": true,
-    "title": "TJ Latin",
-    "date": "2021-04-02",
-    "description": "TJ Latin's website for 2020-2021! Static website with blogging by Jekyll.",
-    "url": "https://activities.tjhsst.edu/latin/",
-    "imageUrl": "",
-    "tags": ["web-dev"]
   },
   {
     "image": false,
