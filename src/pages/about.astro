@@ -28,6 +28,11 @@ import headshot from "@assets/headshot.jpg";
             <div class="headshot">
               <Image src={headshot} width="800" alt="Anna Hsu headshot" />
             </div>
+            <div class="fun-fact">
+              <p>
+                <b>Two fun facts for you:</b> I'm ambidextrous and (arguably) a foosball menace ✌️🤪
+              </p>
+            </div>
           </div>
           <div class="bar">
             <ButtonBar>
@@ -42,9 +47,8 @@ import headshot from "@assets/headshot.jpg";
         <div class="content">
           <p>
             Hallo! My name is Anna (she/her) and I'm a Taiwanese American gal
-            studying Computer Engineering/Computer Science and Public Relations
-            at the <a href="https://usc.edu"
-              >University of Southern California</a
+            studying Computer Engineering and Computer Science at the <a
+              href="https://usc.edu">University of Southern California</a
             >. I'm originally from Northern Virginia and I graduated from <a
               href="https://tjhsst.fcps.edu"
               >Thomas Jefferson High School for Science and Technology</a
@@ -158,6 +162,33 @@ import headshot from "@assets/headshot.jpg";
       max-width: 300px;
       height: auto;
     }
+  }
+
+  .fun-fact {
+    opacity: 0;
+    position: absolute;
+    z-index: 999;
+    background-color: var(--white);
+    padding: 1rem;
+    width: 16rem;
+    left: 8rem;
+    bottom: -2rem;
+    box-shadow: var(--cutout);
+    transform: rotate(3deg);
+    visibility: hidden;
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+
+    p {
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+  .wrap:hover .fun-fact {
+    opacity: 1;
+    visibility: visible;
   }
 
   @media (max-width: 374px) {
