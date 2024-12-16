@@ -6,7 +6,7 @@ import Head from "@components/head.astro";
 import Navbar from "@components/navbar.astro";
 import PortfolioCard from "@components/portfoliocard.astro";
 
-import portfolio from "@data/portfolio.json";
+import data from "@data/portfolio.json";
 ---
 
 <PageLayout>
@@ -20,8 +20,8 @@ import portfolio from "@data/portfolio.json";
       <h1>Oh, all the things I've done</h1>
       <div class="grid">
         {
-          portfolio.map(({ image, body, title, date, description, url, imageUrl, tags }) => (
-            <PortfolioCard {image} {body} {title} {date} {description} {url} {imageUrl} {tags} />
+          data.map(({ image, body, title, date, description, url, imageUrl, tags, portfolio }) => (
+            portfolio && <PortfolioCard {image} {body} {title} {date} {description} {url} {imageUrl} {tags} />
           ))
         }
       </div>

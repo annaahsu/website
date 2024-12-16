@@ -5,7 +5,7 @@ import Container from "@components/container.astro";
 import Head from "@components/head.astro";
 import Navbar from "@components/navbar.astro";
 
-import data from "@data/publications.json";
+import data from "@data/portfolio.json";
 ---
 
 <PageLayout>
@@ -19,17 +19,18 @@ import data from "@data/publications.json";
       <h1>Musings in the media</h1>
       <div>
         {
-          data.map(({ title, date, description, url }) => {
+          data.map(({ title, date, description, url, publications }) => {
             const newDate = new Date(date).toLocaleDateString("en-US", {
               month: "long",
               day: "numeric",
               year: "numeric",
             });
             return (
-              <p>
+              publications &&
+              (<p>
                 <a href={url}>{`${title} (${newDate}).`}</a>
                 {description}
-              </p>
+              </p>)
             );
           })
         }
