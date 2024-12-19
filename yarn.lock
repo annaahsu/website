@@ -1288,7 +1288,7 @@ __metadata:
     "@astrojs/sitemap": "npm:3.2.1"
     "@fontsource/readex-pro": "npm:^5.0.13"
     "@iconify-json/ion": "npm:^1.1.18"
-    astro: "npm:5.0.5"
+    astro: "npm:5.0.8"
     astro-icon: "npm:^1.1.0"
     astro-robots-txt: "npm:^1.0.0"
     preact: "npm:^10.21.0"
@@ -1417,9 +1417,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:5.0.5":
-  version: 5.0.5
-  resolution: "astro@npm:5.0.5"
+"astro@npm:5.0.8":
+  version: 5.0.8
+  resolution: "astro@npm:5.0.8"
   dependencies:
     "@astrojs/compiler": "npm:^2.10.3"
     "@astrojs/internal-helpers": "npm:0.4.2"
@@ -1485,7 +1485,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: cd671327055bcc7af7ef92b72a0c8add9d26fb178a56344d86ba04b994555f7a18c65f934f6c246bf62fca48b6ca78b6ff3edeecd841fadaa036f092bf9d2387
+  checksum: 7b75ab06ad5b469044f43550ab5651001094ce8ba1e7cc3256b1930868881166a7dae067b45154dc99bff204f381e51eed8ebe54f7f76f7e309c9724b1b05da2
   languageName: node
   linkType: hard
 
