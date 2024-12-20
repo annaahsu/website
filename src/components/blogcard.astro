@@ -31,7 +31,13 @@ if (!images[post.data.cover]) {
 
 <a class="cardlink" href={permalink}>
   <article class="card">
-    <Image class="image" src={images[post.data.cover]()} alt="cover" width="400" />
+    <Image
+      class="image"
+      src={images[post.data.cover]()}
+      alt="cover"
+      width="400"
+      loading="lazy"
+    />
     <div class="content">
       <header class="header">
         <h2 class="title">{title}</h2>
@@ -64,8 +70,10 @@ if (!images[post.data.cover]) {
 
   .image {
     object-fit: cover;
+    min-width: 250px;
     width: 250px;
     height: auto;
+    max-height: 250px;
     flex: 1 1 0;
 
     @media (max-width: 500px) {

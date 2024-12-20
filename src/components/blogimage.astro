@@ -16,6 +16,7 @@ const { src, alt } = Astro.props;
     widths={[400, 800]}
     sizes="(max-width: 300px) 280px, (max-width: 500px) 20em, (max-width: 600px) 27em, (max-width: 700px) 33em, (min-width: 700px) 40em"
     alt={alt}
+    loading="lazy"
   />
   <figcaption>{alt}</figcaption>
 </div>
