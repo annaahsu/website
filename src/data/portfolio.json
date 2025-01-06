@@ -1,6 +1,16 @@
 [
   {
     "image": true,
+    "title": "Anna Wrapped 2024",
+    "date": "2024-12-31",
+    "description": "Here are some funny statistics from Anna's 2024.",
+    "url": "/assets/portfolio/wrapped.png",
+    "imageUrl": "/src/assets/portfolio/wrapped.png",
+    "tags": ["design"],
+    "portfolio": true
+  },
+  {
+    "image": true,
     "body": true,
     "title": "Massive USC security failure could wreak digital havoc",
     "date": "2024-10-20",
@@ -10,6 +20,16 @@
     "tags": ["journalism", "tech"],
     "portfolio": true,
     "publications": true
+  },
+  {
+    "image": true,
+    "title": "9livesofuhnoo on Instagram",
+    "date": "2024-06-04",
+    "description": "I make short-form videos on cafes and restaurants I visit, as well as other ways I entertain myself in my spare time.",
+    "url": "https://instagram.com/9livesofuhnoo",
+    "imageUrl": "/src/assets/portfolio/9livesofuhnoo.png",
+    "tags": ["design", "videography"],
+    "portfolio": true
   },
   {
     "image": true,
