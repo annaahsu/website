@@ -1,0 +1,61 @@
+---
+title: "foodfluenced"
+publishDate: 2024-05-01
+description: "For my ITP 342: iOS Development final project, I was tasked to build an iOS app from scratch using SwiftUI. Here's the journey I took myself to build my own dream app!"
+permalink: /blog/foodfluenced
+tags: ["dev"]
+cover: "/src/assets/blog/foodfluenced/logo.png"
+---
+
+import BlogImage from "@components/blogimage.astro";
+import english from "@assets/blog/foodfluenced/english.png";
+import chinese from "@assets/blog/foodfluenced/chinese.png";
+
+For my ITP 342: iOS Development final project, I was tasked to build an iOS app from scratch using [SwiftUI](https://developer.apple.com/xcode/swiftui/). Here's the journey I took myself to build my own dream app!
+
+## What is an app I would want for myself?
+
+I love trying new restaurants, but I'm always forgetting the places I want to try! Sometimes I'll hear about a place from Instagram Reels or from a friend, but I could never find a good way to organize the places I wanted to go.
+
+Before I knew [Beli](https://beliapp.com) was a thing, I was so discontent with the way Yelp handled saving places. If I was going to leave USC, I knew I needed a whole game plan (because I am not going to sit in a car for an hour only to go home with no food or drink in hand).
+
+Parking in LA sucks, traffic in LA sucks, and restaurant lines in LA suck. I wanted an app that could fit my type-A planning habits and food consumption goals together.
+
+## Visualizing restaurants
+
+I wanted a way to quickly see places nearby in case a restaurant or cafe didn't work out. While Yelp already offers maps in their collections, it's restricted to the contents of the collection. In my case, I set up my collections via neighborhood or city (e.g., Koreatown, DTLA, and South LA are all different collections). But sometimes, neighborhoods are right next to each other — for example, Westminster and Garden Grove are close enough I'd be willing to hop from one to the other.
+
+I could've also saved everything into one massive collection to visualize that way, but it seemed like a lot of extra work. What if we had just one database with different tags for each place (cuisine, $, open late, good for working, etc.) and we could visualize them not only as lists but also on the map?
+
+Beli does an okay job of this, but it's not as granular as I wanted it to be.
+
+## Design
+
+We get to cheat a little with this because SwiftUI components have a pretty standard, clean UI, but I still made some branding designs that would make the app still more recognizable in a sea full of different apps that all look similar. I elected to use a green color theme to represent adventure — a foray into exploratory dining, I suppose.
+
+Most notably, I chose very simple interfaces with less tabs to make the app less complicated to use, since the whole premise of the app is already sufficiently confusing. The goal is always to reduce the number of buttons to hit!
+
+<BlogImage src={english} alt="screenshots of the app in English" />
+<BlogImage src={chinese} alt="screenshots of the app in Chinese (Traditional)" />
+
+## Development
+
+My project had a requirement where I had to use two Apple frameworks with my project, so I chose [Core Location](https://developer.apple.com/documentation/corelocation) + [MapKit](https://developer.apple.com/documentation/mapkit/) and [Localization](https://developer.apple.com/documentation/Xcode/localization/). I felt like the two paired well with the app — we need location to figure out where we are with respect to the restaurants we're searching up, and it's cool to be able to search in a language familiar to you! As someone who is multilingual, I also thought it'd just be a good excuse to practice my translation skills.
+
+### Location
+
+Core Location and MapKit make it super easy to display your current location and also different locations on a map. It has the same UI as Apple Maps and Find My, making it visually familiar as well!
+
+Through the [Yelp API](https://docs.developer.yelp.com/docs/fusion-intro), I was able to easily access latitude and longitude coordinates of restaurants and put them on the map using `Marker` and `CLLocationCoordinate2D`. This is how we're able to display accurate locations of restaurants on the map.
+
+When I took the screenshots above, I wasn't in LA, so you can't see the characteristic blue bubble identifying your own location, which I only remembered after the fact 😅
+
+### Localization
+
+I did not know what localization was at all when I started — I literally clicked into all of the suggested frameworks and looked through them to see what would make the most sense within my app. Localization seemed pretty cool; as someone who can read/write multiple languages, the idea that we would be able to make an app easily accessible to people of many different languages was so fascinating to me!
+
+By this point, I had the app almost entirely fleshed out in English, and I chose Traditional Chinese as the language of choice to also provide support in. The most complicated step here is preparing your app for localization — the translations come pretty easily (under the assumption that you have the ability to translate it into any given language). Thankfully, the `Text` component already has support for localization, so all I had to do was make sure all of my keys were supported in the `Localizable.strings` file for Chinese.
+
+## Conclusion
+
+Although I'd say it's obviously just easier to use an app like Beli for saving restaurants, this was a really fun exercise to build an app from 0 to 1 and it's something that I can look back on as my first serious attempt at app development! App development feels a lot like web development in some ways and then not at all in others, so I can't wait to explore more of this area and see whether I'd pursue it as a career.
