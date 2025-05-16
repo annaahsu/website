@@ -1,6 +1,30 @@
 [
   {
     "image": true,
+    "body": true,
+    "title": "Turning Brainwaves Into Biomarkers: How a USC Grad Is Using Code to Improve Early Autism Intervention",
+    "date": "2025-05-14",
+    "description": "After starting with Minecraft mods at 13, Joey Yap now applies signal processing to pediatric brain data and is headed to NYU for a Ph.D. in biomedical engineering.",
+    "url": "https://viterbischool.usc.edu/news/2025/05/turning-brainwaves-into-biomarkers-how-a-usc-grad-is-using-code-to-improve-early-autism-intervention/",
+    "imageUrl": "/src/assets/portfolio/joey-yap.png",
+    "tags": ["journalism", "tech"],
+    "portfolio": true,
+    "publications": true
+  },
+  {
+    "image": true,
+    "body": true,
+    "title": "He Rode 103 Roller Coasters. Now He's Building the Next One.",
+    "date": "2025-05-13",
+    "description": "How one USC computer science student found his calling at the intersection of computer science, storytelling, and themed entertainment.",
+    "url": "https://viterbischool.usc.edu/news/2025/05/he-rode-103-roller-coasters-now-hes-building-the-next-one/",
+    "imageUrl": "/src/assets/portfolio/jeremy-pogue.jpg",
+    "tags": ["journalism", "tech"],
+    "portfolio": true,
+    "publications": true
+  },
+  {
+    "image": true,
     "title": "Anna Wrapped 2024",
     "date": "2024-12-31",
     "description": "Here are some funny statistics from Anna's 2024.",
