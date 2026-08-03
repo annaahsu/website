@@ -16,13 +16,12 @@ const permalink = `/blog/${frontmatter.permalink}`;
 ---
 
 <PageLayout>
-  <head>
+  <Fragment slot="head">
     <link rel="stylesheet" href="/prism-laserwave.css" />
 
     <Head {title} {description} {permalink} />
-  </head>
+  </Fragment>
 
-  <body>
     <Navbar />
     <Container>
       <header class="header">
@@ -36,7 +35,6 @@ const permalink = `/blog/${frontmatter.permalink}`;
         <ButtonLink href="/blog">&larr; Back</ButtonLink>
       </ButtonBar>
     </Container>
-  </body>
 </PageLayout>
 
 <style lang="scss">

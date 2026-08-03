@@ -5,6 +5,10 @@ import "../styles/global.scss";
 ---
 
 <html lang="en">
-  <slot />
-
+  <head>
+    <slot name="head" />
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>

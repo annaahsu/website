@@ -9,32 +9,28 @@ import data from "@data/portfolio.json";
 ---
 
 <PageLayout>
-  <head>
-    <Head title="Publications" permalink="/publications" />
-  </head>
+  <Head slot="head" title="Publications" permalink="/publications" />
 
-  <body>
-    <Navbar />
-    <Container>
-      <h1>Musings in the media</h1>
-      <div>
-        {
-          data.map(({ title, date, description, url, publications }) => {
-            const newDate = new Date(date).toLocaleDateString("en-US", {
-              month: "long",
-              day: "numeric",
-              year: "numeric",
-            });
-            return (
-              publications &&
-              (<p>
-                <a href={url}>{`${title} (${newDate}).`}</a>
-                {description}
-              </p>)
-            );
-          })
-        }
-      </div>
-    </Container>
-  </body>
+  <Navbar />
+  <Container>
+    <h1>Musings in the media</h1>
+    <div>
+      {
+        data.map(({ title, date, description, url, publications }) => {
+          const newDate = new Date(date).toLocaleDateString("en-US", {
+            month: "long",
+            day: "numeric",
+            year: "numeric",
+          });
+          return (
+            publications && (
+              <p>
+                <a href={url}>{`${title} (${newDate}).`}</a> {description}
+              </p>
+            )
+          );
+        })
+      }
+    </div>
+  </Container>
 </PageLayout>

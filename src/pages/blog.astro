@@ -23,11 +23,8 @@ allPosts.forEach((p) => {
 ---
 
 <PageLayout>
-  <head>
-    <Head title="Blog" permalink="/blog" />
-  </head>
+    <Head slot="head" title="Blog" permalink="/blog" />
 
-  <body>
     <Navbar />
     <Container>
       <h1>How to take over the world&trade;</h1>
@@ -46,7 +43,6 @@ allPosts.forEach((p) => {
         }
       </div>
     </Container>
-  </body>
 </PageLayout>
 
 <style lang="scss">

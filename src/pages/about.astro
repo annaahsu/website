@@ -11,112 +11,101 @@ import headshot from "@assets/headshot.jpg";
 ---
 
 <PageLayout>
-  <head>
-    <Head title="About" permalink="/about" />
-  </head>
+  <Head slot="head" title="About" permalink="/about" />
 
-  <body>
-    <Navbar />
-    <Container>
-      <h1>Who is this girl?</h1>
-      <div class="tangent">
-        <div class="sidebar">
-          <div class="wrap">
-            <div class="rectangle-wrap">
-              <div class="rectangle"></div>
-            </div>
-            <div class="headshot">
-              <Image src={headshot} width="800" alt="Anna Hsu headshot" />
-            </div>
-            <div class="fun-fact">
-              <p>
-                <b>Two fun facts for you:</b> I'm ambidextrous and (arguably) a foosball
-                menace ✌️🤪
-              </p>
-            </div>
+  <Navbar />
+  <Container>
+    <h1>Who is this girl?</h1>
+    <div class="tangent">
+      <div class="sidebar">
+        <div class="wrap">
+          <div class="rectangle-wrap">
+            <div class="rectangle"></div>
           </div>
-          <div class="bar">
-            <ButtonBar>
-              <ButtonLink href="https://anna.show/resume">Resume</ButtonLink>
-              <ButtonLink href="https://anna.show/headshot">
-                Headshot
-              </ButtonLink>
-            </ButtonBar>
-            <Socials />
+          <div class="headshot">
+            <Image src={headshot} width="800" alt="Anna Hsu headshot" />
+          </div>
+          <div class="fun-fact">
+            <p>
+              <b>Two fun facts for you:</b> I'm ambidextrous and (arguably) a foosball
+              menace ✌️🤪
+            </p>
           </div>
         </div>
-        <div class="content">
-          <p>
-            Hallo! My name is Anna (she/her) and I'm a Taiwanese American
-            gal based in San Francisco. I graduated from the <a
-              href="https://usc.edu"
-              target="_blank">University of Southern California</a
-            > and <a href="https://tjhsst.fcps.edu" target="_blank"
-              >Thomas Jefferson High School for Science and Technology</a
-            >. I'm broadly interested in building useful products and telling
-            stories that matter.
-          </p>
-          <p>
-            At USC, I was a <a
-              href="https://viterbiadmission.usc.edu/author/annahsu/"
-              target="_blank">Viterbi Student Ambassador</a
-            >, where they <a
-              href="https://www.instagram.com/reel/DABxPh2Swmq/"
-              target="_blank">somehow</a
-            >
-            <a
-              href="https://www.instagram.com/reel/DFd12seyxXw/"
-              target="_blank">let</a
-            >
-            <a
-              href="https://www.instagram.com/reel/DH9GB1XyTQn/"
-              target="_blank">me</a
-            >
-            <a
-              href="https://www.instagram.com/reel/DI1kD6hTufn/"
-              target="_blank">run</a
-            >
-            <a
-              href="https://www.instagram.com/reel/DOeHc9tCeCl/"
-              target="_blank">their</a
-            >
-            <a
-              href="https://www.instagram.com/reel/DQHuw_Fjz1x/"
-              target="_blank">Instagram</a
-            >. I also drummed up daily shenanigans at <a
-              href="https://morningtrojan.com/"
-              target="_blank">Morning, Trojan</a
-            > and on more than one occasion, I went <a
-              href="https://www.instagram.com/p/DX6D07XpxV0/"
-              target="_blank">locally</a
-            >
-            <a
-              href="https://www.instagram.com/reel/DVjiyztklJv/"
-              target="_blank">viral</a
-            >
-            for <a
-              href="https://www.instagram.com/reel/DWxMtZ3D3a2/"
-              target="_blank">side</a
-            >
-            <a
-              href="https://www.instagram.com/reel/DWkJDljEn_U/"
-              target="_blank">quests</a
-            > I went on.
-          </p>
-          <p>
-            In my (rare) spare time, you can find me getting mistaken for a
-            16-year-old while getting samples at Costco, <a
-              href="https://open.spotify.com/playlist/7pqZbX1kOheeGjIY5B6i6M"
-              target="_blank">listening to music</a
-            >, and <a
-              href="https://www.strava.com/athletes/89593849"
-              target="_blank">running from my life problems</a
-            >. Feel free to reach out via email; I'd love to chat!
-          </p>
+        <div class="bar">
+          <ButtonBar>
+            <ButtonLink href="https://anna.show/resume">Resume</ButtonLink>
+            <ButtonLink href="https://anna.show/headshot">
+              Headshot
+            </ButtonLink>
+          </ButtonBar>
+          <Socials />
         </div>
       </div>
-    </Container>
-  </body>
+      <div class="content">
+        <p>
+          Hallo! My name is Anna (she/her) and I'm a Taiwanese American gal
+          based in San Francisco. I graduated from the <a
+            href="https://usc.edu"
+            target="_blank">University of Southern California</a
+          > and <a href="https://tjhsst.fcps.edu" target="_blank"
+            >Thomas Jefferson High School for Science and Technology</a
+          >. I'm broadly interested in building useful products and telling
+          stories that matter.
+        </p>
+        <p>
+          At USC, I was a <a
+            href="https://viterbiadmission.usc.edu/author/annahsu/"
+            target="_blank">Viterbi Student Ambassador</a
+          >, where they <a
+            href="https://www.instagram.com/reel/DABxPh2Swmq/"
+            target="_blank">somehow</a
+          >{" "}
+          <a href="https://www.instagram.com/reel/DFd12seyxXw/" target="_blank"
+            >let</a
+          >{" "}
+          <a href="https://www.instagram.com/reel/DH9GB1XyTQn/" target="_blank"
+            >me</a
+          >{" "}
+          <a href="https://www.instagram.com/reel/DI1kD6hTufn/" target="_blank"
+            >run</a
+          >{" "}
+          <a href="https://www.instagram.com/reel/DOeHc9tCeCl/" target="_blank"
+            >their</a
+          >{" "}
+          <a href="https://www.instagram.com/reel/DQHuw_Fjz1x/" target="_blank"
+            >Instagram</a
+          >. I also drummed up daily shenanigans at <a
+            href="https://morningtrojan.com/"
+            target="_blank">Morning, Trojan</a
+          > and on more than one occasion, I went <a
+            href="https://www.instagram.com/p/DX6D07XpxV0/"
+            target="_blank">locally</a
+          >{" "}
+          <a href="https://www.instagram.com/reel/DVjiyztklJv/" target="_blank"
+            >viral</a
+          >{" "}
+          for <a
+            href="https://www.instagram.com/reel/DWxMtZ3D3a2/"
+            target="_blank">side</a
+          >{" "}
+          <a href="https://www.instagram.com/reel/DWkJDljEn_U/" target="_blank"
+            >quests</a
+          > I went on.
+        </p>
+        <p>
+          In my (rare) spare time, you can find me getting mistaken for a
+          16-year-old while getting samples at Costco, <a
+            href="https://open.spotify.com/playlist/7pqZbX1kOheeGjIY5B6i6M"
+            target="_blank">listening to music</a
+          >, and <a
+            href="https://www.strava.com/athletes/89593849"
+            target="_blank">running from my life problems</a
+          >. Feel free to reach out via email; I'd love to chat!
+        </p>
+      </div>
+    </div>
+  </Container>
 </PageLayout>
 
 <style lang="scss">

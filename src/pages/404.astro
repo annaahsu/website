@@ -8,11 +8,8 @@ import Navbar from "@components/navbar.astro";
 ---
 
 <PageLayout>
-  <head>
-    <Head title="404" permalink="/404" />
-  </head>
+    <Head slot="head" title="404" permalink="/404" />
 
-  <body>
     <Navbar />
     <Container>
       <h1>404</h1>
@@ -27,5 +24,4 @@ import Navbar from "@components/navbar.astro";
         <ButtonLink href="/">Return home</ButtonLink>
       </ButtonBar>
     </Container>
-  </body>
 </PageLayout>

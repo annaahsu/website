@@ -10,23 +10,41 @@ import data from "@data/portfolio.json";
 ---
 
 <PageLayout>
-  <head>
-    <Head title="Portfolio" permalink="/portfolio" />
-  </head>
+  <Head slot="head" title="Portfolio" permalink="/portfolio" />
 
-  <body>
-    <Navbar />
-    <Container>
-      <h1>Oh, all the things I've done</h1>
-      <div class="grid">
-        {
-          data.map(({ image, body, title, date, description, url, imageUrl, tags, portfolio }) => (
-            portfolio && <PortfolioCard {image} {body} {title} {date} {description} {url} {imageUrl} {tags} />
-          ))
-        }
-      </div>
-    </Container>
-  </body>
+  <Navbar />
+  <Container>
+    <h1>Oh, all the things I've done</h1>
+    <div class="grid">
+      {
+        data.map(
+          ({
+            image,
+            body,
+            title,
+            date,
+            description,
+            url,
+            imageUrl,
+            tags,
+            portfolio,
+          }) =>
+            portfolio && (
+              <PortfolioCard
+                {image}
+                {body}
+                {title}
+                {date}
+                {description}
+                {url}
+                {imageUrl}
+                {tags}
+              />
+            )
+        )
+      }
+    </div>
+  </Container>
 </PageLayout>
 
 <style lang="scss">

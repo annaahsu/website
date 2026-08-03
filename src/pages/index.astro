@@ -11,39 +11,35 @@ import navLinks from "@data/nav.json";
 ---
 
 <PageLayout>
-  <head>
-    <Head title="Home" permalink="/" />
-  </head>
+  <Head slot="head" title="Home" permalink="/" />
 
-  <body>
-    <main>
-      <div class="wrap">
-        <div class="rectangle-wrap">
-          <div class="rectangle"></div>
-        </div>
-        <div class="home-wrap">
-          <div class="home">
-            <AnnaHsu />
-            <p>
-              I'm Anna Hsu (she/her), a Taiwanese American gal based in San
-              Francisco who is probably
-              <a href="https://instagram.com/9livesofuhnoo" target="_blank"
-                >side questing somewhere</a
-              >. Welcome, and I hope you enjoy your stay!
-            </p>
-            <ButtonBar>
-              {
-                navLinks.map(({ name, link }) => (
-                  <ButtonLink href={link}>{name}</ButtonLink>
-                ))
-              }
-            </ButtonBar>
-            <Socials />
-          </div>
+  <main>
+    <div class="wrap">
+      <div class="rectangle-wrap">
+        <div class="rectangle"></div>
+      </div>
+      <div class="home-wrap">
+        <div class="home">
+          <AnnaHsu />
+          <p>
+            I'm Anna Hsu (she/her), a Taiwanese American gal based in San
+            Francisco who is probably <a
+              href="https://instagram.com/9livesofuhnoo"
+              target="_blank">side questing somewhere</a
+            >. Welcome, and I hope you enjoy your stay!
+          </p>
+          <ButtonBar>
+            {
+              navLinks.map(({ name, link }) => (
+                <ButtonLink href={link}>{name}</ButtonLink>
+              ))
+            }
+          </ButtonBar>
+          <Socials />
         </div>
       </div>
-    </main>
-  </body>
+    </div>
+  </main>
 </PageLayout>
 
 <style lang="scss">
