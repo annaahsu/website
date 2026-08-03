@@ -127,6 +127,10 @@ svg {
   filter: drop-shadow(var(--smalldrop));
 }
 
+iframe {
+  margin-bottom: var(--bottommargin);
+}
+
 ::-moz-selection {
   background: var(--light);
   color: var(--dark);
