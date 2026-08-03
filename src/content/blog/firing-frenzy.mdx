@@ -2,7 +2,7 @@
 title: "Firing Frenzy 🎯"
 publishDate: 2024-04-23
 description: "For EE 354: Introduction to Digital Circuits, my lab partner and I built an aiming practice game using the Nexys 4 and its built-in Analog ADXL362 accelerometer."
-permalink: /blog/firing-frenzy
+permalink: firing-frenzy
 tags: ["electronics"]
 cover: "/src/assets/blog/firing-frenzy/demo.jpg"
 ---
@@ -61,7 +61,7 @@ The accelerometer data is processed in this module. As mentioned in the SPI cont
 
 <BlogImage src={axes} alt="Figure 4. Screen and Target Coordinates" />
 
-The Nexys 4 documentation indicates that the accelerometer is turned 90 degrees on the board; thus, the Y-axis accelerometer corresponds with the X-axis of the screen. For example, when the board is tilted to the right, the data received can be in the range of -2048&rarr;-1024 on the Y-axis. Based on the data above in the figure, we can generate the equation $x_{position} = 464 + \frac{2048 - y_{data}}{10}$, where $y_{data}$ is the magnitude of the Y-axis data. This equation returns $x_{position}=0$ when $y_{data}=2048$ and $x_{position}=566$ when $y_{data}=1024$. The resulting coordinates are then assigned to a wire.
+The Nexys 4 documentation indicates that the accelerometer is turned 90 degrees on the board; thus, the Y-axis accelerometer corresponds with the X-axis of the screen. For example, when the board is tilted to the right, the data received can be in the range of -2048&rarr;-1024 on the Y-axis. Based on the data above in the figure, we can generate the equation $$x_{position} = 464 + \frac{2048 - y_{data}}{10}$$, where $y_{data}$ is the magnitude of the Y-axis data. This equation returns $x_{position}=0$ when $y_{data}=2048$ and $x_{position}=566$ when $y_{data}=1024$. The resulting coordinates are then assigned to a wire.
 
 An `always` block handles the states and transitions of the state machines, which will be addressed in the next section. The RGB values of the cursor, firing area, and target are updated in a separate `always` block, which updates the VGA signals in the top module.
 

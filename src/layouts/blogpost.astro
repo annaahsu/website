@@ -1,4 +1,5 @@
 ---
+import "@styles/prism-laserwave.css";
 import ButtonBar from "@components/buttonbar.astro";
 import ButtonLink from "@components/buttonlink.astro";
 import Container from "@components/container.astro";
@@ -16,11 +17,7 @@ const permalink = `/blog/${frontmatter.permalink}`;
 ---
 
 <PageLayout>
-  <Fragment slot="head">
-    <link rel="stylesheet" href="/prism-laserwave.css" />
-
-    <Head {title} {description} {permalink} />
-  </Fragment>
+    <Head slot="head" {title} {description} {permalink} />
 
     <Navbar />
     <Container>

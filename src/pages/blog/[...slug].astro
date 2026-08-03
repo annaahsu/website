@@ -1,17 +1,23 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import Layout from "@layouts/blogpost.astro";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("blog");
   return blogEntries.map((entry) => ({
-    params: { slug: entry.slug },
-    props: { entry },
+    params: { slug: entry.data.permalink },
   }));
 }
 
-const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { slug } = Astro.params;
+const blogEntries = await getCollection("blog");
+const entry = blogEntries.find((e) => e.data.permalink === slug);
+
+if (!entry) {
+  throw new Error(`No blog entry found for ${slug}`);
+}
+
+const { Content } = await render(entry);
 ---
 
 <link

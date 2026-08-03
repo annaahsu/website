@@ -3,8 +3,8 @@ import astro from "astro-robots-txt";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import icon from "astro-icon";
-import rehypeKatex from 'rehype-katex';
-import remarkMath from 'remark-math';
+import rehypeKatex from "rehype-katex";
+import remarkMath from "remark-math";
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,15 +16,9 @@ export default defineConfig({
   },
   markdown: {
     syntaxHighlight: "prism",
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [rehypeKatex],
   },
-  integrations: [
-    astro(),
-    mdx({
-      remarkPlugins: [remarkMath],
-      rehypePlugins: [rehypeKatex],
-    }),
-    sitemap(),
-    icon(),
-  ],
+  integrations: [astro(), mdx(), sitemap(), icon()],
   scopedStyleStrategy: "class",
 });
